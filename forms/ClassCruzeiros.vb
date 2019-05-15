@@ -1,27 +1,12 @@
 ﻿Public Class ClassCruzeiros
     Inherits Collections.CollectionBase
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-    Public Sub Add(ByVal NewFuncionario As ClassCruzeiro)
-        Me.List.Add(NewFuncionario)
+    Public Sub Add(ByVal NewMyObject As ClassCruzeiro)
+        Me.List.Add(NewMyObject)
     End Sub
 
-    Public Sub Remove(ByVal oldFuncionario As ClassCruzeiro)
-        Me.List.Remove(oldFuncionario)
-=======
-=======
->>>>>>> 6592d1b4dfacf26c6e3b1c680d8ca55a82e4032a
-    Public Sub Add(ByVal NewClassCruzeiro As ClassCruzeiro)
-        Me.List.Add(NewClassCruzeiro)
-    End Sub
-
-    Public Sub Remove(ByVal oldClassCruzeiro As ClassCruzeiro)
-        Me.List.Remove(oldClassCruzeiro)
-<<<<<<< HEAD
->>>>>>> 6592d1b4dfacf26c6e3b1c680d8ca55a82e4032a
-=======
->>>>>>> 6592d1b4dfacf26c6e3b1c680d8ca55a82e4032a
+    Public Sub Remove(ByVal oldMyObject As ClassCruzeiro)
+        Me.List.Remove(oldMyObject)
     End Sub
 
     Default Public Property item(ByVal index As Integer) As ClassCruzeiro
@@ -40,21 +25,7 @@
     Public Shadows Sub RemoveAt(ByVal index As Integer)
         Remove(item(index))
     End Sub
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-    Public Sub InsertAt(ByVal index As Integer, ByVal NewFuncionario As ClassFuncionario)
-        Me.List.Insert(index, NewFuncionario)
+    Public Sub InsertAt(ByVal index As Integer, ByVal NewMyObject As ClassParagem)
+        Me.List.Insert(index, NewMyObject)
     End Sub
-
-=======
-    Public Sub InsertAt(ByVal index As Integer, ByVal NewClassCruzeiro As ClassCruzeiro)
-        Me.List.Insert(index, NewClassCruzeiro)
-    End Sub
->>>>>>> 6592d1b4dfacf26c6e3b1c680d8ca55a82e4032a
-=======
-    Public Sub InsertAt(ByVal index As Integer, ByVal NewClassCruzeiro As ClassCruzeiro)
-        Me.List.Insert(index, NewClassCruzeiro)
-    End Sub
->>>>>>> 6592d1b4dfacf26c6e3b1c680d8ca55a82e4032a
 End Class
