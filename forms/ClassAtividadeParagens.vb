@@ -1,6 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿Public Class ClassAtividadeParagens
 =======
+=======
+>>>>>>> 6592d1b4dfacf26c6e3b1c680d8ca55a82e4032a
 ﻿
 
 Public Class ClassAtividadeParagens

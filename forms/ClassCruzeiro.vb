@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 ﻿Public Class ClassCruzeiro
     Private _nome As String
     Private _diainicio As Date
@@ -117,6 +118,8 @@
         _atividadesnavio = New ClassAtividadesNavio
     End Sub
 =======
+=======
+>>>>>>> 6592d1b4dfacf26c6e3b1c680d8ca55a82e4032a
 ﻿Imports forms
 
 Public Class ClassCruzeiro
@@ -263,5 +266,8 @@ Public Class ClassCruzeiro
 
 
 
+<<<<<<< HEAD
+>>>>>>> 6592d1b4dfacf26c6e3b1c680d8ca55a82e4032a
+=======
 >>>>>>> 6592d1b4dfacf26c6e3b1c680d8ca55a82e4032a
 End Class
