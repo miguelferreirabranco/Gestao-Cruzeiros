@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{186F9522-A718-407E-8675-7EEC82A37376}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>forms.My.MyApplication</StartupObject>
+    <RootNamespace>forms</RootNamespace>
+    <AssemblyName>forms</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>forms.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>forms.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Atividades_Navio.Designer.vb">
+      <DependentUpon>Atividades_Navio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Atividades_Navio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Atividades_Paragens.Designer.vb">
+      <DependentUpon>Atividades_Paragens.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Atividades_Paragens.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassAtividadeBase.vb" />
+    <Compile Include="ClassAtividadeNavio.vb" />
+    <Compile Include="ClassAtividadeParagens.vb" />
+    <Compile Include="ClassAtividadesNavio.vb" />
+    <Compile Include="ClassAtividadesParagens.vb" />
+    <Compile Include="ClassParagem.vb" />
+    <Compile Include="ClassParagens.vb" />
+    <Compile Include="CollectionQuartos.vb" />
+    <Compile Include="Cruzeiros.Designer.vb">
+      <DependentUpon>Cruzeiros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cruzeiros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrincipal.Designer.vb">
+      <DependentUpon>FormPrincipal.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrincipal.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Funcionario.vb" />
+    <Compile Include="Funcionarios.vb" />
+    <Compile Include="Lista_Funcionários.Designer.vb">
+      <DependentUpon>Lista_Funcionários.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Lista_Funcionários.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_Viajantes.Designer.vb">
+      <DependentUpon>Lista_Viajantes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Lista_Viajantes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Novo_Registo_Funcionário.Designer.vb">
+      <DependentUpon>Novo_Registo_Funcionário.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Novo_Registo_Funcionário.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Novo_Registo_Viajante.Designer.vb">
+      <DependentUpon>Novo_Registo_Viajante.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Novo_Registo_Viajante.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paragens.Designer.vb">
+      <DependentUpon>Paragens.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Paragens.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quarto.vb" />
+    <Compile Include="Quartos.Designer.vb">
+      <DependentUpon>Quartos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Quartos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Utilizador.vb" />
+    <Compile Include="Viajante.vb" />
+    <Compile Include="Viajantes.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Atividades_Navio.resx">
+      <DependentUpon>Atividades_Navio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Atividades_Paragens.resx">
+      <DependentUpon>Atividades_Paragens.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cruzeiros.resx">
+      <DependentUpon>Cruzeiros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrincipal.resx">
+      <DependentUpon>FormPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_Funcionários.resx">
+      <DependentUpon>Lista_Funcionários.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_Viajantes.resx">
+      <DependentUpon>Lista_Viajantes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Novo_Registo_Funcionário.resx">
+      <DependentUpon>Novo_Registo_Funcionário.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Novo_Registo_Viajante.resx">
+      <DependentUpon>Novo_Registo_Viajante.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paragens.resx">
+      <DependentUpon>Paragens.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quartos.resx">
+      <DependentUpon>Quartos.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
