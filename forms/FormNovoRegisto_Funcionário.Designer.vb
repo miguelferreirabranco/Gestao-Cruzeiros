@@ -34,8 +34,9 @@ Partial Class FormNovoRegisto_Funcionário
         Me.TextBox_nib = New System.Windows.Forms.TextBox()
         Me.TextBox_username = New System.Windows.Forms.TextBox()
         Me.TextBox_ncc = New System.Windows.Forms.TextBox()
-        Me.TextBox_datanasc = New System.Windows.Forms.TextBox()
         Me.TextBox_sexo = New System.Windows.Forms.TextBox()
+        Me.Button_Registar = New System.Windows.Forms.Button()
+        Me.DateTimePicker_datanasc = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'Label2
@@ -143,13 +144,6 @@ Partial Class FormNovoRegisto_Funcionário
         Me.TextBox_ncc.Size = New System.Drawing.Size(185, 20)
         Me.TextBox_ncc.TabIndex = 65
         '
-        'TextBox_datanasc
-        '
-        Me.TextBox_datanasc.Location = New System.Drawing.Point(205, 102)
-        Me.TextBox_datanasc.Name = "TextBox_datanasc"
-        Me.TextBox_datanasc.Size = New System.Drawing.Size(185, 20)
-        Me.TextBox_datanasc.TabIndex = 66
-        '
         'TextBox_sexo
         '
         Me.TextBox_sexo.Location = New System.Drawing.Point(205, 76)
@@ -157,13 +151,31 @@ Partial Class FormNovoRegisto_Funcionário
         Me.TextBox_sexo.Size = New System.Drawing.Size(185, 20)
         Me.TextBox_sexo.TabIndex = 67
         '
-        'Novo_Registo_Funcionário
+        'Button_Registar
+        '
+        Me.Button_Registar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_Registar.Location = New System.Drawing.Point(302, 250)
+        Me.Button_Registar.Name = "Button_Registar"
+        Me.Button_Registar.Size = New System.Drawing.Size(88, 39)
+        Me.Button_Registar.TabIndex = 87
+        Me.Button_Registar.Text = "Registar"
+        Me.Button_Registar.UseVisualStyleBackColor = True
+        '
+        'DateTimePicker_datanasc
+        '
+        Me.DateTimePicker_datanasc.Location = New System.Drawing.Point(205, 102)
+        Me.DateTimePicker_datanasc.Name = "DateTimePicker_datanasc"
+        Me.DateTimePicker_datanasc.Size = New System.Drawing.Size(185, 20)
+        Me.DateTimePicker_datanasc.TabIndex = 88
+        '
+        'FormNovoRegisto_Funcionário
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(524, 290)
+        Me.ClientSize = New System.Drawing.Size(524, 324)
+        Me.Controls.Add(Me.DateTimePicker_datanasc)
+        Me.Controls.Add(Me.Button_Registar)
         Me.Controls.Add(Me.TextBox_sexo)
-        Me.Controls.Add(Me.TextBox_datanasc)
         Me.Controls.Add(Me.TextBox_ncc)
         Me.Controls.Add(Me.TextBox_username)
         Me.Controls.Add(Me.TextBox_nib)
@@ -176,7 +188,7 @@ Partial Class FormNovoRegisto_Funcionário
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Name = "Novo_Registo_Funcionário"
+        Me.Name = "FormNovoRegisto_Funcionário"
         Me.Text = "Novo_Registo_Funcionário"
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -195,6 +207,7 @@ Partial Class FormNovoRegisto_Funcionário
     Friend WithEvents TextBox_nib As TextBox
     Friend WithEvents TextBox_username As TextBox
     Friend WithEvents TextBox_ncc As TextBox
-    Friend WithEvents TextBox_datanasc As TextBox
     Friend WithEvents TextBox_sexo As TextBox
+    Friend WithEvents Button_Registar As Button
+    Friend WithEvents DateTimePicker_datanasc As DateTimePicker
 End Class
