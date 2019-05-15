@@ -123,6 +123,14 @@ Public Class ClassCruzeiro
         Me.LocalInicio = localInicio
         Me.LocalFim = LocalFim
 
+        Me.AtividadesNavio = New ClassAtividadesNavio
+        Me.AtividadesParagens = New ClassAtividadesParagens
+        Me.Funcionarios = New ClassFuncionarios
+        Me.Viajantes = New ClassViajantes
+        Me.Quartos = New ClassQuartos
+        Me.Paragens = New ClassParagens
+
+
     End Sub
 
     Public Sub modificar(ByVal Nome As String, ByVal datainicio As Date, ByVal datafim As Date, ByVal localInicio As String, ByVal LocalFim As String)
