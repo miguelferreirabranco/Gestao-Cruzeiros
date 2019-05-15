@@ -3,6 +3,8 @@
 
     Private _nif As String
 
+
+
     Public Sub New()
 
     End Sub

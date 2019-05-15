@@ -1,4 +1,5 @@
 ﻿Public Class ClassQuarto
+
     Private _npessoas As Integer
     Private _nquarto As Integer
     Private _ppessoa As Single

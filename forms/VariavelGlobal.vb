@@ -1,0 +1,3 @@
+﻿Module VariavelGlobal
+
+End Module

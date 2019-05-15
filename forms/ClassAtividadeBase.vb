@@ -2,6 +2,7 @@
 
 Public Class ClassAtividadeBase
     Private _nome As String
+    Private _data As Date
     Private _horaInicio As Integer
     Private _horaFim As Integer
     Private _tipo As String
@@ -59,6 +60,15 @@ Public Class ClassAtividadeBase
         End Get
         Set(value As ClassViajantes)
             _pessoas = value
+        End Set
+    End Property
+
+    Public Property Data As Date
+        Get
+            Return _data
+        End Get
+        Set(value As Date)
+            _data = value
         End Set
     End Property
 
