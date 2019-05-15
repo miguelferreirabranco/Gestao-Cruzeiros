@@ -74,13 +74,6 @@
   <ItemGroup>
     <Compile Include="ClassCruzeiro.vb" />
     <Compile Include="ClassCruzeiros.vb" />
-    <Compile Include="ClassReservaAtividadeNavio.vb" />
-    <Compile Include="ClassReservaAtividadeParagens.vb" />
-    <Compile Include="ClassReservaCruzeiro.vb" />
-    <Compile Include="ClassReservaQuarto.vb" />
-    <Compile Include="ClassReservasAtividadesParagens.vb" />
-    <Compile Include="ClassReservasCruzeiros.vb" />
-    <Compile Include="ClassReservasQuartos.vb" />
     <Compile Include="FormAtividades_Navio.Designer.vb">
       <DependentUpon>FormAtividades_Navio.vb</DependentUpon>
     </Compile>
@@ -100,7 +93,6 @@
     <Compile Include="ClassAtividadesParagens.vb" />
     <Compile Include="ClassParagem.vb" />
     <Compile Include="ClassParagens.vb" />
-    <Compile Include="ClassReserva.vb" />
     <Compile Include="ClassQuartos.vb" />
     <Compile Include="FormCruzeiros.Designer.vb">
       <DependentUpon>FormCruzeiros.vb</DependentUpon>
@@ -177,7 +169,7 @@
     <Compile Include="ClassUtilizador.vb" />
     <Compile Include="ClassViajante.vb" />
     <Compile Include="ClassViajantes.vb" />
-    <Compile Include="ClassReservasAtividadesNavio.vb" />
+    <Compile Include="VariavelGlobal.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="FormAtividades_Navio.resx">

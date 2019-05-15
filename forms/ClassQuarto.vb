@@ -32,6 +32,8 @@
         End Set
     End Property
 
+
+
     Public Property UserNumber As String
         Get
             Return _userNumber
@@ -54,14 +56,14 @@
         If Me.UserNumber = "" Then
             Me.UserNumber = Nome
         Else
-            MsgBox("O quarto em questao já se encontra reservado")
+            MsgBox("O quarto em questão já se encontra reservado!")
         End If
     End Sub
     Public Sub AnularReserva(Nome As String)
         If Me.UserNumber = Nome Then
             Me.UserNumber = ""
         Else
-            MsgBox("O quarto em questao nao se encontra reservado ou n esta reservado por si")
+            MsgBox("O quarto em questao nao se encontra reservado ou não está reservado por si!")
         End If
     End Sub
 End Class

@@ -125,4 +125,15 @@ Public Class ClassCruzeiro
 
     End Sub
 
+    Public Sub modificar(ByVal Nome As String, ByVal datainicio As Date, ByVal datafim As Date, ByVal localInicio As String, ByVal LocalFim As String)
+
+        Me.Nome = Nome
+        Me.DataInicio = datainicio
+        Me.DataFim = datafim
+        Me.LocalInicio = localInicio
+        Me.LocalFim = LocalFim
+    End Sub
+
+
+
 End Class
