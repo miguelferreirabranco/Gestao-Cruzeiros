@@ -74,11 +74,11 @@ Partial Class FormParagens
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(131, 190)
+        Me.Label5.Location = New System.Drawing.Point(117, 190)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(37, 20)
+        Me.Label5.Size = New System.Drawing.Size(48, 20)
         Me.Label5.TabIndex = 92
-        Me.Label5.Text = "Dia:"
+        Me.Label5.Text = "Data:"
         '
         'Label4
         '
@@ -175,7 +175,7 @@ Partial Class FormParagens
         Me.Label1.TabIndex = 101
         Me.Label1.Text = "Paragens"
         '
-        'Paragens
+        'FormParagens
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -195,7 +195,7 @@ Partial Class FormParagens
         Me.Controls.Add(Me.Button_seguinte)
         Me.Controls.Add(Me.Button_anterior)
         Me.Controls.Add(Me.Button_inicio)
-        Me.Name = "Paragens"
+        Me.Name = "FormParagens"
         Me.Text = "Paragens"
         Me.ResumeLayout(False)
         Me.PerformLayout()

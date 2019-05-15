@@ -1,4 +1,4 @@
-﻿Imports TrabalhoPCII
+﻿
 
 Public Class ClassAtividadeParagens
     Inherits ClassAtividadeBase
@@ -33,4 +33,6 @@ Public Class ClassAtividadeParagens
         Me.Paragem = Paragem
         Me.LocalaVisitar = Localavisitar
     End Sub
+
+    p
 End Class
