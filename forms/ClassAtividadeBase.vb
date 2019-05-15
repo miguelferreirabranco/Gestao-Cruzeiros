@@ -6,7 +6,7 @@ Public Class ClassAtividadeBase
     Private _horaFim As Integer
     Private _tipo As String
     Private _npessoas As Integer = 0
-    Private _pessoas As Viajantes
+    Private _pessoas As ClassViajantes
 
     Public Property Nome As String
         Get
@@ -53,11 +53,11 @@ Public Class ClassAtividadeBase
         End Set
     End Property
 
-    Public Property Pessoas As Viajantes
+    Public Property Pessoas As ClassViajantes
         Get
             Return _pessoas
         End Get
-        Set(value As Viajantes)
+        Set(value As ClassViajantes)
             _pessoas = value
         End Set
     End Property
@@ -72,7 +72,7 @@ Public Class ClassAtividadeBase
         Me.HoraInicio = HoraInicio
         Me.HoraFim = HoraFim
         Me.Tipo = Tipo
-        Me.Pessoas = New Viajantes
+        Me.Pessoas = New ClassViajantes
     End Sub
 
     Public Sub Marcar(ByVal Nlogin As Integer)

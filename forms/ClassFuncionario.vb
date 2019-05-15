@@ -1,24 +1,24 @@
-﻿Public Class Viajante
-    Inherits Utilizador
+﻿Public Class ClassFuncionario
+    Inherits ClassUtilizador
 
-    Private _nif As String
+    Private _nib As String
 
     Public Sub New()
 
     End Sub
 
     Public Sub New(ByVal nome As String, ByVal sexo As String, ByVal data As Date, ByVal cc As String,
-                   ByVal login As String, ByVal pass As String, ByVal nif As String)
+                  ByVal login As String, ByVal pass As String, ByVal nib As String)
         MyBase.New(nome, sexo, data, cc, login, pass)
-        Me._nif = nif
+        Me._nib = nib
     End Sub
 
-    Public Property Nif As String
+    Public Property Nib As String
         Get
-            Return _nif
+            Return _nib
         End Get
         Set(value As String)
-            _nif = value
+            _nib = value
         End Set
     End Property
 End Class

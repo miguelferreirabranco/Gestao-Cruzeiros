@@ -1,4 +1,4 @@
-﻿Public Class Utilizador
+﻿Public Class ClassUtilizador
     Private _nome As String
     Private _sexo As String
     Private _data_nasc As Date

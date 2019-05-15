@@ -72,16 +72,16 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Atividades_Navio.Designer.vb">
-      <DependentUpon>Atividades_Navio.vb</DependentUpon>
+    <Compile Include="FormAtividades_Navio.Designer.vb">
+      <DependentUpon>FormAtividades_Navio.vb</DependentUpon>
     </Compile>
-    <Compile Include="Atividades_Navio.vb">
+    <Compile Include="FormAtividades_Navio.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Atividades_Paragens.Designer.vb">
-      <DependentUpon>Atividades_Paragens.vb</DependentUpon>
+    <Compile Include="FormAtividades_Paragens.Designer.vb">
+      <DependentUpon>FormAtividades_Paragens.vb</DependentUpon>
     </Compile>
-    <Compile Include="Atividades_Paragens.vb">
+    <Compile Include="FormAtividades_Paragens.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ClassAtividadeBase.vb" />
@@ -92,11 +92,11 @@
     <Compile Include="ClassParagem.vb" />
     <Compile Include="ClassParagens.vb" />
     <Compile Include="ClassReserva.vb" />
-    <Compile Include="CollectionQuartos.vb" />
-    <Compile Include="Cruzeiros.Designer.vb">
-      <DependentUpon>Cruzeiros.vb</DependentUpon>
+    <Compile Include="ClassQuartos.vb" />
+    <Compile Include="FormCruzeiros.Designer.vb">
+      <DependentUpon>FormCruzeiros.vb</DependentUpon>
     </Compile>
-    <Compile Include="Cruzeiros.vb">
+    <Compile Include="FormCruzeiros.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormPrincipal.Designer.vb">
@@ -105,24 +105,24 @@
     <Compile Include="FormPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Funcionario.vb" />
-    <Compile Include="Funcionarios.vb" />
-    <Compile Include="Lista_Funcionários.Designer.vb">
-      <DependentUpon>Lista_Funcionários.vb</DependentUpon>
+    <Compile Include="ClassFuncionario.vb" />
+    <Compile Include="ClassFuncionarios.vb" />
+    <Compile Include="FormLista_Funcionários.Designer.vb">
+      <DependentUpon>FormLista_Funcionários.vb</DependentUpon>
     </Compile>
-    <Compile Include="Lista_Funcionários.vb">
+    <Compile Include="FormLista_Funcionários.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Lista_Viajantes.Designer.vb">
-      <DependentUpon>Lista_Viajantes.vb</DependentUpon>
+    <Compile Include="FormLista_Viajantes.Designer.vb">
+      <DependentUpon>FormLista_Viajantes.vb</DependentUpon>
     </Compile>
-    <Compile Include="Lista_Viajantes.vb">
+    <Compile Include="FormLista_Viajantes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.vb">
-      <DependentUpon>Login.vb</DependentUpon>
+    <Compile Include="FormLogin.Designer.vb">
+      <DependentUpon>FormLogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="Login.vb">
+    <Compile Include="FormLogin.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -140,56 +140,56 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Novo_Registo_Funcionário.Designer.vb">
-      <DependentUpon>Novo_Registo_Funcionário.vb</DependentUpon>
+    <Compile Include="FormNovoRegisto_Funcionário.Designer.vb">
+      <DependentUpon>FormNovoRegisto_Funcionário.vb</DependentUpon>
     </Compile>
-    <Compile Include="Novo_Registo_Funcionário.vb">
+    <Compile Include="FormNovoRegisto_Funcionário.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Novo_Registo_Viajante.Designer.vb">
-      <DependentUpon>Novo_Registo_Viajante.vb</DependentUpon>
+    <Compile Include="FormNovoRegisto_Viajante.Designer.vb">
+      <DependentUpon>FormNovoRegisto_Viajante.vb</DependentUpon>
     </Compile>
-    <Compile Include="Novo_Registo_Viajante.vb">
+    <Compile Include="FormNovoRegisto_Viajante.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Paragens.Designer.vb">
-      <DependentUpon>Paragens.vb</DependentUpon>
+    <Compile Include="FormParagens.Designer.vb">
+      <DependentUpon>FormParagens.vb</DependentUpon>
     </Compile>
-    <Compile Include="Paragens.vb">
+    <Compile Include="FormParagens.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Quarto.vb" />
-    <Compile Include="Quartos.Designer.vb">
-      <DependentUpon>Quartos.vb</DependentUpon>
+    <Compile Include="ClassQuarto.vb" />
+    <Compile Include="FormQuartos.Designer.vb">
+      <DependentUpon>FormQuartos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Quartos.vb">
+    <Compile Include="FormQuartos.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Utilizador.vb" />
-    <Compile Include="Viajante.vb" />
-    <Compile Include="Viajantes.vb" />
+    <Compile Include="ClassUtilizador.vb" />
+    <Compile Include="ClassViajante.vb" />
+    <Compile Include="ClassViajantes.vb" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Atividades_Navio.resx">
-      <DependentUpon>Atividades_Navio.vb</DependentUpon>
+    <EmbeddedResource Include="FormAtividades_Navio.resx">
+      <DependentUpon>FormAtividades_Navio.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Atividades_Paragens.resx">
-      <DependentUpon>Atividades_Paragens.vb</DependentUpon>
+    <EmbeddedResource Include="FormAtividades_Paragens.resx">
+      <DependentUpon>FormAtividades_Paragens.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cruzeiros.resx">
-      <DependentUpon>Cruzeiros.vb</DependentUpon>
+    <EmbeddedResource Include="FormCruzeiros.resx">
+      <DependentUpon>FormCruzeiros.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lista_Funcionários.resx">
-      <DependentUpon>Lista_Funcionários.vb</DependentUpon>
+    <EmbeddedResource Include="FormLista_Funcionários.resx">
+      <DependentUpon>FormLista_Funcionários.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Lista_Viajantes.resx">
-      <DependentUpon>Lista_Viajantes.vb</DependentUpon>
+    <EmbeddedResource Include="FormLista_Viajantes.resx">
+      <DependentUpon>FormLista_Viajantes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
-      <DependentUpon>Login.vb</DependentUpon>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -197,17 +197,17 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Novo_Registo_Funcionário.resx">
-      <DependentUpon>Novo_Registo_Funcionário.vb</DependentUpon>
+    <EmbeddedResource Include="FormNovoRegisto_Funcionário.resx">
+      <DependentUpon>FormNovoRegisto_Funcionário.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Novo_Registo_Viajante.resx">
-      <DependentUpon>Novo_Registo_Viajante.vb</DependentUpon>
+    <EmbeddedResource Include="FormNovoRegisto_Viajante.resx">
+      <DependentUpon>FormNovoRegisto_Viajante.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Paragens.resx">
-      <DependentUpon>Paragens.vb</DependentUpon>
+    <EmbeddedResource Include="FormParagens.resx">
+      <DependentUpon>FormParagens.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Quartos.resx">
-      <DependentUpon>Quartos.vb</DependentUpon>
+    <EmbeddedResource Include="FormQuartos.resx">
+      <DependentUpon>FormQuartos.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

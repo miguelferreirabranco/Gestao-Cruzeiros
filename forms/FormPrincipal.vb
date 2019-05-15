@@ -87,7 +87,7 @@ Public Class FormPrincipal
 
     Private Sub CruzeirosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CruzeirosToolStripMenuItem.Click
         ' Cria uma nova instância do formulário filho.
-        Dim ChildForm As New Cruzeiros
+        Dim ChildForm As New FormCruzeiros
         ' Torná-lo uma criança deste formulário MDI antes de mostrá-lo.
         ChildForm.MdiParent = Me
 
@@ -99,7 +99,7 @@ Public Class FormPrincipal
 
     Private Sub QuartosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuartosToolStripMenuItem.Click
         ' Cria uma nova instância do formulário filho.
-        Dim ChildForm As New Quartos
+        Dim ChildForm As New FormQuartos
         ' Torná-lo uma criança deste formulário MDI antes de mostrá-lo.
         ChildForm.MdiParent = Me
 
@@ -111,7 +111,7 @@ Public Class FormPrincipal
 
     Private Sub AtividadesNavioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AtividadesNavioToolStripMenuItem.Click
         ' Cria uma nova instância do formulário filho.
-        Dim ChildForm As New Paragens
+        Dim ChildForm As New FormParagens
         ' Torná-lo uma criança deste formulário MDI antes de mostrá-lo.
         ChildForm.MdiParent = Me
 
@@ -123,7 +123,7 @@ Public Class FormPrincipal
 
     Private Sub NavioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NavioToolStripMenuItem.Click
         ' Cria uma nova instância do formulário filho.
-        Dim ChildForm As New Atividades_Navio
+        Dim ChildForm As New FormAtividades_Navio
         ' Torná-lo uma criança deste formulário MDI antes de mostrá-lo.
         ChildForm.MdiParent = Me
 
@@ -135,7 +135,7 @@ Public Class FormPrincipal
 
     Private Sub ParagensToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ParagensToolStripMenuItem1.Click
         ' Cria uma nova instância do formulário filho.
-        Dim ChildForm As New Atividades_Paragens
+        Dim ChildForm As New FormAtividades_Paragens
         ' Torná-lo uma criança deste formulário MDI antes de mostrá-lo.
         ChildForm.MdiParent = Me
 
@@ -147,7 +147,7 @@ Public Class FormPrincipal
 
     Private Sub ViajantesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ViajantesToolStripMenuItem.Click
         ' Cria uma nova instância do formulário filho.
-        Dim ChildForm As New Lista_Viajantes
+        Dim ChildForm As New FormLista_Viajantes
         ' Torná-lo uma criança deste formulário MDI antes de mostrá-lo.
         ChildForm.MdiParent = Me
 
@@ -159,7 +159,7 @@ Public Class FormPrincipal
 
     Private Sub FuncionáriosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FuncionáriosToolStripMenuItem.Click
         ' Cria uma nova instância do formulário filho.
-        Dim ChildForm As New Lista_Funcionários
+        Dim ChildForm As New FormLista_Funcionários
         ' Torná-lo uma criança deste formulário MDI antes de mostrá-lo.
         ChildForm.MdiParent = Me
 

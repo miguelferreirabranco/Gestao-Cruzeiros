@@ -1,24 +1,24 @@
-﻿Public Class Funcionario
-    Inherits Utilizador
+﻿Public Class ClassViajante
+    Inherits ClassUtilizador
 
-    Private _nib As String
+    Private _nif As String
 
     Public Sub New()
 
     End Sub
 
     Public Sub New(ByVal nome As String, ByVal sexo As String, ByVal data As Date, ByVal cc As String,
-                  ByVal login As String, ByVal pass As String, ByVal nib As String)
+                   ByVal login As String, ByVal pass As String, ByVal nif As String)
         MyBase.New(nome, sexo, data, cc, login, pass)
-        Me._nib = nib
+        Me._nif = nif
     End Sub
 
-    Public Property Nib As String
+    Public Property Nif As String
         Get
-            Return _nib
+            Return _nif
         End Get
         Set(value As String)
-            _nib = value
+            _nif = value
         End Set
     End Property
 End Class
