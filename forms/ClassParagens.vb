@@ -1,6 +1,6 @@
 ﻿Public Class ClassParagens
-    Public Class MyCollection
-        Inherits Collections.CollectionBase
+
+    Inherits Collections.CollectionBase
 
         Public Sub Add(ByVal NewMyObject As ClassParagem)
             Me.List.Add(NewMyObject)
@@ -31,5 +31,5 @@
         End Sub
 
 
-    End Class
+
 End Class

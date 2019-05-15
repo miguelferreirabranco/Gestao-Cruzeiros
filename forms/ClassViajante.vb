@@ -2,6 +2,10 @@
     Inherits ClassUtilizador
 
     Private _nif As String
+    Public CruzeirosMarcados As ClassCruzeiros
+    Public QuartosMarcados As ClassQuartos
+    Public AtividadesNavioMarcadas As ClassAtividadesNavio
+    Public AtividadesParagensMarcadas As ClassAtividadesParagens
 
     Public Sub New()
 

@@ -41,52 +41,58 @@ Partial Class FormParagens
         '
         'TextBox_local
         '
-        Me.TextBox_local.Location = New System.Drawing.Point(185, 164)
+        Me.TextBox_local.Location = New System.Drawing.Point(247, 202)
+        Me.TextBox_local.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox_local.Name = "TextBox_local"
-        Me.TextBox_local.Size = New System.Drawing.Size(140, 20)
+        Me.TextBox_local.Size = New System.Drawing.Size(185, 22)
         Me.TextBox_local.TabIndex = 100
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(117, 164)
+        Me.Label6.Location = New System.Drawing.Point(156, 202)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(51, 20)
+        Me.Label6.Size = New System.Drawing.Size(65, 25)
         Me.Label6.TabIndex = 99
         Me.Label6.Text = "Local:"
         '
         'TextBox_horafim
         '
-        Me.TextBox_horafim.Location = New System.Drawing.Point(185, 242)
+        Me.TextBox_horafim.Location = New System.Drawing.Point(247, 298)
+        Me.TextBox_horafim.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox_horafim.Name = "TextBox_horafim"
-        Me.TextBox_horafim.Size = New System.Drawing.Size(140, 20)
+        Me.TextBox_horafim.Size = New System.Drawing.Size(185, 22)
         Me.TextBox_horafim.TabIndex = 98
         '
         'TextBox_horainicio
         '
-        Me.TextBox_horainicio.Location = New System.Drawing.Point(185, 216)
+        Me.TextBox_horainicio.Location = New System.Drawing.Point(247, 266)
+        Me.TextBox_horainicio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox_horainicio.Name = "TextBox_horainicio"
-        Me.TextBox_horainicio.Size = New System.Drawing.Size(140, 20)
+        Me.TextBox_horainicio.Size = New System.Drawing.Size(185, 22)
         Me.TextBox_horainicio.TabIndex = 97
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(131, 190)
+        Me.Label5.Location = New System.Drawing.Point(156, 234)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(37, 20)
+        Me.Label5.Size = New System.Drawing.Size(59, 25)
         Me.Label5.TabIndex = 92
-        Me.Label5.Text = "Dia:"
+        Me.Label5.Text = "Data:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(57, 216)
+        Me.Label4.Location = New System.Drawing.Point(76, 266)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(111, 20)
+        Me.Label4.Size = New System.Drawing.Size(137, 25)
         Me.Label4.TabIndex = 91
         Me.Label4.Text = "Hora de Início:"
         '
@@ -94,25 +100,28 @@ Partial Class FormParagens
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(68, 242)
+        Me.Label2.Location = New System.Drawing.Point(91, 298)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(100, 20)
+        Me.Label2.Size = New System.Drawing.Size(124, 25)
         Me.Label2.TabIndex = 90
         Me.Label2.Text = "Hora de Fim:"
         '
         'TextBox_dia
         '
-        Me.TextBox_dia.Location = New System.Drawing.Point(185, 190)
+        Me.TextBox_dia.Location = New System.Drawing.Point(247, 234)
+        Me.TextBox_dia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.TextBox_dia.Name = "TextBox_dia"
-        Me.TextBox_dia.Size = New System.Drawing.Size(140, 20)
+        Me.TextBox_dia.Size = New System.Drawing.Size(185, 22)
         Me.TextBox_dia.TabIndex = 88
         '
         'Button_Adicionar
         '
         Me.Button_Adicionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Adicionar.Location = New System.Drawing.Point(23, 331)
+        Me.Button_Adicionar.Location = New System.Drawing.Point(31, 407)
+        Me.Button_Adicionar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button_Adicionar.Name = "Button_Adicionar"
-        Me.Button_Adicionar.Size = New System.Drawing.Size(88, 39)
+        Me.Button_Adicionar.Size = New System.Drawing.Size(117, 48)
         Me.Button_Adicionar.TabIndex = 86
         Me.Button_Adicionar.Text = "Adicionar"
         Me.Button_Adicionar.UseVisualStyleBackColor = True
@@ -120,17 +129,20 @@ Partial Class FormParagens
         'ListBox_Paragens
         '
         Me.ListBox_Paragens.FormattingEnabled = True
-        Me.ListBox_Paragens.Location = New System.Drawing.Point(434, 151)
+        Me.ListBox_Paragens.ItemHeight = 16
+        Me.ListBox_Paragens.Location = New System.Drawing.Point(579, 186)
+        Me.ListBox_Paragens.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ListBox_Paragens.Name = "ListBox_Paragens"
-        Me.ListBox_Paragens.Size = New System.Drawing.Size(329, 303)
+        Me.ListBox_Paragens.Size = New System.Drawing.Size(437, 372)
         Me.ListBox_Paragens.TabIndex = 85
         '
         'Button_fim
         '
         Me.Button_fim.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_fim.Location = New System.Drawing.Point(266, 82)
+        Me.Button_fim.Location = New System.Drawing.Point(355, 101)
+        Me.Button_fim.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button_fim.Name = "Button_fim"
-        Me.Button_fim.Size = New System.Drawing.Size(75, 39)
+        Me.Button_fim.Size = New System.Drawing.Size(100, 48)
         Me.Button_fim.TabIndex = 84
         Me.Button_fim.Text = ">>"
         Me.Button_fim.UseVisualStyleBackColor = True
@@ -138,9 +150,10 @@ Partial Class FormParagens
         'Button_seguinte
         '
         Me.Button_seguinte.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_seguinte.Location = New System.Drawing.Point(185, 82)
+        Me.Button_seguinte.Location = New System.Drawing.Point(247, 101)
+        Me.Button_seguinte.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button_seguinte.Name = "Button_seguinte"
-        Me.Button_seguinte.Size = New System.Drawing.Size(75, 39)
+        Me.Button_seguinte.Size = New System.Drawing.Size(100, 48)
         Me.Button_seguinte.TabIndex = 83
         Me.Button_seguinte.Text = ">"
         Me.Button_seguinte.UseVisualStyleBackColor = True
@@ -148,9 +161,10 @@ Partial Class FormParagens
         'Button_anterior
         '
         Me.Button_anterior.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_anterior.Location = New System.Drawing.Point(104, 82)
+        Me.Button_anterior.Location = New System.Drawing.Point(139, 101)
+        Me.Button_anterior.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button_anterior.Name = "Button_anterior"
-        Me.Button_anterior.Size = New System.Drawing.Size(75, 39)
+        Me.Button_anterior.Size = New System.Drawing.Size(100, 48)
         Me.Button_anterior.TabIndex = 82
         Me.Button_anterior.Text = "<"
         Me.Button_anterior.UseVisualStyleBackColor = True
@@ -158,9 +172,10 @@ Partial Class FormParagens
         'Button_inicio
         '
         Me.Button_inicio.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_inicio.Location = New System.Drawing.Point(23, 82)
+        Me.Button_inicio.Location = New System.Drawing.Point(31, 101)
+        Me.Button_inicio.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button_inicio.Name = "Button_inicio"
-        Me.Button_inicio.Size = New System.Drawing.Size(75, 39)
+        Me.Button_inicio.Size = New System.Drawing.Size(100, 48)
         Me.Button_inicio.TabIndex = 81
         Me.Button_inicio.Text = "<<"
         Me.Button_inicio.UseVisualStyleBackColor = True
@@ -169,17 +184,18 @@ Partial Class FormParagens
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(324, 9)
+        Me.Label1.Location = New System.Drawing.Point(432, 11)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(112, 25)
+        Me.Label1.Size = New System.Drawing.Size(138, 31)
         Me.Label1.TabIndex = 101
         Me.Label1.Text = "Paragens"
         '
-        'Paragens
+        'FormParagens
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(793, 466)
+        Me.ClientSize = New System.Drawing.Size(1057, 574)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox_local)
         Me.Controls.Add(Me.Label6)
@@ -195,7 +211,8 @@ Partial Class FormParagens
         Me.Controls.Add(Me.Button_seguinte)
         Me.Controls.Add(Me.Button_anterior)
         Me.Controls.Add(Me.Button_inicio)
-        Me.Name = "Paragens"
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Name = "FormParagens"
         Me.Text = "Paragens"
         Me.ResumeLayout(False)
         Me.PerformLayout()
