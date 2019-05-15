@@ -91,6 +91,7 @@
     <Compile Include="ClassAtividadesParagens.vb" />
     <Compile Include="ClassParagem.vb" />
     <Compile Include="ClassParagens.vb" />
+    <Compile Include="ClassReserva.vb" />
     <Compile Include="CollectionQuartos.vb" />
     <Compile Include="Cruzeiros.Designer.vb">
       <DependentUpon>Cruzeiros.vb</DependentUpon>
