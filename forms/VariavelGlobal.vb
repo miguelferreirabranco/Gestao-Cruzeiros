@@ -3,7 +3,7 @@
     Public CruzeiroVisivel As Integer
     Public ViajanteVisivel As Integer
     Public FuncionarioVisivel As Integer
-    Dim username As Single
+    Public username As String
 
     Public Sub InitVars()
         EmpresaCruzeiros = New ClassCruzeiros
