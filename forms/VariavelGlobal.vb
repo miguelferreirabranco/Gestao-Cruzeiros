@@ -1,11 +1,13 @@
 ﻿Module VariavelGlobal
     Public EmpresaCruzeiros As ClassCruzeiros
-    Public X As Integer
+    Public CruzeiroVisivel As Integer
+    Public ViajanteVisivel As Integer
     Dim username As Single
 
     Public Sub InitVars()
         EmpresaCruzeiros = New ClassCruzeiros
-        X = 0
+        CruzeiroVisivel = 0
+        ViajanteVisivel = 0
         username = ""
     End Sub
 

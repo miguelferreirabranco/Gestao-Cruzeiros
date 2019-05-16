@@ -216,7 +216,7 @@ Partial Class FormAtividades_Navio
         Me.Label6.TabIndex = 61
         Me.Label6.Text = "Atividades no Navio"
         '
-        'Atividades_Navio
+        'FormAtividades_Navio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -240,7 +240,7 @@ Partial Class FormAtividades_Navio
         Me.Controls.Add(Me.Button_seguinte)
         Me.Controls.Add(Me.Button_anterior)
         Me.Controls.Add(Me.Button_inicio)
-        Me.Name = "Atividades_Navio"
+        Me.Name = "FormAtividades_Navio"
         Me.Text = "Atividades_Navio"
         Me.ResumeLayout(False)
         Me.PerformLayout()

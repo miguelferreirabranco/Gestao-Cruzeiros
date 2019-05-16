@@ -235,7 +235,7 @@ Partial Class FormAtividades_Paragens
         Me.Label7.TabIndex = 81
         Me.Label7.Text = "Atividades nas Paragens"
         '
-        'Atividades_Paragens
+        'FormAtividades_Paragens
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -261,7 +261,7 @@ Partial Class FormAtividades_Paragens
         Me.Controls.Add(Me.Button_seguinte)
         Me.Controls.Add(Me.Button_anterior)
         Me.Controls.Add(Me.Button_inicio)
-        Me.Name = "Atividades_Paragens"
+        Me.Name = "FormAtividades_Paragens"
         Me.Text = "Atividades_Paragens"
         Me.ResumeLayout(False)
         Me.PerformLayout()

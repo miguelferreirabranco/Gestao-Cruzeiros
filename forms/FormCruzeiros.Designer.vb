@@ -216,7 +216,7 @@ Partial Class FormCruzeiros
         Me.Label6.TabIndex = 62
         Me.Label6.Text = "Cruzeiros"
         '
-        'Cruzeiros
+        'FormCruzeiros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -240,7 +240,7 @@ Partial Class FormCruzeiros
         Me.Controls.Add(Me.Button_seguinte)
         Me.Controls.Add(Me.Button_anterior)
         Me.Controls.Add(Me.Button_inicio)
-        Me.Name = "Cruzeiros"
+        Me.Name = "FormCruzeiros"
         Me.Text = "Cruzeiros"
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -1,40 +1,39 @@
 ﻿Public Class FormNovoRegisto_Viajante
-    Private novoviajante As ClassViajante
-    Private lista_viaj As ClassViajantes
-    Private visivel_viaj As Integer = 0
+
 
     Private Sub Button_Registar_Click(sender As Object, e As EventArgs) Handles Button_Registar.Click
 
+        Dim novoviajante As ClassViajante
 
-        novoviajante = New ClassViajante(TextBox_nome.Text, TextBox_sexo.Text, DateTimePicker_datanasc.Value,
-                                               TextBox_ncc.Text, TextBox_username.Text, TextBox_password.Text,
-                                              TextBox_nif.Text)
-
-        If pessoa_existente(Me.TextBox_ncc.Text) = True Then
+        If viajante_existente(Me.TextBox_ncc.Text) = True Then
             Dim TempForm As New FormLogin
             TempForm.Show()
-            'Dúvida!!! Forço a abertura do FormLogin ou deixo o utilizador fechar este e ir para o do login 
+
             MsgBox("Já possui um registo! Basta fazer o login!")
         Else
             If username_existente(Me.TextBox_username.Text) = True Then
                 MsgBox("Este nome de utilizador já existe! Experimente outro diferente!")
                 Me.TextBox_username.Clear()
             Else
-                Me.lista_viaj.Add(novoviajante)
-                visivel_viaj = Me.lista_viaj.Count - 1
+                novoviajante = New ClassViajante(TextBox_nome.Text, TextBox_sexo.Text, DateTimePicker_datanasc.Value,
+                                               TextBox_ncc.Text, TextBox_username.Text, TextBox_password.Text,
+                                              TextBox_nif.Text)
+
+                EmpresaCruzeiros(CruzeiroVisivel).Viajantes.Add(novoviajante)
+                ViajanteVisivel = EmpresaCruzeiros(CruzeiroVisivel).Viajantes.Count - 1
                 Dim TempForm As New FormLogin
                 TempForm.Show()
-                'Mesma dúvida!!!
+
                 MsgBox("Registo efetuado com sucesso! Autentique-se com os seus dados de Login!")
             End If
         End If
     End Sub
 
-    Public Function pessoa_existente(ByVal cod As String) As Boolean
+    Public Function viajante_existente(ByVal cod As String) As Boolean
         Dim temp As Boolean = False
         Dim k As Integer = 0
-        While k <= Me.lista_viaj.Count - 1 And temp = False
-            If Me.lista_viaj(k).Numero_cc = cod Then
+        While k <= EmpresaCruzeiros(CruzeiroVisivel).Viajantes.Count - 1 And temp = False
+            If EmpresaCruzeiros(CruzeiroVisivel).Viajantes(k).Numero_cc = cod Then
                 temp = True
             Else
                 temp = False
@@ -47,8 +46,8 @@
     Public Function username_existente(ByVal name As String) As Boolean
         Dim temp As Boolean = False
         Dim k As Integer = 0
-        While k <= Me.lista_viaj.Count - 1 And temp = False
-            If Me.lista_viaj(k).Login = name Then
+        While k <= EmpresaCruzeiros(CruzeiroVisivel).Viajantes.Count - 1 And temp = False
+            If EmpresaCruzeiros(CruzeiroVisivel).Viajantes(k).Login = name Then
                 temp = True
             Else
                 temp = False
@@ -57,5 +56,6 @@
         End While
         Return temp
     End Function
+
 
 End Class
