@@ -50,4 +50,8 @@
 
         EmpresaCruzeiros(CruzeiroVisivel).Quartos(i).AnularReserva(username) ' ajustar quando se puser um login
     End Sub
+
+    Private Sub Button_reservaVIP_Click(sender As Object, e As EventArgs) Handles Button_reservaVIP.Click
+
+    End Sub
 End Class
