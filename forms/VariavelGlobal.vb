@@ -2,6 +2,7 @@
     Public EmpresaCruzeiros As ClassCruzeiros
     Public CruzeiroVisivel As Integer
     Public ViajanteVisivel As Integer
+    Public FuncionarioVisivel As Integer
     Dim username As Single
 
     Public Sub InitVars()
