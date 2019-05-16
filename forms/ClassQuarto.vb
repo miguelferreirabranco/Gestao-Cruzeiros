@@ -3,7 +3,7 @@
     Private _npessoas As Integer
     Private _nquarto As Integer
     Private _ppessoa As Single
-    Private _userNumber As String
+    Private _NomedeReserva As String
 
     Public Property Npessoas As Integer
         Get
@@ -34,12 +34,12 @@
 
 
 
-    Public Property UserNumber As String
+    Public Property Nomedereserva As String
         Get
-            Return _userNumber
+            Return _NomedeReserva
         End Get
         Set(value As String)
-            _userNumber = value
+            _NomedeReserva = value
         End Set
     End Property
 
@@ -60,18 +60,18 @@
         _nquarto = nquarto
         _ppessoa = ppessoa
         Me.Seccao = seccao
-        _userNumber = ""
+        _NomedeReserva = ""
     End Sub
     Public Sub Reservar(ByVal Nome As String)
-        If Me.UserNumber = "" Then
-            Me.UserNumber = Nome
+        If Me.Nomedereserva = "" Then
+            Me.Nomedereserva = Nome
         Else
             MsgBox("O quarto em questão já se encontra reservado!")
         End If
     End Sub
     Public Sub AnularReserva(ByVal Nome As String)
-        If Me.UserNumber = Nome Then
-            Me.UserNumber = ""
+        If Me.Nomedereserva = Nome Then
+            Me.Nomedereserva = ""
         Else
             MsgBox("O quarto em questao nao se encontra reservado ou não está reservado por si!")
         End If

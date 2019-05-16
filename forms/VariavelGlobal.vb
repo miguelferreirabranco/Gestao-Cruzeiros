@@ -4,7 +4,7 @@
     Public ViajanteVisivel As Integer
     Public FuncionarioVisivel As Integer
 
-    Public username As String
+
 
 
 
@@ -12,7 +12,7 @@
         EmpresaCruzeiros = New ClassCruzeiros
         CruzeiroVisivel = 0
         ViajanteVisivel = 0
-        username = ""
+
     End Sub
 
 End Module
