@@ -73,7 +73,7 @@
         If Me.UserNumber = Nome Then
             Me.UserNumber = ""
         Else
-            MsgBox("O quarto em questao nao se encontra reservado ou não está reservado por si!")
+            MsgBox("O quarto em questão não se encontra reservado ou não está reservado por si!")
         End If
     End Sub
 

@@ -18,8 +18,8 @@
                 novofuncionario = New ClassFuncionario(TextBox_nome.Text, TextBox_sexo.Text, DateTimePicker_datanasc.Value,
                                               TextBox_ncc.Text, TextBox_username.Text, TextBox_password.Text,
                                              TextBox_nib.Text)
-                EmpresaCruzeiros(CruzeiroVisivel).Funcionarios.Add(novofuncionario)
-                FuncionarioVisivel = EmpresaCruzeiros(CruzeiroVisivel).Funcionarios.Count - 1
+                EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Funcionarios.Add(novofuncionario)
+                FuncionarioVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Funcionarios.Count - 1
                 Dim TempForm As New FormLogin
                 TempForm.Show()
 
@@ -31,8 +31,8 @@
     Public Function funcionario_existente(ByVal cod As String) As Boolean
         Dim temp As Boolean = False
         Dim k As Integer = 0
-        While k <= EmpresaCruzeiros(CruzeiroVisivel).Funcionarios.Count - 1 And temp = False
-            If EmpresaCruzeiros(CruzeiroVisivel).Funcionarios(k).Numero_cc = cod Then
+        While k <= EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Funcionarios.Count - 1 And temp = False
+            If EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Funcionarios(k).Numero_cc = cod Then
                 temp = True
             Else
                 temp = False
@@ -45,8 +45,8 @@
     Public Function username_existente(ByVal name As String) As Boolean
         Dim temp As Boolean = False
         Dim k As Integer = 0
-        While k <= EmpresaCruzeiros(CruzeiroVisivel).Funcionarios.Count - 1 And temp = False
-            If EmpresaCruzeiros(CruzeiroVisivel).Funcionarios(k).Login = name Then
+        While k <= EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Funcionarios.Count - 1 And temp = False
+            If EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Funcionarios(k).Login = name Then
                 temp = True
             Else
                 temp = False

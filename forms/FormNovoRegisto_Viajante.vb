@@ -19,8 +19,8 @@
                                                TextBox_ncc.Text, TextBox_username.Text, TextBox_password.Text,
                                               TextBox_nif.Text)
 
-                EmpresaCruzeiros(CruzeiroVisivel).Viajantes.Add(novoviajante)
-                ViajanteVisivel = EmpresaCruzeiros(CruzeiroVisivel).Viajantes.Count - 1
+                EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes.Add(novoviajante)
+                ViajanteVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes.Count - 1
                 Dim TempForm As New FormLogin
                 TempForm.Show()
 
@@ -32,8 +32,8 @@
     Public Function viajante_existente(ByVal cod As String) As Boolean
         Dim temp As Boolean = False
         Dim k As Integer = 0
-        While k <= EmpresaCruzeiros(CruzeiroVisivel).Viajantes.Count - 1 And temp = False
-            If EmpresaCruzeiros(CruzeiroVisivel).Viajantes(k).Numero_cc = cod Then
+        While k <= EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes.Count - 1 And temp = False
+            If EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(k).Numero_cc = cod Then
                 temp = True
             Else
                 temp = False
@@ -46,8 +46,8 @@
     Public Function username_existente(ByVal name As String) As Boolean
         Dim temp As Boolean = False
         Dim k As Integer = 0
-        While k <= EmpresaCruzeiros(CruzeiroVisivel).Viajantes.Count - 1 And temp = False
-            If EmpresaCruzeiros(CruzeiroVisivel).Viajantes(k).Login = name Then
+        While k <= EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes.Count - 1 And temp = False
+            If EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(k).Login = name Then
                 temp = True
             Else
                 temp = False
