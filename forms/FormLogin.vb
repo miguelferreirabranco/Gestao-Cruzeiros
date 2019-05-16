@@ -11,4 +11,8 @@
 
         TempForm.Show()
     End Sub
+
+    Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        VariavelGlobal.InitVars()
+    End Sub
 End Class

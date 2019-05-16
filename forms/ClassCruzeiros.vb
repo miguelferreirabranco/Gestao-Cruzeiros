@@ -28,4 +28,6 @@
     Public Sub InsertAt(ByVal index As Integer, ByVal NewMyObject As ClassParagem)
         Me.List.Insert(index, NewMyObject)
     End Sub
+
+
 End Class

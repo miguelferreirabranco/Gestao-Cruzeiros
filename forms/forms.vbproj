@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="ClassCruzeiro.vb" />
     <Compile Include="ClassCruzeiros.vb" />
+    <Compile Include="ClassEmpresa.vb" />
     <Compile Include="FormAtividades_Navio.Designer.vb">
       <DependentUpon>FormAtividades_Navio.vb</DependentUpon>
     </Compile>
