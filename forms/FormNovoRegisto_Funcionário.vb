@@ -26,6 +26,9 @@
                 MsgBox("Registo efetuado com sucesso! Autentique-se com os seus dados de Login!")
             End If
         End If
+
+        EmpresaCruzeiros.gravar()
+
     End Sub
 
     Public Function funcionario_existente(ByVal cod As String) As Boolean

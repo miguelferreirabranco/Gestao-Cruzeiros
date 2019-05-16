@@ -44,14 +44,14 @@ Partial Class FormLista_Viajantes
         Me.Label6.TabIndex = 64
         Me.Label6.Text = "Lista dos Viajantes"
         '
-        'Lista_Viajantes
+        'FormLista_Viajantes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(590, 389)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ListBox_viajantes)
-        Me.Name = "Lista_Viajantes"
+        Me.Name = "FormLista_Viajantes"
         Me.Text = "Lista_Viajantes"
         Me.ResumeLayout(False)
         Me.PerformLayout()

@@ -47,6 +47,8 @@
             Me.ListBox_Paragens.Items.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(k).ParaString)
         Next
 
+        EmpresaCruzeiros.gravar()
+
     End Sub
 
 End Class

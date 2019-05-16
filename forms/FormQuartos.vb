@@ -39,19 +39,29 @@
         quarto = New ClassQuarto(Me.TextBox_npessoas.Text, i + 1, Me.TextBox_preco.Text, Me.TextBox_seccao.Text)
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Add(quarto)
         i = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count - 1
+
+        EmpresaCruzeiros.gravar()
     End Sub
 
     Private Sub Button_Reservar_Click(sender As Object, e As EventArgs) Handles Button_Reservar.Click
 
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(i).Reservar(username) ' ajustar quando se puser um login
+
+
+        EmpresaCruzeiros.gravar()
+
     End Sub
 
     Private Sub Button_anular_Click(sender As Object, e As EventArgs) Handles Button_anular.Click
 
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(i).AnularReserva(username) ' ajustar quando se puser um login
+
+        EmpresaCruzeiros.gravar()
+
     End Sub
 
     Private Sub Button_reservaVIP_Click(sender As Object, e As EventArgs) Handles Button_reservaVIP.Click
 
+        EmpresaCruzeiros.gravar()
     End Sub
 End Class

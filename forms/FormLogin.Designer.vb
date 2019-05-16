@@ -94,7 +94,7 @@ Partial Class FormLogin
         Me.Label3.TabIndex = 57
         Me.Label3.Text = "Ainda não tem conta? Registe-se aqui!"
         '
-        'Login
+        'FormLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -106,7 +106,7 @@ Partial Class FormLogin
         Me.Controls.Add(Me.TextBox_username)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Name = "Login"
+        Me.Name = "FormLogin"
         Me.Text = "Login"
         Me.ResumeLayout(False)
         Me.PerformLayout()

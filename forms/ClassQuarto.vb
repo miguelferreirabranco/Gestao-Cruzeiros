@@ -68,6 +68,8 @@
         Else
             MsgBox("O quarto em questão já se encontra reservado!")
         End If
+
+
     End Sub
     Public Sub AnularReserva(ByVal Nome As String)
         If Me.UserNumber = Nome Then
