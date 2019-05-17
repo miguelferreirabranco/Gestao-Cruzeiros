@@ -10,13 +10,13 @@
     End Sub
     Sub LoadForm()
 
-        Me.TextBox_numero.Text = EmpresaCruzeiros(CruzeiroVisivel).Quartos(i).Nquarto
-        Me.TextBox_npessoas.Text = EmpresaCruzeiros(CruzeiroVisivel).Quartos(i).Npessoas
-        Me.TextBox_preco.Text = EmpresaCruzeiros(CruzeiroVisivel).Quartos(i).Ppessoa
-        Me.TextBox_seccao.Text = EmpresaCruzeiros(CruzeiroVisivel).Quartos(i).Seccao
+        Me.TextBox_numero.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(i).Nquarto
+        Me.TextBox_npessoas.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(i).Npessoas
+        Me.TextBox_preco.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(i).Ppessoa
+        Me.TextBox_seccao.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(i).Seccao
         Me.ListBox_Quartos.Items.Clear()
-        For k = 0 To EmpresaCruzeiros(CruzeiroVisivel).Quartos.Count - 1
-            Me.ListBox_Quartos.Items.Add(EmpresaCruzeiros(CruzeiroVisivel).Quartos(k).ParaString)
+        For k = 0 To EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count - 1
+            Me.ListBox_Quartos.Items.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k).ParaString)
         Next
 
     End Sub
@@ -52,7 +52,7 @@
     Private Sub Button_Reservar_Click(sender As Object, e As EventArgs) Handles Button_Reservar.Click
 
 
-        EmpresaCruzeiros(CruzeiroVisivel).Quartos(i).Reservar(EmpresaCruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).Nome) ' ajustar quando se puser um login
+        EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(i).Reservar(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).Nome) ' ajustar quando se puser um login
 
 
 
@@ -64,7 +64,7 @@
     Private Sub Button_anular_Click(sender As Object, e As EventArgs) Handles Button_anular.Click
 
 
-        EmpresaCruzeiros(CruzeiroVisivel).Quartos(i).AnularReserva(EmpresaCruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).Nome) ' ajustar quando se puser um login
+        EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(i).AnularReserva(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).Nome) ' ajustar quando se puser um login
 
 
         EmpresaCruzeiros.gravar()
