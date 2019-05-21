@@ -20,6 +20,7 @@
                                              TextBox_nib.Text)
                 EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Funcionarios.Add(novofuncionario)
                 FuncionarioVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Funcionarios.Count - 1
+
                 Dim TempForm As New FormLogin
                 TempForm.Show()
 

@@ -44,14 +44,14 @@ Partial Class FormLista_Funcionários
         Me.Label6.TabIndex = 63
         Me.Label6.Text = "Lista dos Funcionários"
         '
-        'Lista_Funcionários
+        'FormLista_Funcionários
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(636, 387)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.ListBox_funcionarios)
-        Me.Name = "Lista_Funcionários"
+        Me.Name = "FormLista_Funcionários"
         Me.Text = "Lista_Funcionários"
         Me.ResumeLayout(False)
         Me.PerformLayout()
