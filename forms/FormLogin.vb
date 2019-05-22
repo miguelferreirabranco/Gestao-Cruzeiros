@@ -1,9 +1,18 @@
 ﻿Public Class FormLogin
     Private Sub Button_entrar_Click(sender As Object, e As EventArgs) Handles Button_entrar.Click
         Dim TempForm As New FormPrincipal
+        Dim loginok As Boolean
+        Dim Nivel As String
 
-        TempForm.Show()
+        ValidaLogin(Me.TextBox_username.Text, Me.TextBox_password.Text, loginok, Nivel)
 
+
+
+        If loginok = True Then
+            TempForm.Show()
+        Else
+            MsgBox("login Incorreto, tente outra vez")
+        End If
     End Sub
 
     Private Sub Button_Adicionar_Click(sender As Object, e As EventArgs) Handles Button_Adicionar.Click
@@ -30,40 +39,11 @@
 
     Private _loginok As Boolean = False
 
-    Private Sub OK_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OK.Click
-        Dim loginok As Boolean
-        Dim Nivel As Integer
-
-        ValidaLogin(Me.TextBox_username.Text, Me.TextBox_password.Text, loginok, Nivel)
-        _loginok = loginok
-
-        If _loginok Then
-            RaiseEvent loginok(Me.TextBox_username.Text, Nivel)
-            Me.Close()
-        Else
-            MsgBox("Login Errado")
-
-        End If
-
-
-
-
-    End Sub
-
-    Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
-
-        _loginok = False
-        RaiseEvent LoginErro(Me.TextBox_username.Text, "Login Cancelado")
-        Me.Close()
-    End Sub
-
-
-
     Private Sub LoginForm_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
 
     End Sub
 
-    Private Sub ValidaLogin(ByVal NomeUser As String, ByVal Password As String, ByRef loginok As Boolean, ByRef Nivel As Single)
+    Private Sub ValidaLogin(ByVal NomeUser As String, ByVal Password As String, ByRef loginok As Boolean, ByRef Nivel As String)
         loginok = False
         For i = 0 To EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes.Count - 1
             If EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(i).Login = NomeUser Then
