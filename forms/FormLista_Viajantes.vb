@@ -6,9 +6,9 @@
 
         ListBox_viajantes.Items.Clear()
 
-        For i = 0 To EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes.Count - 1
+        For i = 0 To EmpresaCruzeiros.Viajantes.Count - 1
 
-            ListBox_viajantes.Items.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(i).Pessoa_str)
+            ListBox_viajantes.Items.Add(EmpresaCruzeiros.Viajantes(i).Pessoa_str)
 
         Next
 

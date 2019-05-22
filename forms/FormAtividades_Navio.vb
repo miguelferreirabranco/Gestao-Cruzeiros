@@ -39,13 +39,13 @@
     End Sub
 
     Private Sub Button_Marcar_Click(sender As Object, e As EventArgs) Handles Button_Marcar.Click
-        EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).MarcarAtividadeNavio(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel))
+        EmpresaCruzeiros.Viajantes(ViajanteVisivel).MarcarAtividadeNavio(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel))
         AtividadeNavioVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio.Count - 1
         mostra()
     End Sub
 
     Private Sub Button_anular_Click(sender As Object, e As EventArgs) Handles Button_anular.Click
-        EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).AnularMarcacaoNavio(Me.TextBox_nome.Text)
+        EmpresaCruzeiros.Viajantes(ViajanteVisivel).AnularMarcacaoNavio(Me.TextBox_nome.Text)
         AtividadeNavioVisivel = 0
         mostra()
     End Sub

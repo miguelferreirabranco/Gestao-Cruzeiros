@@ -45,9 +45,9 @@
 
     Private Sub ValidaLogin(ByVal NomeUser As String, ByVal Password As String, ByRef loginok As Boolean, ByRef Nivel As String)
         loginok = False
-        For i = 0 To EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes.Count - 1
-            If EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(i).Login = NomeUser Then
-                If EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(i).Password = Password Then
+        For i = 0 To EmpresaCruzeiros.Viajantes.Count - 1
+            If EmpresaCruzeiros.Viajantes(i).Login = NomeUser Then
+                If EmpresaCruzeiros.Viajantes(i).Password = Password Then
                     ViajanteVisivel = i
                     Nivel = "Viajante"
                     MsgBox("Login efetuado com sucesso como viajante")
@@ -57,9 +57,9 @@
             End If
         Next
 
-        For i = 0 To EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Funcionarios.Count - 1
-            If EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Funcionarios(i).Login = NomeUser Then
-                If EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Funcionarios(i).Password = Password Then
+        For i = 0 To EmpresaCruzeiros.Funcionarios.Count - 1
+            If EmpresaCruzeiros.Funcionarios(i).Login = NomeUser Then
+                If EmpresaCruzeiros.Funcionarios(i).Password = Password Then
                     FuncionarioVisivel = i
                     Nivel = "Funcionario"
                     MsgBox("Login efetuado com sucesso como funcionario")

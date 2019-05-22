@@ -6,9 +6,9 @@
 
         ListBox_funcionarios.Items.Clear()
 
-        For i = 0 To EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Funcionarios.Count - 1
+        For i = 0 To EmpresaCruzeiros.Funcionarios.Count - 1
 
-            ListBox_funcionarios.Items.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Funcionarios(i).Pessoa_str)
+            ListBox_funcionarios.Items.Add(EmpresaCruzeiros.Funcionarios(i).Pessoa_str)
 
         Next
 

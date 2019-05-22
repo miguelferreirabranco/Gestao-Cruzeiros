@@ -52,7 +52,13 @@
         mostra()
     End Sub
 
-    Private Sub Button_Reservar_Click(sender As Object, e As EventArgs) Handles Button_Reservar.Click
 
+    Private Sub Button_modificar_Click(sender As Object, e As EventArgs) Handles Button_modificar.Click
+        EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).modificar(Me.TextBox_nome.Text, Me.DateTimePicker_datainicial.Value, Me.DateTimePicker_datafinal.Value, Me.TextBox_origem.Text, Me.TextBox_destino.Text)
+        mostra()
+    End Sub
+
+    Private Sub Button_Reservar_Click(sender As Object, e As EventArgs) Handles Button_Reservar.Click
+        EmpresaCruzeiros.Viajantes(ViajanteVisivel).CruzeirosMarcados.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel))
     End Sub
 End Class
