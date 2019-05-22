@@ -30,4 +30,120 @@
         Return MyBase.Pessoa_str() & vbTab & Me.Nif
     End Function
 
+    Public Sub MarcarAtividadeNavio(ByVal novaatividadenavio As ClassAtividadeNavio)
+        Dim temp As Boolean = False
+        Dim k As Integer = 0
+
+        If Me.AtividadesNavioMarcadas.Count > 0 Then
+
+            While k <= Me.AtividadesNavioMarcadas.Count - 1 And temp = False
+                If novaatividadenavio.Data = Me.AtividadesNavioMarcadas(k).Data Then
+                    If (novaatividadenavio.HoraInicio >= Me.AtividadesNavioMarcadas(k).HoraInicio And novaatividadenavio.HoraInicio <= Me.AtividadesNavioMarcadas(k).HoraFim) Or (novaatividadenavio.HoraFim >= Me.AtividadesNavioMarcadas(k).HoraInicio And novaatividadenavio.HoraFim <= Me.AtividadesNavioMarcadas(k).HoraFim) Then
+                        temp = True
+                    End If
+
+                End If
+                k = k + 1
+            End While
+
+            If temp = False Then
+                k = 0
+                While k <= Me.AtividadesParagensMarcadas.Count - 1 And temp = False
+                    If novaatividadenavio.Data = Me.AtividadesParagensMarcadas(k).Data Then
+                        If (novaatividadenavio.HoraInicio >= Me.AtividadesParagensMarcadas(k).HoraInicio And novaatividadenavio.HoraInicio <= Me.AtividadesParagensMarcadas(k).HoraFim) Or (novaatividadenavio.HoraFim >= Me.AtividadesParagensMarcadas(k).HoraInicio And novaatividadenavio.HoraFim <= Me.AtividadesParagensMarcadas(k).HoraFim) Then
+                            temp = True
+                        End If
+
+                    End If
+                    k = k + 1
+                End While
+                If temp = False Then
+                    Me.AtividadesNavioMarcadas.Add(novaatividadenavio)
+                Else
+                    MsgBox("Já tem uma atividade marcada nesse horário!")
+
+                End If
+            Else
+                MsgBox("Já tem uma atividade marcada nesse horário!")
+            End If
+        End If
+    End Sub
+
+    Public Sub AnularMarcacaoNavio(ByVal NomeAtividade As String)
+        Dim k As Integer = 0
+        Dim temp As Boolean = False
+
+        While k <= Me.AtividadesNavioMarcadas.Count - 1 And temp = False
+            If Me.AtividadesNavioMarcadas(k).Nome = NomeAtividade Then
+                Me.AtividadesNavioMarcadas.RemoveAt(k)
+                temp = True
+            End If
+
+        End While
+
+        If temp = False Then
+            MsgBox("Não tem esta atividade marcada!")
+        End If
+
+
+    End Sub
+
+    Public Sub MarcarAtividadeParagem(ByVal novaatividadeparagem As ClassAtividadeParagens)
+        Dim temp As Boolean = False
+        Dim k As Integer = 0
+
+        If Me.AtividadesParagensMarcadas.Count > 0 Then
+
+            While k <= Me.AtividadesParagensMarcadas.Count - 1 And temp = False
+                If novaatividadeparagem.Data = Me.AtividadesParagensMarcadas(k).Data Then
+                    If (novaatividadeparagem.HoraInicio >= Me.AtividadesParagensMarcadas(k).HoraInicio And novaatividadeparagem.HoraInicio <= Me.AtividadesParagensMarcadas(k).HoraFim) Or (novaatividadeparagem.HoraFim >= Me.AtividadesParagensMarcadas(k).HoraInicio And novaatividadeparagem.HoraFim <= Me.AtividadesParagensMarcadas(k).HoraFim) Then
+                        temp = True
+                    End If
+
+                End If
+                k = k + 1
+            End While
+
+            If temp = False Then
+                k = 0
+                While k <= Me.AtividadesNavioMarcadas.Count - 1 And temp = False
+                    If novaatividadeparagem.Data = Me.AtividadesNavioMarcadas(k).Data Then
+                        If (novaatividadeparagem.HoraInicio >= Me.AtividadesNavioMarcadas(k).HoraInicio And novaatividadeparagem.HoraInicio <= Me.AtividadesNavioMarcadas(k).HoraFim) Or (novaatividadeparagem.HoraFim >= Me.AtividadesNavioMarcadas(k).HoraInicio And novaatividadeparagem.HoraFim <= Me.AtividadesNavioMarcadas(k).HoraFim) Then
+                            temp = True
+                        End If
+
+                    End If
+                    k = k + 1
+                End While
+
+                If temp = False Then
+                    Me.AtividadesParagensMarcadas.Add(novaatividadeparagem)
+                Else
+                    MsgBox("Já tem uma atividade marcada nesse horário!")
+                End If
+
+            Else
+                MsgBox("Já tem uma atividade marcada nesse horário!")
+            End If
+        End If
+    End Sub
+
+    Public Sub AnularMarcacaoParagem(ByVal NomeAtividade As String)
+        Dim k As Integer = 0
+        Dim temp As Boolean = False
+
+        While k <= Me.AtividadesParagensMarcadas.Count - 1 And temp = False
+            If Me.AtividadesParagensMarcadas(k).Nome = NomeAtividade Then
+                Me.AtividadesParagensMarcadas.RemoveAt(k)
+                temp = True
+            End If
+
+        End While
+
+        If temp = False Then
+            MsgBox("Não tem esta atividade marcada!")
+        End If
+
+
+    End Sub
 End Class

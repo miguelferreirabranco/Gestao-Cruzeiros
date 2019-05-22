@@ -72,7 +72,7 @@
 
     End Sub
 
-    Private Sub Button_reservaVIP_Click(sender As Object, e As EventArgs) Handles Button_reservaVIP.Click
+    Private Sub Button_reservaVIP_Click(sender As Object, e As EventArgs)
 
         EmpresaCruzeiros.gravar()
     End Sub
@@ -80,4 +80,6 @@
     Private Sub ListBox_Quartos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListBox_Quartos.SelectedIndexChanged
 
     End Sub
+
+
 End Class

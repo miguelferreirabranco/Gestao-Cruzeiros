@@ -32,4 +32,7 @@ Public Class ClassAtividadeParagens
         Me.Paragem = Paragem
         Me.LocalaVisitar = Localavisitar
     End Sub
+    Public Overrides Function AtividadeParaString() As String
+        Return MyBase.AtividadeParaString() & vbTab & Me.Paragem.LocalParagem & vbTab & Me.LocalaVisitar
+    End Function
 End Class
