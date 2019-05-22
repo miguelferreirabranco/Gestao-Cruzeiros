@@ -33,14 +33,36 @@
 
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio.Add(NovaAtividadeNavio)
         AtividadeNavioVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio.Count - 1
+
+        EmpresaCruzeiros.gravar()
         mostra()
     End Sub
 
     Private Sub Button_Marcar_Click(sender As Object, e As EventArgs) Handles Button_Marcar.Click
-        EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).MarcarAtividadeNavio(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel)
+        EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).MarcarAtividadeNavio(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel))
     End Sub
 
     Private Sub Button_anular_Click(sender As Object, e As EventArgs) Handles Button_anular.Click
+        EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).AnularMarcacaoNavio(Me.TextBox_nome.Text)
+    End Sub
 
+    Private Sub Button_inicio_Click(sender As Object, e As EventArgs) Handles Button_inicio.Click
+        AtividadeNavioVisivel = 0
+        mostra()
+    End Sub
+
+    Private Sub Button_anterior_Click(sender As Object, e As EventArgs) Handles Button_anterior.Click
+        AtividadeNavioVisivel = AtividadeNavioVisivel - 1
+        mostra()
+    End Sub
+
+    Private Sub Button_seguinte_Click(sender As Object, e As EventArgs) Handles Button_seguinte.Click
+        AtividadeNavioVisivel = AtividadeNavioVisivel + 1
+        mostra()
+    End Sub
+
+    Private Sub Button_fim_Click(sender As Object, e As EventArgs) Handles Button_fim.Click
+        AtividadeNavioVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio.Count - 1
+        mostra()
     End Sub
 End Class
