@@ -22,7 +22,7 @@
             ListBox_Atividades_Paragens.Items.Clear()
 
             For k = 0 To EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens.Count - 1
-                ListBox_Atividades_Paragens.Items.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).AtividadeParaString)
+                ListBox_Atividades_Paragens.Items.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(k).AtividadeParaString)
             Next
         End If
     End Sub
@@ -38,6 +38,7 @@
                 temp = True
                 paragem = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(k)
             End If
+            k = k + 1
         End While
 
         NovaAtividadeParagem = New ClassAtividadeParagens(Me.TextBox_nome.Text, Me.TextBox_horainicio.Text, Me.TextBox_horafim.Text, Me.TextBox_tipo.Text, paragem, Me.TextBox_local.Text)
@@ -51,10 +52,14 @@
 
     Private Sub Button_Marcar_Click(sender As Object, e As EventArgs) Handles Button_Marcar.Click
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).MarcarAtividadeParagem(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel))
+        AtividadeParagemVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens.Count - 1
+        mostra()
     End Sub
 
     Private Sub Button_anular_Click(sender As Object, e As EventArgs) Handles Button_anular.Click
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).AnularMarcacaoParagem(Me.TextBox_nome.Text)
+        AtividadeParagemVisivel = 0
+        mostra()
     End Sub
 
     Private Sub Button_inicio_Click(sender As Object, e As EventArgs) Handles Button_inicio.Click

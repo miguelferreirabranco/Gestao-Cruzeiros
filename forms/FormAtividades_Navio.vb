@@ -21,7 +21,7 @@
             ListBox_Atividades_Navio.Items.Clear()
 
             For k = 0 To EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio.Count - 1
-                ListBox_Atividades_Navio.Items.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).AtividadeParaString)
+                ListBox_Atividades_Navio.Items.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(k).AtividadeParaString)
             Next
         End If
     End Sub
@@ -40,10 +40,14 @@
 
     Private Sub Button_Marcar_Click(sender As Object, e As EventArgs) Handles Button_Marcar.Click
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).MarcarAtividadeNavio(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel))
+        AtividadeNavioVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio.Count - 1
+        mostra()
     End Sub
 
     Private Sub Button_anular_Click(sender As Object, e As EventArgs) Handles Button_anular.Click
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).AnularMarcacaoNavio(Me.TextBox_nome.Text)
+        AtividadeNavioVisivel = 0
+        mostra()
     End Sub
 
     Private Sub Button_inicio_Click(sender As Object, e As EventArgs) Handles Button_inicio.Click

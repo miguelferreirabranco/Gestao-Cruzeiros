@@ -94,7 +94,7 @@ Partial Class FormCruzeiros
         'Button_Adicionar
         '
         Me.Button_Adicionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Adicionar.Location = New System.Drawing.Point(79, 404)
+        Me.Button_Adicionar.Location = New System.Drawing.Point(173, 359)
         Me.Button_Adicionar.Name = "Button_Adicionar"
         Me.Button_Adicionar.Size = New System.Drawing.Size(88, 39)
         Me.Button_Adicionar.TabIndex = 5
@@ -199,7 +199,7 @@ Partial Class FormCruzeiros
         'Button_Reservar
         '
         Me.Button_Reservar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Reservar.Location = New System.Drawing.Point(173, 404)
+        Me.Button_Reservar.Location = New System.Drawing.Point(79, 404)
         Me.Button_Reservar.Name = "Button_Reservar"
         Me.Button_Reservar.Size = New System.Drawing.Size(88, 39)
         Me.Button_Reservar.TabIndex = 19
