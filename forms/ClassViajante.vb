@@ -30,4 +30,13 @@
         Return MyBase.Pessoa_str() & vbTab & Me.Nif
     End Function
 
+    Public Sub MarcarAtividadeNavio(ByVal atividadenavio As ClassAtividadeNavio)
+        Dim temp As Boolean = False
+        Dim k As Integer
+
+        Me.AtividadesNavioMarcadas.Add(atividadenavio)
+    End Sub
+
+
+
 End Class
