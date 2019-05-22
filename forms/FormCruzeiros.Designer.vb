@@ -86,9 +86,9 @@ Partial Class FormCruzeiros
         'ListBox_Cruzeiros
         '
         Me.ListBox_Cruzeiros.FormattingEnabled = True
-        Me.ListBox_Cruzeiros.Location = New System.Drawing.Point(466, 163)
+        Me.ListBox_Cruzeiros.Location = New System.Drawing.Point(381, 76)
         Me.ListBox_Cruzeiros.Name = "ListBox_Cruzeiros"
-        Me.ListBox_Cruzeiros.Size = New System.Drawing.Size(293, 290)
+        Me.ListBox_Cruzeiros.Size = New System.Drawing.Size(437, 368)
         Me.ListBox_Cruzeiros.TabIndex = 4
         '
         'Button_Adicionar
@@ -220,7 +220,7 @@ Partial Class FormCruzeiros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(816, 465)
+        Me.ClientSize = New System.Drawing.Size(840, 465)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button_Reservar)
         Me.Controls.Add(Me.Button_modificar)
