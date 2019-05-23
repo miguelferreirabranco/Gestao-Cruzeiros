@@ -39,9 +39,6 @@
 
     Private _loginok As Boolean = False
 
-    Private Sub LoginForm_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
-
-    End Sub
 
     Private Sub ValidaLogin(ByVal NomeUser As String, ByVal Password As String, ByRef loginok As Boolean, ByRef Nivel As String)
         loginok = False
