@@ -79,6 +79,7 @@
         End If
     End Sub
 
+
     Public Function ParaString() As String
         Return Me.Nquarto & vbTab & Me.Seccao & vbTab & Me.Npessoas & vbTab & Me.Ppessoa
     End Function

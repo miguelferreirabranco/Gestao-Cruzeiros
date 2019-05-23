@@ -39,8 +39,6 @@
         While k <= EmpresaCruzeiros.Funcionarios.Count - 1 And temp = False
             If EmpresaCruzeiros.Funcionarios(k).Numero_cc = cod Then
                 temp = True
-            Else
-                temp = False
             End If
             k = k + 1
         End While
@@ -53,8 +51,6 @@
         While k <= EmpresaCruzeiros.Funcionarios.Count - 1 And temp = False
             If EmpresaCruzeiros.Funcionarios(k).Login = name Then
                 temp = True
-            Else
-                temp = False
             End If
             k = k + 1
         End While
