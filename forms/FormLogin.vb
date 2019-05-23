@@ -5,14 +5,17 @@
         Dim Nivel As String
 
         ValidaLogin(Me.TextBox_username.Text, Me.TextBox_password.Text, loginok, Nivel)
-
-
+        NivelVisivel = Nivel
 
         If loginok = True Then
             TempForm.Show()
         Else
-            MsgBox("login Incorreto, tente outra vez")
+            MsgBox("Dados de login incorretos, tente novamente!")
+            Me.TextBox_username.Clear()
+            Me.TextBox_password.Clear()
+
         End If
+
     End Sub
 
     Private Sub Button_Adicionar_Click(sender As Object, e As EventArgs) Handles Button_Adicionar.Click
@@ -21,8 +24,10 @@
 
         If RadioButtonFuncionario.Checked Then
             TempFormFuncionario.Show()
-        Else
+        ElseIf RadioButtonViajante.Checked Then
             TempFormViajante.Show()
+        Else
+            MsgBox("Selecione qual o tipo de utilizador!")
 
         End If
 
@@ -31,6 +36,7 @@
 
     Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         VariavelGlobal.InitVars()
+
     End Sub
 
 
@@ -47,8 +53,9 @@
                 If EmpresaCruzeiros.Viajantes(i).Password = Password Then
                     ViajanteVisivel = i
                     Nivel = "Viajante"
-                    MsgBox("Login efetuado com sucesso como viajante")
                     loginok = True
+                    MsgBox("Login efetuado com sucesso como viajante!")
+
                     Exit Sub
                 End If
             End If
@@ -59,12 +66,15 @@
                 If EmpresaCruzeiros.Funcionarios(i).Password = Password Then
                     FuncionarioVisivel = i
                     Nivel = "Funcionario"
-                    MsgBox("Login efetuado com sucesso como funcionario")
                     loginok = True
+                    MsgBox("Login efetuado com sucesso como funcionário!")
+
                     Exit Sub
                 End If
             End If
         Next
 
     End Sub
+
+
 End Class

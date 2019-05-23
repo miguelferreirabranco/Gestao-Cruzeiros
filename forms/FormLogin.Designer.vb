@@ -30,6 +30,7 @@ Partial Class FormLogin
         Me.Button_entrar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.RadioButtonFuncionario = New System.Windows.Forms.RadioButton()
+        Me.RadioButtonViajante = New System.Windows.Forms.RadioButton()
         Me.SuspendLayout()
         '
         'Label1
@@ -98,8 +99,8 @@ Partial Class FormLogin
         'RadioButtonFuncionario
         '
         Me.RadioButtonFuncionario.AutoSize = True
-        Me.RadioButtonFuncionario.Location = New System.Drawing.Point(78, 340)
-        Me.RadioButtonFuncionario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.RadioButtonFuncionario.Location = New System.Drawing.Point(45, 339)
+        Me.RadioButtonFuncionario.Margin = New System.Windows.Forms.Padding(2)
         Me.RadioButtonFuncionario.Name = "RadioButtonFuncionario"
         Me.RadioButtonFuncionario.Size = New System.Drawing.Size(80, 17)
         Me.RadioButtonFuncionario.TabIndex = 59
@@ -107,11 +108,23 @@ Partial Class FormLogin
         Me.RadioButtonFuncionario.Text = "Funcionario"
         Me.RadioButtonFuncionario.UseVisualStyleBackColor = True
         '
+        'RadioButtonViajante
+        '
+        Me.RadioButtonViajante.AutoSize = True
+        Me.RadioButtonViajante.Location = New System.Drawing.Point(130, 340)
+        Me.RadioButtonViajante.Name = "RadioButtonViajante"
+        Me.RadioButtonViajante.Size = New System.Drawing.Size(63, 17)
+        Me.RadioButtonViajante.TabIndex = 60
+        Me.RadioButtonViajante.TabStop = True
+        Me.RadioButtonViajante.Text = "Viajante"
+        Me.RadioButtonViajante.UseVisualStyleBackColor = True
+        '
         'FormLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(508, 376)
+        Me.Controls.Add(Me.RadioButtonViajante)
         Me.Controls.Add(Me.RadioButtonFuncionario)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button_entrar)
@@ -135,4 +148,5 @@ Partial Class FormLogin
     Friend WithEvents Button_entrar As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents RadioButtonFuncionario As RadioButton
+    Friend WithEvents RadioButtonViajante As RadioButton
 End Class

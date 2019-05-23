@@ -22,7 +22,6 @@ Partial Class FormNovoRegisto_Viajante
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox_sexo = New System.Windows.Forms.TextBox()
         Me.TextBox_ncc = New System.Windows.Forms.TextBox()
         Me.TextBox_username = New System.Windows.Forms.TextBox()
         Me.TextBox_nif = New System.Windows.Forms.TextBox()
@@ -37,14 +36,8 @@ Partial Class FormNovoRegisto_Viajante
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button_Registar = New System.Windows.Forms.Button()
         Me.DateTimePicker_datanasc = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBoxSexo = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
-        '
-        'TextBox_sexo
-        '
-        Me.TextBox_sexo.Location = New System.Drawing.Point(233, 87)
-        Me.TextBox_sexo.Name = "TextBox_sexo"
-        Me.TextBox_sexo.Size = New System.Drawing.Size(185, 20)
-        Me.TextBox_sexo.TabIndex = 81
         '
         'TextBox_ncc
         '
@@ -168,14 +161,23 @@ Partial Class FormNovoRegisto_Viajante
         Me.DateTimePicker_datanasc.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker_datanasc.TabIndex = 89
         '
+        'ComboBoxSexo
+        '
+        Me.ComboBoxSexo.FormattingEnabled = True
+        Me.ComboBoxSexo.Items.AddRange(New Object() {"Feminino", "Masculino", "Outro"})
+        Me.ComboBoxSexo.Location = New System.Drawing.Point(233, 87)
+        Me.ComboBoxSexo.Name = "ComboBoxSexo"
+        Me.ComboBoxSexo.Size = New System.Drawing.Size(185, 21)
+        Me.ComboBoxSexo.TabIndex = 90
+        '
         'FormNovoRegisto_Viajante
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(569, 345)
+        Me.Controls.Add(Me.ComboBoxSexo)
         Me.Controls.Add(Me.DateTimePicker_datanasc)
         Me.Controls.Add(Me.Button_Registar)
-        Me.Controls.Add(Me.TextBox_sexo)
         Me.Controls.Add(Me.TextBox_ncc)
         Me.Controls.Add(Me.TextBox_username)
         Me.Controls.Add(Me.TextBox_nif)
@@ -194,8 +196,6 @@ Partial Class FormNovoRegisto_Viajante
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents TextBox_sexo As TextBox
     Friend WithEvents TextBox_ncc As TextBox
     Friend WithEvents TextBox_username As TextBox
     Friend WithEvents TextBox_nif As TextBox
@@ -210,4 +210,5 @@ Partial Class FormNovoRegisto_Viajante
     Friend WithEvents Label2 As Label
     Friend WithEvents Button_Registar As Button
     Friend WithEvents DateTimePicker_datanasc As DateTimePicker
+    Friend WithEvents ComboBoxSexo As ComboBox
 End Class

@@ -15,11 +15,12 @@
                 MsgBox("Este nome de utilizador já existe! Experimente outro diferente!")
                 Me.TextBox_username.Clear()
             Else
-                novoviajante = New ClassViajante(TextBox_nome.Text, TextBox_sexo.Text, DateTimePicker_datanasc.Value,
+                novoviajante = New ClassViajante(TextBox_nome.Text, ComboBoxSexo.SelectedItem, DateTimePicker_datanasc.Value,
                                                TextBox_ncc.Text, TextBox_username.Text, TextBox_password.Text,
                                               TextBox_nif.Text)
 
                 EmpresaCruzeiros.Viajantes.Add(novoviajante)
+                EmpresaCruzeiros.gravar()
                 ViajanteVisivel = EmpresaCruzeiros.Viajantes.Count - 1
                 Dim TempForm As New FormLogin
                 TempForm.Show()
@@ -28,7 +29,7 @@
             End If
         End If
 
-        EmpresaCruzeiros.gravar()
+
 
     End Sub
 

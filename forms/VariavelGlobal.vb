@@ -3,7 +3,7 @@
     Public CruzeiroVisivel As Integer
     Public ViajanteVisivel As Integer
     Public FuncionarioVisivel As Integer
-
+    Public NivelVisivel As String
 
 
 
@@ -11,9 +11,9 @@
         EmpresaCruzeiros = New ClassEmpresa
         CruzeiroVisivel = 0
         ViajanteVisivel = 0
-
         FuncionarioVisivel = 0
-        
+        NivelVisivel = ""
+
         EmpresaCruzeiros.ler()
 
 

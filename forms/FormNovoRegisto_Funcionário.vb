@@ -15,10 +15,11 @@
                 MsgBox("Este nome de utilizador já existe! Experimente outro diferente!")
                 Me.TextBox_username.Clear()
             Else
-                novofuncionario = New ClassFuncionario(TextBox_nome.Text, TextBox_sexo.Text, DateTimePicker_datanasc.Value,
+                novofuncionario = New ClassFuncionario(TextBox_nome.Text, ComboBoxSexo.SelectedItem, DateTimePicker_datanasc.Value,
                                               TextBox_ncc.Text, TextBox_username.Text, TextBox_password.Text,
                                              TextBox_nib.Text)
                 EmpresaCruzeiros.Funcionarios.Add(novofuncionario)
+                EmpresaCruzeiros.gravar()
                 FuncionarioVisivel = EmpresaCruzeiros.Funcionarios.Count - 1
 
                 Dim TempForm As New FormLogin
@@ -28,7 +29,7 @@
             End If
         End If
 
-        EmpresaCruzeiros.gravar()
+
 
     End Sub
 
