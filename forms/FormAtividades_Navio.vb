@@ -34,7 +34,7 @@
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio.Add(NovaAtividadeNavio)
         AtividadeNavioVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio.Count - 1
 
-        EmpresaCruzeiros.gravar()
+        gravar()
         mostra()
     End Sub
 
@@ -67,6 +67,16 @@
 
     Private Sub Button_fim_Click(sender As Object, e As EventArgs) Handles Button_fim.Click
         AtividadeNavioVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio.Count - 1
+        mostra()
+    End Sub
+
+    Private Sub FormAtividades_Navio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If NivelVisivel = "Viajante" Then
+            Me.Button_Adicionar.Visible = False
+        ElseIf NivelVisivel = "Funcionario" Then
+            Me.Button_Marcar.Visible = False
+            Me.Button_anular.Visible = False
+        End If
         mostra()
     End Sub
 End Class

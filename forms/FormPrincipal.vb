@@ -168,4 +168,28 @@ Public Class FormPrincipal
 
         ChildForm.Show()
     End Sub
+
+    Private WithEvents FormLogin As FormLogin
+
+
+    Private Sub LoginOK(ByVal username As String, ByVal nivel As String) Handles FormLogin.LoginOK
+        MsgBox("Login efetuado com sucesso com o username " & username & " como " & nivel & "!")
+        If NivelVisivel = "Viajante" Then
+            FuncionáriosToolStripMenuItem.Visible = False
+            ViajantesToolStripMenuItem.Visible = False
+        End If
+    End Sub
+
+    Private Sub LoginErro() Handles FormLogin.LoginErro
+
+        MsgBox("Dados de Login incorretos, tente novamente!")
+    End Sub
+
+    Private Sub FormPrincipal_Load(sender As Object, e As EventArgs) Handles Me.Load
+        VariavelGlobal.InitVars()
+
+        FormLogin = New FormLogin
+        FormLogin.ShowDialog()
+
+    End Sub
 End Class

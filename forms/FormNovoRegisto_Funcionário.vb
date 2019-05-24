@@ -6,9 +6,10 @@
 
 
         If funcionario_existente(Me.TextBox_ncc.Text) = True Then
-            Dim TempForm As New FormLogin
-            TempForm.Show()
-
+            'Dim TempForm As New FormLogin
+            Me.Close()
+            ' TempForm.Show()
+            ' Me.Hide()
             MsgBox("Já possui um registo! Basta fazer o login!")
         Else
             If username_existente(Me.TextBox_username.Text) = True Then
@@ -19,12 +20,13 @@
                                               TextBox_ncc.Text, TextBox_username.Text, TextBox_password.Text,
                                              TextBox_nib.Text)
                 EmpresaCruzeiros.Funcionarios.Add(novofuncionario)
-                EmpresaCruzeiros.gravar()
+               gravar()
                 FuncionarioVisivel = EmpresaCruzeiros.Funcionarios.Count - 1
 
-                Dim TempForm As New FormLogin
-                TempForm.Show()
+                ' Dim TempForm As New FormLogin
 
+                ' TempForm.Show()
+                Me.Close()
                 MsgBox("Registo efetuado com sucesso! Autentique-se com os seus dados de Login!")
             End If
         End If

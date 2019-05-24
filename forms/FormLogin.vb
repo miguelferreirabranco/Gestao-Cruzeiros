@@ -1,18 +1,26 @@
 ﻿Public Class FormLogin
+    Public Event LoginOK(ByVal NomeUser As String, ByVal Nivel As String)
+    Public Event LoginErro()
+
+    Private Verloginok As Boolean = False
     Private Sub Button_entrar_Click(sender As Object, e As EventArgs) Handles Button_entrar.Click
         Dim TempForm As New FormPrincipal
-        Dim loginok As Boolean
+
         Dim Nivel As String
 
-        ValidaLogin(Me.TextBox_username.Text, Me.TextBox_password.Text, loginok, Nivel)
+        ValidaLogin(Me.TextBox_username.Text, Me.TextBox_password.Text, Verloginok, Nivel)
         NivelVisivel = Nivel
 
-        If loginok = True Then
-            TempForm.Show()
+
+        If Verloginok = True Then
+            RaiseEvent LoginOK(TextBox_username.Text, NivelVisivel)
+            Me.Close()
+
         Else
-            MsgBox("Dados de login incorretos, tente novamente!")
             Me.TextBox_username.Clear()
             Me.TextBox_password.Clear()
+
+            RaiseEvent LoginErro()
 
         End If
 
@@ -27,6 +35,7 @@
         ElseIf RadioButtonViajante.Checked Then
             TempFormViajante.Show()
         Else
+
             MsgBox("Selecione qual o tipo de utilizador!")
 
         End If
@@ -35,44 +44,44 @@
     End Sub
 
     Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        VariavelGlobal.InitVars()
+        'VariavelGlobal.InitVars()
 
     End Sub
 
 
-    Public Event LoginOK(ByVal NomeUser As String, ByVal Nivel As String)
-    Public Event LoginErro(ByVal NomeUser As String, ByVal Erro As String)
-
-    Private _loginok As Boolean = False
-
-
     Private Sub ValidaLogin(ByVal NomeUser As String, ByVal Password As String, ByRef loginok As Boolean, ByRef Nivel As String)
-        loginok = False
-        For i = 0 To EmpresaCruzeiros.Viajantes.Count - 1
+        Dim i As Integer
+
+
+
+        While i <= EmpresaCruzeiros.Viajantes.Count - 1 And loginok = False
+
             If EmpresaCruzeiros.Viajantes(i).Login = NomeUser Then
                 If EmpresaCruzeiros.Viajantes(i).Password = Password Then
                     ViajanteVisivel = i
                     Nivel = "Viajante"
-                    loginok = True
-                    MsgBox("Login efetuado com sucesso como viajante!")
+                    Verloginok = True
 
-                    Exit Sub
                 End If
             End If
-        Next
+            i = i + 1
+        End While
 
-        For i = 0 To EmpresaCruzeiros.Funcionarios.Count - 1
-            If EmpresaCruzeiros.Funcionarios(i).Login = NomeUser Then
-                If EmpresaCruzeiros.Funcionarios(i).Password = Password Then
-                    FuncionarioVisivel = i
-                    Nivel = "Funcionario"
-                    loginok = True
-                    MsgBox("Login efetuado com sucesso como funcionário!")
+        If Verloginok = False Then
+            i = 0
+            While i <= EmpresaCruzeiros.Funcionarios.Count - 1 And loginok = False
+                If EmpresaCruzeiros.Funcionarios(i).Login = NomeUser Then
+                    If EmpresaCruzeiros.Funcionarios(i).Password = Password Then
+                        FuncionarioVisivel = i
+                        Nivel = "Funcionario"
+                        Verloginok = True
 
-                    Exit Sub
+                    End If
                 End If
-            End If
-        Next
+                i = i + 1
+            End While
+        End If
+
 
     End Sub
 

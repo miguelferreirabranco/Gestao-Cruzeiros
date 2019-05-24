@@ -2,7 +2,7 @@
 
     Private Sub FormLista_Viajantes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        EmpresaCruzeiros.ler()
+        ler()
 
         ListBox_viajantes.Items.Clear()
 

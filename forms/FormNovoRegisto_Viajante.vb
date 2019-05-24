@@ -6,9 +6,10 @@
         Dim novoviajante As ClassViajante
 
         If viajante_existente(Me.TextBox_ncc.Text) = True Then
-            Dim TempForm As New FormLogin
-            TempForm.Show()
+            'Dim TempForm As New FormLogin
 
+            'TempForm.Show()
+            Me.Close()
             MsgBox("Já possui um registo! Basta fazer o login!")
         Else
             If username_existente(Me.TextBox_username.Text) = True Then
@@ -20,11 +21,12 @@
                                               TextBox_nif.Text)
 
                 EmpresaCruzeiros.Viajantes.Add(novoviajante)
-                EmpresaCruzeiros.gravar()
+                gravar()
                 ViajanteVisivel = EmpresaCruzeiros.Viajantes.Count - 1
-                Dim TempForm As New FormLogin
-                TempForm.Show()
+                ' Dim TempForm As New FormLogin
 
+                'TempForm.Show()
+                Me.Close()
                 MsgBox("Registo efetuado com sucesso! Autentique-se com os seus dados de Login!")
             End If
         End If

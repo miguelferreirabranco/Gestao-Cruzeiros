@@ -47,8 +47,13 @@
             Me.ListBox_Paragens.Items.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(k).ParaString)
         Next
 
-        EmpresaCruzeiros.gravar()
+        gravar()
 
     End Sub
 
+    Private Sub FormParagens_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If NivelVisivel = "Viajante" Then
+            Me.Button_Adicionar.Visible = False
+        End If
+    End Sub
 End Class

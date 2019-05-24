@@ -56,11 +56,11 @@
     End Sub
 
     Public Sub New(ByVal npessoas As Integer, ByVal nquarto As Integer, ByVal ppessoa As Single, ByVal seccao As String)
-        _npessoas = npessoas
-        _nquarto = nquarto
-        _ppessoa = ppessoa
+        Me.Npessoas = npessoas
+        Me.Nquarto = nquarto
+        Me.Ppessoa = ppessoa
         Me.Seccao = seccao
-        _NomedeReserva = ""
+        Me.Nomedereserva = ""
     End Sub
     Public Sub Reservar(ByVal Nome As String)
         If Me.Nomedereserva = "" Then

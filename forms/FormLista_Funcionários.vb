@@ -2,7 +2,7 @@
 
     Private Sub FormLista_Funcionários_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-        EmpresaCruzeiros.ler()
+        ler()
 
         ListBox_funcionarios.Items.Clear()
 

@@ -46,7 +46,7 @@
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens.Add(NovaAtividadeParagem)
         AtividadeParagemVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens.Count - 1
 
-        EmpresaCruzeiros.gravar()
+        gravar()
         mostra()
     End Sub
 
@@ -79,6 +79,16 @@
 
     Private Sub Button_fim_Click(sender As Object, e As EventArgs) Handles Button_fim.Click
         AtividadeParagemVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens.Count - 1
+        mostra()
+    End Sub
+
+    Private Sub FormAtividades_Paragens_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If NivelVisivel = "Viajante" Then
+            Me.Button_Adicionar.Visible = False
+        ElseIf NivelVisivel = "Funcionario" Then
+            Me.Button_Marcar.Visible = False
+            Me.Button_anular.Visible = False
+        End If
         mostra()
     End Sub
 End Class

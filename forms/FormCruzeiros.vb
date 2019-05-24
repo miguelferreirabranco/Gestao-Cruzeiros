@@ -47,7 +47,7 @@
         Dim novocruzeiro As ClassCruzeiro
         novocruzeiro = New ClassCruzeiro(TextBox_nome.Text, DateTimePicker_datainicial.Value, DateTimePicker_datafinal.Value, TextBox_origem.Text, TextBox_destino.Text)
         EmpresaCruzeiros.Cruzeiros.Add(novocruzeiro)
-        EmpresaCruzeiros.gravar()
+        gravar()
         CruzeiroVisivel = EmpresaCruzeiros.Cruzeiros.Count - 1
         mostra()
     End Sub
@@ -60,5 +60,15 @@
 
     Private Sub Button_Reservar_Click(sender As Object, e As EventArgs) Handles Button_Reservar.Click
         EmpresaCruzeiros.Viajantes(ViajanteVisivel).CruzeirosMarcados.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel))
+    End Sub
+
+    Private Sub FormCruzeiros_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        If NivelVisivel = "Viajante" Then
+            Me.Button_modificar.Visible = False
+            Me.Button_Adicionar.Visible = False
+        ElseIf NivelVisivel = "Funcionario" Then
+            Me.Button_Reservar.Visible = False
+        End If
+        mostra()
     End Sub
 End Class
