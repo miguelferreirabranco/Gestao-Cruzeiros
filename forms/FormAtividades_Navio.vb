@@ -70,6 +70,8 @@
         mostra()
     End Sub
 
+
+
     Private Sub FormAtividades_Navio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If NivelVisivel = "Viajante" Then
             Me.Button_Adicionar.Visible = False
@@ -79,4 +81,6 @@
         End If
         mostra()
     End Sub
+
+
 End Class
