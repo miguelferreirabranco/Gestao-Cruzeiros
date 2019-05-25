@@ -64,6 +64,7 @@ Partial Class FormLogin
         '
         Me.TextBox_password.Location = New System.Drawing.Point(269, 160)
         Me.TextBox_password.Name = "TextBox_password"
+        Me.TextBox_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TextBox_password.Size = New System.Drawing.Size(171, 20)
         Me.TextBox_password.TabIndex = 54
         '

@@ -62,6 +62,10 @@
     Private Sub FormParagens_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If NivelVisivel = "Viajante" Then
             Me.Button_Adicionar.Visible = False
+            Me.TextBox_horafim.Enabled = False
+            Me.TextBox_horainicio.Enabled = False
+            Me.TextBox_local.Enabled = False
+            Me.DateTimePickerData.Enabled = False
         End If
     End Sub
 End Class
