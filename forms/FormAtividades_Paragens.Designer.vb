@@ -40,17 +40,11 @@ Partial Class FormAtividades_Paragens
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox_local = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox_horafim = New System.Windows.Forms.TextBox()
+        Me.TextBox_horainicio = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.DateTimePickerData = New System.Windows.Forms.DateTimePicker()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.HoraFim = New System.Windows.Forms.NumericUpDown()
-        Me.HoraInicio = New System.Windows.Forms.NumericUpDown()
-        Me.MinutoFim = New System.Windows.Forms.NumericUpDown()
-        Me.MinutoInicio = New System.Windows.Forms.NumericUpDown()
-        CType(Me.HoraFim, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.HoraInicio, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MinutoFim, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.MinutoInicio, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
@@ -222,6 +216,20 @@ Partial Class FormAtividades_Paragens
         Me.Label7.TabIndex = 81
         Me.Label7.Text = "Atividades nas Paragens"
         '
+        'TextBox_horafim
+        '
+        Me.TextBox_horafim.Location = New System.Drawing.Point(197, 248)
+        Me.TextBox_horafim.Name = "TextBox_horafim"
+        Me.TextBox_horafim.Size = New System.Drawing.Size(140, 20)
+        Me.TextBox_horafim.TabIndex = 78
+        '
+        'TextBox_horainicio
+        '
+        Me.TextBox_horainicio.Location = New System.Drawing.Point(197, 222)
+        Me.TextBox_horainicio.Name = "TextBox_horainicio"
+        Me.TextBox_horainicio.Size = New System.Drawing.Size(140, 20)
+        Me.TextBox_horainicio.TabIndex = 77
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
@@ -247,53 +255,19 @@ Partial Class FormAtividades_Paragens
         Me.ComboBox1.Size = New System.Drawing.Size(140, 21)
         Me.ComboBox1.TabIndex = 84
         '
-        'HoraFim
-        '
-        Me.HoraFim.Location = New System.Drawing.Point(197, 249)
-        Me.HoraFim.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
-        Me.HoraFim.Name = "HoraFim"
-        Me.HoraFim.Size = New System.Drawing.Size(35, 20)
-        Me.HoraFim.TabIndex = 110
-        '
-        'HoraInicio
-        '
-        Me.HoraInicio.Location = New System.Drawing.Point(197, 220)
-        Me.HoraInicio.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
-        Me.HoraInicio.Name = "HoraInicio"
-        Me.HoraInicio.Size = New System.Drawing.Size(35, 20)
-        Me.HoraInicio.TabIndex = 109
-        '
-        'MinutoFim
-        '
-        Me.MinutoFim.Location = New System.Drawing.Point(238, 249)
-        Me.MinutoFim.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.MinutoFim.Name = "MinutoFim"
-        Me.MinutoFim.Size = New System.Drawing.Size(35, 20)
-        Me.MinutoFim.TabIndex = 108
-        '
-        'MinutoInicio
-        '
-        Me.MinutoInicio.Location = New System.Drawing.Point(238, 220)
-        Me.MinutoInicio.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
-        Me.MinutoInicio.Name = "MinutoInicio"
-        Me.MinutoInicio.Size = New System.Drawing.Size(35, 20)
-        Me.MinutoInicio.TabIndex = 107
-        '
         'FormAtividades_Paragens
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(810, 465)
-        Me.Controls.Add(Me.HoraFim)
-        Me.Controls.Add(Me.HoraInicio)
-        Me.Controls.Add(Me.MinutoFim)
-        Me.Controls.Add(Me.MinutoInicio)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.DateTimePickerData)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TextBox_local)
         Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.TextBox_horafim)
+        Me.Controls.Add(Me.TextBox_horainicio)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button_anular)
         Me.Controls.Add(Me.Button_Marcar)
@@ -311,10 +285,6 @@ Partial Class FormAtividades_Paragens
         Me.Controls.Add(Me.Button_inicio)
         Me.Name = "FormAtividades_Paragens"
         Me.Text = "Atividades_Paragens"
-        CType(Me.HoraFim, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.HoraInicio, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MinutoFim, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.MinutoInicio, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -337,11 +307,9 @@ Partial Class FormAtividades_Paragens
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox_local As TextBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents TextBox_horafim As TextBox
+    Friend WithEvents TextBox_horainicio As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents DateTimePickerData As DateTimePicker
     Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents HoraFim As NumericUpDown
-    Friend WithEvents HoraInicio As NumericUpDown
-    Friend WithEvents MinutoFim As NumericUpDown
-    Friend WithEvents MinutoInicio As NumericUpDown
 End Class

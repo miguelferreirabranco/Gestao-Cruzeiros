@@ -15,11 +15,9 @@
 
             End If
 
-            Me.DateTimePickerData.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(paragemvisivel).DataInicio
-            Me.HoraInicio.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(paragemvisivel).DataInicio.Hour
-            Me.MinutoInicio.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(paragemvisivel).DataInicio.Minute
-            Me.HoraFim.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(paragemvisivel).DataFim.Hour
-            Me.MinutoFim.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(paragemvisivel).DataFim.Minute
+            Me.DateTimePickerData.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(paragemvisivel).Data
+            Me.TextBox_horainicio.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(paragemvisivel).HoraInicio
+            Me.TextBox_horafim.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(paragemvisivel).HoraFim
             Me.TextBox_local.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(paragemvisivel).LocalParagem
 
             Me.ListBox_Paragens.Items.Clear()
@@ -50,10 +48,7 @@
 
     Private Sub Button_Adicionar_Click(sender As Object, e As EventArgs) Handles Button_Adicionar.Click
         Dim paragem As ClassParagem
-        Dim data As Date = Me.DateTimePickerData.Value
-        Dim datainicio As New System.DateTime(data.Year, data.Month, data.Day, Me.HoraInicio.Value, Me.MinutoInicio.Value, 0)
-        Dim datafim As New System.DateTime(data.Year, data.Month, data.Day, Me.HoraFim.Value, Me.MinutoFim.Value, 0)
-        paragem = New ClassParagem(Me.TextBox_local.Text, datainicio, datafim)
+        paragem = New ClassParagem(Me.TextBox_local.Text, Me.DateTimePickerData.Value.ToShortDateString, Me.TextBox_horainicio.Text, Me.TextBox_horafim.Text)
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens.Add(paragem)
 
         paragemvisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens.Count - 1
@@ -68,10 +63,8 @@
     Private Sub FormParagens_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If NivelVisivel = "Viajante" Then
             Me.Button_Adicionar.Visible = False
-            Me.HoraFim.Enabled = False
-            Me.HoraInicio.Enabled = False
-            Me.MinutoFim.Enabled = False
-            Me.MinutoInicio.Enabled = False
+            Me.TextBox_horainicio.Enabled = False
+            Me.TextBox_horafim.Enabled = False
             Me.TextBox_local.Enabled = False
             Me.DateTimePickerData.Enabled = False
         End If
