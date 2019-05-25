@@ -1,8 +1,8 @@
 ﻿Public Class ClassParagem
     Private _localParagem As String
-    Private _data As Date
-    Private _horaInicio As Integer
-    Private _horaFim As Integer
+    Private _datainicio As Date
+
+    Private _dataFim As Date
 
     Public Property LocalParagem As String
         Get
@@ -13,30 +13,23 @@
         End Set
     End Property
 
-    Public Property Data As Date
+    Public Property DataInicio As Date
         Get
-            Return _data
+            Return _datainicio
         End Get
         Set(value As Date)
-            _data = value
+            _datainicio = value
         End Set
     End Property
 
-    Public Property HoraInicio As Integer
-        Get
-            Return _horaInicio
-        End Get
-        Set(value As Integer)
-            _horaInicio = value
-        End Set
-    End Property
 
-    Public Property HoraFim As Integer
+
+    Public Property DataFim As Date
         Get
-            Return _horaFim
+            Return _dataFim
         End Get
-        Set(value As Integer)
-            _horaFim = value
+        Set(value As Date)
+            _dataFim = value
         End Set
     End Property
 
@@ -44,15 +37,16 @@
 
     End Sub
 
-    Public Sub New(ByVal localparagem As String, ByVal data As Date, ByVal horainicio As Integer, ByVal horafim As Integer)
+    Public Sub New(ByVal localparagem As String, ByVal datainicio As Date, ByVal datafim As Date)
         Me.LocalParagem = localparagem
-        Me.Data = data
-        Me.HoraInicio = horainicio
-        Me.HoraFim = horafim
+        Me.DataInicio = datainicio
+
+        Me.DataFim = datafim
 
     End Sub
 
     Public Function ParaString() As String
-        Return Me.LocalParagem & vbTab & Me.Data & vbTab & Me.HoraInicio & vbTab & Me.HoraFim
+        Return Me.LocalParagem & vbTab & Me.DataInicio.ToShortDateString & vbTab & Me.DataInicio.Hour & ":" & Me.DataInicio.Minute & vbTab & Me.DataFim.Hour & ":" & Me.DataFim.Minute
     End Function
+
 End Class

@@ -35,8 +35,14 @@ Partial Class FormParagens
         Me.Button_inicio = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DateTimePickerData = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox_horafim = New System.Windows.Forms.TextBox()
-        Me.TextBox_horainicio = New System.Windows.Forms.TextBox()
+        Me.MinutoInicio = New System.Windows.Forms.NumericUpDown()
+        Me.MinutoFim = New System.Windows.Forms.NumericUpDown()
+        Me.HoraInicio = New System.Windows.Forms.NumericUpDown()
+        Me.HoraFim = New System.Windows.Forms.NumericUpDown()
+        CType(Me.MinutoInicio, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.MinutoFim, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HoraInicio, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.HoraFim, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TextBox_local
@@ -161,31 +167,51 @@ Partial Class FormParagens
         Me.DateTimePickerData.Size = New System.Drawing.Size(174, 20)
         Me.DateTimePickerData.TabIndex = 102
         '
-        'TextBox_horafim
+        'MinutoInicio
         '
-        Me.TextBox_horafim.Location = New System.Drawing.Point(185, 242)
-        Me.TextBox_horafim.Name = "TextBox_horafim"
-        Me.TextBox_horafim.Size = New System.Drawing.Size(174, 20)
-        Me.TextBox_horafim.TabIndex = 98
+        Me.MinutoInicio.Location = New System.Drawing.Point(225, 216)
+        Me.MinutoInicio.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.MinutoInicio.Name = "MinutoInicio"
+        Me.MinutoInicio.Size = New System.Drawing.Size(35, 20)
+        Me.MinutoInicio.TabIndex = 103
         '
-        'TextBox_horainicio
+        'MinutoFim
         '
-        Me.TextBox_horainicio.Location = New System.Drawing.Point(185, 216)
-        Me.TextBox_horainicio.Name = "TextBox_horainicio"
-        Me.TextBox_horainicio.Size = New System.Drawing.Size(174, 20)
-        Me.TextBox_horainicio.TabIndex = 97
+        Me.MinutoFim.Location = New System.Drawing.Point(225, 245)
+        Me.MinutoFim.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
+        Me.MinutoFim.Name = "MinutoFim"
+        Me.MinutoFim.Size = New System.Drawing.Size(35, 20)
+        Me.MinutoFim.TabIndex = 104
+        '
+        'HoraInicio
+        '
+        Me.HoraInicio.Location = New System.Drawing.Point(184, 216)
+        Me.HoraInicio.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.HoraInicio.Name = "HoraInicio"
+        Me.HoraInicio.Size = New System.Drawing.Size(35, 20)
+        Me.HoraInicio.TabIndex = 105
+        '
+        'HoraFim
+        '
+        Me.HoraFim.Location = New System.Drawing.Point(184, 245)
+        Me.HoraFim.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
+        Me.HoraFim.Name = "HoraFim"
+        Me.HoraFim.Size = New System.Drawing.Size(35, 20)
+        Me.HoraFim.TabIndex = 106
         '
         'FormParagens
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(793, 466)
+        Me.Controls.Add(Me.HoraFim)
+        Me.Controls.Add(Me.HoraInicio)
+        Me.Controls.Add(Me.MinutoFim)
+        Me.Controls.Add(Me.MinutoInicio)
         Me.Controls.Add(Me.DateTimePickerData)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox_local)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox_horafim)
-        Me.Controls.Add(Me.TextBox_horainicio)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
@@ -197,6 +223,10 @@ Partial Class FormParagens
         Me.Controls.Add(Me.Button_inicio)
         Me.Name = "FormParagens"
         Me.Text = "Paragens"
+        CType(Me.MinutoInicio, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.MinutoFim, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HoraInicio, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.HoraFim, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -215,6 +245,8 @@ Partial Class FormParagens
     Friend WithEvents Button_inicio As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents DateTimePickerData As DateTimePicker
-    Friend WithEvents TextBox_horafim As TextBox
-    Friend WithEvents TextBox_horainicio As TextBox
+    Friend WithEvents MinutoInicio As NumericUpDown
+    Friend WithEvents MinutoFim As NumericUpDown
+    Friend WithEvents HoraInicio As NumericUpDown
+    Friend WithEvents HoraFim As NumericUpDown
 End Class

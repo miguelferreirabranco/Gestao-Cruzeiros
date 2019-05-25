@@ -27,8 +27,8 @@ Public Class ClassAtividadeParagens
 
     End Sub
 
-    Public Sub New(ByVal Nome As String, ByVal Data As Date, ByVal HoraInicio As Integer, ByVal HoraFim As Integer, ByVal Tipo As String, ByVal Paragem As ClassParagem, ByVal Localavisitar As String)
-        MyBase.New(Nome, Data, HoraInicio, HoraFim, Tipo)
+    Public Sub New(ByVal Nome As String, ByVal DataInicio As Date, ByVal DataFim As Date, ByVal Tipo As String, ByVal Paragem As ClassParagem, ByVal Localavisitar As String)
+        MyBase.New(Nome, DataInicio, DataFim, Tipo)
         Me.Paragem = Paragem
         Me.LocalaVisitar = Localavisitar
     End Sub
