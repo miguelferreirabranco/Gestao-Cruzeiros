@@ -2,10 +2,31 @@
 
     Private WithEvents FormQuartos As FormQuartos
     Private QuartoVisivel As Integer = 0
+    Private UltimaLinha As Integer = Me.DataGridView1.RowCount
 
-    Private Sub QuartoAdicionado() Handles FormQuartos.AdicionarQuarto 'Ainda nao esta 
-        'se nao houver celulas vazias 
-        Me.DataGridView1.Rows.Add()
+    Private Sub FormListaQuartos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        DataGridView1.ColumnCount = 6
+        mostra()
+    End Sub
+
+
+    Private Sub QuartoAdicionado(ByVal nquarto As Integer) Handles FormQuartos.AdicionarQuarto
+        Dim k As Integer = 1
+        Dim temp As Boolean = False
+        While k <= 6 And temp = False
+            If Me.DataGridView1.Item(k, UltimaLinha).Value = "" Then
+                temp = True
+                Me.DataGridView1.Item(k, UltimaLinha).Value = nquarto
+            End If
+            k = k + 1
+        End While
+
+        If temp = False Then
+            Me.DataGridView1.RowCount = Me.DataGridView1.RowCount + 1
+            UltimaLinha = Me.DataGridView1.RowCount
+            Me.DataGridView1.Item(1, UltimaLinha).Value = nquarto
+        End If
+
     End Sub
 
     Public Sub mostra()
@@ -51,6 +72,8 @@
         QuartoVisivel = numeroposicao
         mostra()
     End Sub
+
+
 
     Private Sub Button_Reservar_Click(sender As Object, e As EventArgs) Handles Button_Reservar.Click
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Reservar(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).Login)

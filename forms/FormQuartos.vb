@@ -1,7 +1,7 @@
 ﻿Public Class FormQuartos
     Dim QuartoVisivel As Integer = 0
 
-    Public Event AdicionarQuarto()
+    Public Event AdicionarQuarto(ByVal nquarto As Integer)
 
     Public Sub Mostra()
 
@@ -50,8 +50,7 @@
         quarto = New ClassQuarto(Me.TextBox_npessoas.Text, EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count + 1, Me.TextBox_preco.Text, Me.TextBox_seccao.Text)
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Add(quarto)
         QuartoVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count - 1
-        RaiseEvent AdicionarQuarto()
-
+        RaiseEvent AdicionarQuarto(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Nquarto)
         gravar()
     End Sub
 
