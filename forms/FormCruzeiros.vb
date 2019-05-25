@@ -45,7 +45,7 @@
 
     Private Sub Button_Adicionar_Click(sender As Object, e As EventArgs) Handles Button_Adicionar.Click
         Dim novocruzeiro As ClassCruzeiro
-        novocruzeiro = New ClassCruzeiro(TextBox_nome.Text, DateTimePicker_datainicial.Value, DateTimePicker_datafinal.Value, TextBox_origem.Text, TextBox_destino.Text)
+        novocruzeiro = New ClassCruzeiro(TextBox_nome.Text, DateTimePicker_datainicial.Value.ToShortDateString, DateTimePicker_datafinal.Value.ToShortDateString, TextBox_origem.Text, TextBox_destino.Text)
         EmpresaCruzeiros.Cruzeiros.Add(novocruzeiro)
         gravar()
         CruzeiroVisivel = EmpresaCruzeiros.Cruzeiros.Count - 1
@@ -54,7 +54,7 @@
 
 
     Private Sub Button_modificar_Click(sender As Object, e As EventArgs) Handles Button_modificar.Click
-        EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).modificar(Me.TextBox_nome.Text, Me.DateTimePicker_datainicial.Value, Me.DateTimePicker_datafinal.Value, Me.TextBox_origem.Text, Me.TextBox_destino.Text)
+        EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).modificar(Me.TextBox_nome.Text, Me.DateTimePicker_datainicial.Value.ToShortDateString, Me.DateTimePicker_datafinal.Value.ToShortDateString, Me.TextBox_origem.Text, Me.TextBox_destino.Text)
         mostra()
     End Sub
 

@@ -48,7 +48,7 @@
 
     Private Sub Button_Adicionar_Click(sender As Object, e As EventArgs) Handles Button_Adicionar.Click
         Dim paragem As ClassParagem
-        paragem = New ClassParagem(Me.TextBox_local.Text, Me.DateTimePickerData.Value, Me.TextBox_horainicio.Text, Me.TextBox_horafim.Text)
+        paragem = New ClassParagem(Me.TextBox_local.Text, Me.DateTimePickerData.Value.ToShortDateString, Me.TextBox_horainicio.Text, Me.TextBox_horafim.Text)
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens.Add(paragem)
 
         paragemvisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens.Count - 1
