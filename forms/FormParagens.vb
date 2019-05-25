@@ -78,5 +78,10 @@
         mostra()
     End Sub
 
-
+    Private Sub ButtonNova_Click(sender As Object, e As EventArgs) Handles ButtonNova.Click
+        Me.TextBox_local.Clear()
+        Me.DateTimePickerData.Value = Today
+        Me.HoraInicio.Value = 0
+        Me.HoraFim.Value = 0
+    End Sub
 End Class

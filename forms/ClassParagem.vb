@@ -1,7 +1,6 @@
 ﻿Public Class ClassParagem
     Private _localParagem As String
     Private _datainicio As Date
-
     Private _dataFim As Date
 
     Public Property LocalParagem As String

@@ -14,10 +14,8 @@
             End If
 
             TextBox_nome.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).Nome
-<<<<<<< HEAD
-            Me.ComboBoxTipo.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).Tipo
-=======
-            TextBox_tipo.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).Tipo
+
+            Me.ComboBoxTipo1.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).Tipo
 
             Me.HoraInicio.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).DataInicio.Hour
             Me.MinutoInicio.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).DataInicio.Minute
@@ -25,18 +23,12 @@
             Me.MinutoFim.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).DataFim.Minute
             Me.DateTimePickerData.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).DataInicio
 
-            Me.ComboBox1.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).Paragem.LocalParagem
-<<<<<<< HEAD
 
-=======
-=======
->>>>>>> 58412672bb3db65893f77cf3477ed9d112e94097
-            Me.DateTimePickerData.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).Data
-            TextBox_horainicio.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).HoraInicio
-            TextBox_horafim.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).HoraFim
+            'Me.DateTimePickerData.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).Data
+            'TextBox_horainicio.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).HoraInicio
+            'TextBox_horafim.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).HoraFim
             Me.ComboBoxParagem.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).Paragem.LocalParagem
->>>>>>> 4c4b9c9148dffb25bf4ee37c46c885a476e0f38a
->>>>>>> 0dc2834190ac8f397fbe6e882c81d21d5840c470
+
             TextBox_local.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).LocalaVisitar
 
             ListBox_Atividades_Paragens.Items.Clear()
@@ -46,19 +38,19 @@
             Next
         End If
     End Sub
-<<<<<<< HEAD
 
-=======
-    Private Sub ButtonNova_Click(sender As Object, e As EventArgs) Handles ButtonNova.Click
+    Private Sub ButtonNova1_Click(sender As Object, e As EventArgs) Handles ButtonNova1.Click
         Me.TextBox_nome.Clear()
-        Me.TextBox_horafim.Clear()
-        Me.TextBox_horainicio.Clear()
+        Me.HoraInicio.Value = 0
+        Me.MinutoInicio.Value = 0
+        Me.HoraFim.Value = 0
+        Me.MinutoFim.Value = 0
         Me.ComboBoxTipo.Text = ""
         Me.TextBox_local.Clear()
         Me.ComboBoxParagem.Text = ""
         Me.DateTimePickerData.Value = Today
     End Sub
->>>>>>> 0dc2834190ac8f397fbe6e882c81d21d5840c470
+
 
     Private Sub Button_Adicionar_Click(sender As Object, e As EventArgs) Handles Button_Adicionar.Click
         Dim NovaAtividadeParagem As ClassAtividadeParagens
@@ -72,7 +64,7 @@
 
         Dim paragem As ClassParagem
         While k = 0
-            If Me.ComboBox1.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(i).LocalParagem Then
+            If Me.ComboBoxParagem.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(i).LocalParagem Then
                 paragem = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(i)
                 k = 1
             End If
@@ -80,18 +72,11 @@
         End While
 
 
+        'NovaAtividadeParagem = New ClassAtividadeParagens(Me.TextBox_nome.Text, Me.DateTimePickerData.Value.ToShortDateString, Me.TextBox_horainicio.Text, Me.TextBox_horafim.Text, Me.ComboBoxTipo.Text, paragem, Me.TextBox_local.Text)
 
-<<<<<<< HEAD
-        NovaAtividadeParagem = New ClassAtividadeParagens(Me.TextBox_nome.Text, Me.DateTimePickerData.Value.ToShortDateString, Me.TextBox_horainicio.Text, Me.TextBox_horafim.Text, Me.ComboBoxTipo.Text, paragem, Me.TextBox_local.Text)
-=======
-        NovaAtividadeParagem = New ClassAtividadeParagens(Me.TextBox_nome.Text, datainicio, datafim, Me.TextBox_tipo.Text, paragem, Me.TextBox_local.Text)
-<<<<<<< HEAD
-=======
-=======
-        NovaAtividadeParagem = New ClassAtividadeParagens(Me.TextBox_nome.Text, Me.DateTimePickerData.Value.ToShortDateString, Me.TextBox_horainicio.Text, Me.TextBox_horafim.Text, Me.TextBox_tipo.Text, paragem, Me.TextBox_local.Text)
->>>>>>> 4c4b9c9148dffb25bf4ee37c46c885a476e0f38a
->>>>>>> 58412672bb3db65893f77cf3477ed9d112e94097
->>>>>>> 0dc2834190ac8f397fbe6e882c81d21d5840c470
+        NovaAtividadeParagem = New ClassAtividadeParagens(Me.TextBox_nome.Text, datainicio, datafim, Me.ComboBoxTipo1.Text, paragem, Me.TextBox_local.Text)
+
+        'NovaAtividadeParagem = New ClassAtividadeParagens(Me.TextBox_nome.Text, Me.DateTimePickerData.Value.ToShortDateString, Me.TextBox_horainicio.Text, Me.TextBox_horafim.Text, Me.TextBox_tipo.Text, paragem, Me.TextBox_local.Text)
 
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens.Add(NovaAtividadeParagem)
         AtividadeParagemVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens.Count - 1
@@ -99,9 +84,7 @@
         gravar()
         mostra()
     End Sub
-    'Public Sub EncontrarParagem()
-    'Verrrrrr
-    ' End Sub
+
     Private Sub Button_Marcar_Click(sender As Object, e As EventArgs) Handles Button_Marcar.Click
         EmpresaCruzeiros.Viajantes(ViajanteVisivel).MarcarAtividadeParagem(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel))
         AtividadeParagemVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens.Count - 1
@@ -138,7 +121,7 @@
         If EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens.Count > 0 Then
 
             For i = 0 To EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens.Count - 1
-                Me.ComboBox1.Items.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(i).LocalParagem)
+                Me.ComboBoxParagem.Items.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(i).LocalParagem)
             Next
         End If
 
@@ -151,13 +134,10 @@
             Me.MinutoInicio.Enabled = False
             Me.TextBox_local.Enabled = False
             Me.TextBox_nome.Enabled = False
-<<<<<<< HEAD
-            Me.ComboBox1.Enabled = False
-            Me.TextBox_tipo.Enabled = False
-=======
+
             Me.ComboBoxParagem.Enabled = False
-            Me.ComboBoxTipo.Enabled = False
->>>>>>> 0dc2834190ac8f397fbe6e882c81d21d5840c470
+            Me.ComboBoxTipo1.Enabled = False
+
 
         ElseIf NivelVisivel = "Funcionario" Then
             Me.Button_Marcar.Visible = False
@@ -168,8 +148,5 @@
     End Sub
 
 
-    Private Sub HoraInicio_ValueChanged(sender As Object, e As EventArgs) Handles HoraInicio.ValueChanged
-
-    End Sub
 
 End Class

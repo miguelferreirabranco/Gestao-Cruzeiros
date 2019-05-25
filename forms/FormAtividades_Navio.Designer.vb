@@ -39,18 +39,17 @@ Partial Class FormAtividades_Navio
         Me.Label6 = New System.Windows.Forms.Label()
         Me.DateTimePickerData = New System.Windows.Forms.DateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
-
         Me.HoraFim = New System.Windows.Forms.NumericUpDown()
         Me.HoraInicio = New System.Windows.Forms.NumericUpDown()
         Me.MinutoFim = New System.Windows.Forms.NumericUpDown()
         Me.MinutoInicio = New System.Windows.Forms.NumericUpDown()
+        Me.ComboBoxTipo = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxSeccao = New System.Windows.Forms.ComboBox()
+        Me.ButtonNova = New System.Windows.Forms.Button()
         CType(Me.HoraFim, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HoraInicio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MinutoFim, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MinutoInicio, System.ComponentModel.ISupportInitialize).BeginInit()
-
-
-
         Me.SuspendLayout()
         '
         'Button_anular
@@ -63,10 +62,6 @@ Partial Class FormAtividades_Navio
         Me.Button_anular.Text = "Anular"
         Me.Button_anular.UseVisualStyleBackColor = True
         '
-
-
-        '
-
         'Button_Marcar
         '
         Me.Button_Marcar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -219,7 +214,6 @@ Partial Class FormAtividades_Navio
         Me.Label7.TabIndex = 63
         Me.Label7.Text = "Data:"
         '
-
         'HoraFim
         '
         Me.HoraFim.Location = New System.Drawing.Point(200, 267)
@@ -251,20 +245,47 @@ Partial Class FormAtividades_Navio
         Me.MinutoInicio.Name = "MinutoInicio"
         Me.MinutoInicio.Size = New System.Drawing.Size(35, 20)
         Me.MinutoInicio.TabIndex = 107
-
+        '
+        'ComboBoxTipo
+        '
+        Me.ComboBoxTipo.FormattingEnabled = True
+        Me.ComboBoxTipo.Items.AddRange(New Object() {"Entretenimento", "Cultural", "Lazer", "Desportivo"})
+        Me.ComboBoxTipo.Location = New System.Drawing.Point(200, 178)
+        Me.ComboBoxTipo.Name = "ComboBoxTipo"
+        Me.ComboBoxTipo.Size = New System.Drawing.Size(140, 21)
+        Me.ComboBoxTipo.TabIndex = 111
+        '
+        'ComboBoxSeccao
+        '
+        Me.ComboBoxSeccao.FormattingEnabled = True
+        Me.ComboBoxSeccao.Items.AddRange(New Object() {"Convés Superior", "Convés Inferior", "Sala de Eventos", "Piscina/Jacuzi"})
+        Me.ComboBoxSeccao.Location = New System.Drawing.Point(200, 291)
+        Me.ComboBoxSeccao.Name = "ComboBoxSeccao"
+        Me.ComboBoxSeccao.Size = New System.Drawing.Size(140, 21)
+        Me.ComboBoxSeccao.TabIndex = 112
+        '
+        'ButtonNova
+        '
+        Me.ButtonNova.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonNova.Location = New System.Drawing.Point(38, 330)
+        Me.ButtonNova.Name = "ButtonNova"
+        Me.ButtonNova.Size = New System.Drawing.Size(88, 39)
+        Me.ButtonNova.TabIndex = 113
+        Me.ButtonNova.Text = "Nova"
+        Me.ButtonNova.UseVisualStyleBackColor = True
         '
         'FormAtividades_Navio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(805, 456)
-
-
+        Me.Controls.Add(Me.ButtonNova)
+        Me.Controls.Add(Me.ComboBoxSeccao)
+        Me.Controls.Add(Me.ComboBoxTipo)
         Me.Controls.Add(Me.HoraFim)
         Me.Controls.Add(Me.HoraInicio)
         Me.Controls.Add(Me.MinutoFim)
         Me.Controls.Add(Me.MinutoInicio)
-
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.DateTimePickerData)
         Me.Controls.Add(Me.Label6)
@@ -314,7 +335,9 @@ Partial Class FormAtividades_Navio
     Friend WithEvents HoraInicio As NumericUpDown
     Friend WithEvents MinutoFim As NumericUpDown
     Friend WithEvents MinutoInicio As NumericUpDown
-
+    Friend WithEvents ComboBoxTipo As ComboBox
+    Friend WithEvents ComboBoxSeccao As ComboBox
+    Friend WithEvents ButtonNova As Button
 
 
 End Class

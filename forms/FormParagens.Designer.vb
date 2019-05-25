@@ -35,16 +35,15 @@ Partial Class FormParagens
         Me.Button_inicio = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DateTimePickerData = New System.Windows.Forms.DateTimePicker()
-
         Me.MinutoInicio = New System.Windows.Forms.NumericUpDown()
         Me.MinutoFim = New System.Windows.Forms.NumericUpDown()
         Me.HoraInicio = New System.Windows.Forms.NumericUpDown()
         Me.HoraFim = New System.Windows.Forms.NumericUpDown()
+        Me.ButtonNova = New System.Windows.Forms.Button()
         CType(Me.MinutoInicio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MinutoFim, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HoraInicio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HoraFim, System.ComponentModel.ISupportInitialize).BeginInit()
-
         Me.SuspendLayout()
         '
         'TextBox_local
@@ -97,7 +96,7 @@ Partial Class FormParagens
         'Button_Adicionar
         '
         Me.Button_Adicionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Adicionar.Location = New System.Drawing.Point(185, 302)
+        Me.Button_Adicionar.Location = New System.Drawing.Point(271, 302)
         Me.Button_Adicionar.Name = "Button_Adicionar"
         Me.Button_Adicionar.Size = New System.Drawing.Size(88, 39)
         Me.Button_Adicionar.TabIndex = 86
@@ -201,17 +200,26 @@ Partial Class FormParagens
         Me.HoraFim.Size = New System.Drawing.Size(35, 20)
         Me.HoraFim.TabIndex = 106
         '
+        'ButtonNova
+        '
+        Me.ButtonNova.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonNova.Location = New System.Drawing.Point(177, 302)
+        Me.ButtonNova.Name = "ButtonNova"
+        Me.ButtonNova.Size = New System.Drawing.Size(88, 39)
+        Me.ButtonNova.TabIndex = 107
+        Me.ButtonNova.Text = "Nova"
+        Me.ButtonNova.UseVisualStyleBackColor = True
+        '
         'FormParagens
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(793, 466)
-
+        Me.Controls.Add(Me.ButtonNova)
         Me.Controls.Add(Me.HoraFim)
         Me.Controls.Add(Me.HoraInicio)
         Me.Controls.Add(Me.MinutoFim)
         Me.Controls.Add(Me.MinutoInicio)
-
         Me.Controls.Add(Me.DateTimePickerData)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox_local)
@@ -254,5 +262,5 @@ Partial Class FormParagens
     Friend WithEvents MinutoFim As NumericUpDown
     Friend WithEvents HoraInicio As NumericUpDown
     Friend WithEvents HoraFim As NumericUpDown
-
+    Friend WithEvents ButtonNova As Button
 End Class
