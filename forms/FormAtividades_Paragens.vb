@@ -62,6 +62,12 @@
         Dim i As Integer = 0
 
 
+
+
+        'PERGUNTAR SE NAO FALTA NADA NO CICLO PARA O I
+
+
+
         Dim paragem As ClassParagem
         While k = 0
             If Me.ComboBoxParagem.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(i).LocalParagem Then
@@ -72,11 +78,7 @@
         End While
 
 
-        'NovaAtividadeParagem = New ClassAtividadeParagens(Me.TextBox_nome.Text, Me.DateTimePickerData.Value.ToShortDateString, Me.TextBox_horainicio.Text, Me.TextBox_horafim.Text, Me.ComboBoxTipo.Text, paragem, Me.TextBox_local.Text)
-
         NovaAtividadeParagem = New ClassAtividadeParagens(Me.TextBox_nome.Text, datainicio, datafim, Me.ComboBoxTipo1.Text, paragem, Me.TextBox_local.Text)
-
-        'NovaAtividadeParagem = New ClassAtividadeParagens(Me.TextBox_nome.Text, Me.DateTimePickerData.Value.ToShortDateString, Me.TextBox_horainicio.Text, Me.TextBox_horafim.Text, Me.TextBox_tipo.Text, paragem, Me.TextBox_local.Text)
 
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens.Add(NovaAtividadeParagem)
         AtividadeParagemVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens.Count - 1
