@@ -37,8 +37,8 @@
         If Me.AtividadesNavioMarcadas.Count > 0 Then
 
             While k <= Me.AtividadesNavioMarcadas.Count - 1 And temp = False
-                If novaatividadenavio.Data = Me.AtividadesNavioMarcadas(k).Data Then
-                    If (novaatividadenavio.HoraInicio >= Me.AtividadesNavioMarcadas(k).HoraInicio And novaatividadenavio.HoraInicio <= Me.AtividadesNavioMarcadas(k).HoraFim) Or (novaatividadenavio.HoraFim >= Me.AtividadesNavioMarcadas(k).HoraInicio And novaatividadenavio.HoraFim <= Me.AtividadesNavioMarcadas(k).HoraFim) Then
+                If novaatividadenavio.DataInicio.Date = Me.AtividadesNavioMarcadas(k).DataInicio.Date Then
+                    If (novaatividadenavio.DataInicio.Hour >= Me.AtividadesNavioMarcadas(k).DataInicio.Hour And novaatividadenavio.DataInicio.Hour <= Me.AtividadesNavioMarcadas(k).DataFim.Hour) Or (novaatividadenavio.DataFim.Hour >= Me.AtividadesNavioMarcadas(k).DataInicio.Hour And novaatividadenavio.DataFim.Hour <= Me.AtividadesNavioMarcadas(k).DataFim.Hour) Then
                         temp = True
                     End If
 
@@ -49,8 +49,8 @@
             If temp = False Then
                 k = 0
                 While k <= Me.AtividadesParagensMarcadas.Count - 1 And temp = False
-                    If novaatividadenavio.Data = Me.AtividadesParagensMarcadas(k).Data Then
-                        If (novaatividadenavio.HoraInicio >= Me.AtividadesParagensMarcadas(k).HoraInicio And novaatividadenavio.HoraInicio <= Me.AtividadesParagensMarcadas(k).HoraFim) Or (novaatividadenavio.HoraFim >= Me.AtividadesParagensMarcadas(k).HoraInicio And novaatividadenavio.HoraFim <= Me.AtividadesParagensMarcadas(k).HoraFim) Then
+                    If novaatividadenavio.DataInicio.Date = Me.AtividadesParagensMarcadas(k).DataInicio.Date Then
+                        If (novaatividadenavio.DataInicio.Hour >= Me.AtividadesParagensMarcadas(k).DataInicio.Hour And novaatividadenavio.DataInicio.Hour <= Me.AtividadesParagensMarcadas(k).DataInicio.Hour) Or (novaatividadenavio.DataFim.Hour >= Me.AtividadesParagensMarcadas(k).DataInicio.Hour And novaatividadenavio.DataFim.Hour <= Me.AtividadesParagensMarcadas(k).DataFim.Hour) Then
                             temp = True
                         End If
 
@@ -95,8 +95,8 @@
         If Me.AtividadesParagensMarcadas.Count > 0 Then
 
             While k <= Me.AtividadesParagensMarcadas.Count - 1 And temp = False
-                If novaatividadeparagem.Data = Me.AtividadesParagensMarcadas(k).Data Then
-                    If (novaatividadeparagem.HoraInicio >= Me.AtividadesParagensMarcadas(k).HoraInicio And novaatividadeparagem.HoraInicio <= Me.AtividadesParagensMarcadas(k).HoraFim) Or (novaatividadeparagem.HoraFim >= Me.AtividadesParagensMarcadas(k).HoraInicio And novaatividadeparagem.HoraFim <= Me.AtividadesParagensMarcadas(k).HoraFim) Then
+                If novaatividadeparagem.DataInicio.Date = Me.AtividadesParagensMarcadas(k).DataInicio.Date Then
+                    If (novaatividadeparagem.DataInicio.Hour >= Me.AtividadesParagensMarcadas(k).DataInicio.Hour And novaatividadeparagem.DataInicio.Hour <= Me.AtividadesParagensMarcadas(k).DataFim.Hour) Or (novaatividadeparagem.DataFim.Hour >= Me.AtividadesParagensMarcadas(k).DataInicio.Hour And novaatividadeparagem.DataFim.Hour <= Me.AtividadesParagensMarcadas(k).DataFim.Hour) Then
                         temp = True
                     End If
 
@@ -107,8 +107,8 @@
             If temp = False Then
                 k = 0
                 While k <= Me.AtividadesNavioMarcadas.Count - 1 And temp = False
-                    If novaatividadeparagem.Data = Me.AtividadesNavioMarcadas(k).Data Then
-                        If (novaatividadeparagem.HoraInicio >= Me.AtividadesNavioMarcadas(k).HoraInicio And novaatividadeparagem.HoraInicio <= Me.AtividadesNavioMarcadas(k).HoraFim) Or (novaatividadeparagem.HoraFim >= Me.AtividadesNavioMarcadas(k).HoraInicio And novaatividadeparagem.HoraFim <= Me.AtividadesNavioMarcadas(k).HoraFim) Then
+                    If novaatividadeparagem.DataInicio.Date = Me.AtividadesNavioMarcadas(k).DataInicio.Date Then
+                        If (novaatividadeparagem.DataInicio.Hour >= Me.AtividadesNavioMarcadas(k).DataInicio.Hour And novaatividadeparagem.DataInicio.Hour <= Me.AtividadesNavioMarcadas(k).DataFim.Hour) Or (novaatividadeparagem.DataFim.Hour >= Me.AtividadesNavioMarcadas(k).DataInicio.Hour And novaatividadeparagem.DataFim.Hour <= Me.AtividadesNavioMarcadas(k).DataFim.Hour) Then
                             temp = True
                         End If
 
