@@ -41,12 +41,14 @@
     Private Sub Button_Marcar_Click(sender As Object, e As EventArgs) Handles Button_Marcar.Click
         EmpresaCruzeiros.Viajantes(ViajanteVisivel).MarcarAtividadeNavio(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel))
         AtividadeNavioVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio.Count - 1
+        gravar()
         mostra()
     End Sub
 
     Private Sub Button_anular_Click(sender As Object, e As EventArgs) Handles Button_anular.Click
         EmpresaCruzeiros.Viajantes(ViajanteVisivel).AnularMarcacaoNavio(Me.TextBox_nome.Text)
         AtividadeNavioVisivel = 0
+        gravar()
         mostra()
     End Sub
 
@@ -70,13 +72,22 @@
         mostra()
     End Sub
 
+
+
     Private Sub FormAtividades_Navio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If NivelVisivel = "Viajante" Then
             Me.Button_Adicionar.Visible = False
+            Me.TextBox_nome.Enabled = False
+            Me.TextBox_seccao.Enabled = False
+            Me.TextBox_tipo.Enabled = False
+            Me.TextBox_horafim.Enabled = False
+            Me.TextBox_horainicio.Enabled = False
         ElseIf NivelVisivel = "Funcionario" Then
             Me.Button_Marcar.Visible = False
             Me.Button_anular.Visible = False
         End If
         mostra()
     End Sub
+
+
 End Class

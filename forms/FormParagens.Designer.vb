@@ -29,7 +29,6 @@ Partial Class FormParagens
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox_dia = New System.Windows.Forms.TextBox()
         Me.Button_Adicionar = New System.Windows.Forms.Button()
         Me.ListBox_Paragens = New System.Windows.Forms.ListBox()
         Me.Button_fim = New System.Windows.Forms.Button()
@@ -37,13 +36,14 @@ Partial Class FormParagens
         Me.Button_anterior = New System.Windows.Forms.Button()
         Me.Button_inicio = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.DateTimePickerData = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'TextBox_local
         '
         Me.TextBox_local.Location = New System.Drawing.Point(185, 164)
         Me.TextBox_local.Name = "TextBox_local"
-        Me.TextBox_local.Size = New System.Drawing.Size(140, 20)
+        Me.TextBox_local.Size = New System.Drawing.Size(174, 20)
         Me.TextBox_local.TabIndex = 100
         '
         'Label6
@@ -60,14 +60,14 @@ Partial Class FormParagens
         '
         Me.TextBox_horafim.Location = New System.Drawing.Point(185, 242)
         Me.TextBox_horafim.Name = "TextBox_horafim"
-        Me.TextBox_horafim.Size = New System.Drawing.Size(140, 20)
+        Me.TextBox_horafim.Size = New System.Drawing.Size(174, 20)
         Me.TextBox_horafim.TabIndex = 98
         '
         'TextBox_horainicio
         '
         Me.TextBox_horainicio.Location = New System.Drawing.Point(185, 216)
         Me.TextBox_horainicio.Name = "TextBox_horainicio"
-        Me.TextBox_horainicio.Size = New System.Drawing.Size(140, 20)
+        Me.TextBox_horainicio.Size = New System.Drawing.Size(174, 20)
         Me.TextBox_horainicio.TabIndex = 97
         '
         'Label5
@@ -99,13 +99,6 @@ Partial Class FormParagens
         Me.Label2.Size = New System.Drawing.Size(100, 20)
         Me.Label2.TabIndex = 90
         Me.Label2.Text = "Hora de Fim:"
-        '
-        'TextBox_dia
-        '
-        Me.TextBox_dia.Location = New System.Drawing.Point(185, 190)
-        Me.TextBox_dia.Name = "TextBox_dia"
-        Me.TextBox_dia.Size = New System.Drawing.Size(140, 20)
-        Me.TextBox_dia.TabIndex = 88
         '
         'Button_Adicionar
         '
@@ -175,11 +168,19 @@ Partial Class FormParagens
         Me.Label1.TabIndex = 101
         Me.Label1.Text = "Paragens"
         '
+        'DateTimePickerData
+        '
+        Me.DateTimePickerData.Location = New System.Drawing.Point(185, 190)
+        Me.DateTimePickerData.Name = "DateTimePickerData"
+        Me.DateTimePickerData.Size = New System.Drawing.Size(174, 20)
+        Me.DateTimePickerData.TabIndex = 102
+        '
         'FormParagens
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(793, 466)
+        Me.Controls.Add(Me.DateTimePickerData)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox_local)
         Me.Controls.Add(Me.Label6)
@@ -188,7 +189,6 @@ Partial Class FormParagens
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox_dia)
         Me.Controls.Add(Me.Button_Adicionar)
         Me.Controls.Add(Me.ListBox_Paragens)
         Me.Controls.Add(Me.Button_fim)
@@ -209,7 +209,6 @@ Partial Class FormParagens
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox_dia As TextBox
     Friend WithEvents Button_Adicionar As Button
     Friend WithEvents ListBox_Paragens As ListBox
     Friend WithEvents Button_fim As Button
@@ -217,4 +216,5 @@ Partial Class FormParagens
     Friend WithEvents Button_anterior As Button
     Friend WithEvents Button_inicio As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents DateTimePickerData As DateTimePicker
 End Class
