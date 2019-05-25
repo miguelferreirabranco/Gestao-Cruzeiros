@@ -41,7 +41,6 @@ Partial Class FormAtividades_Navio
         Me.Label6 = New System.Windows.Forms.Label()
         Me.DateTimePickerData = New System.Windows.Forms.DateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
-<<<<<<< HEAD
         Me.HoraFim = New System.Windows.Forms.NumericUpDown()
         Me.HoraInicio = New System.Windows.Forms.NumericUpDown()
         Me.MinutoFim = New System.Windows.Forms.NumericUpDown()
@@ -50,9 +49,6 @@ Partial Class FormAtividades_Navio
         CType(Me.HoraInicio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MinutoFim, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MinutoInicio, System.ComponentModel.ISupportInitialize).BeginInit()
-=======
-        Me.ButtonNova = New System.Windows.Forms.Button()
->>>>>>> 4c4b9c9148dffb25bf4ee37c46c885a476e0f38a
         Me.SuspendLayout()
         '
         'Button_anular
@@ -96,7 +92,7 @@ Partial Class FormAtividades_Navio
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(73, 233)
+        Me.Label4.Location = New System.Drawing.Point(73, 238)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(111, 20)
         Me.Label4.TabIndex = 52
@@ -139,7 +135,7 @@ Partial Class FormAtividades_Navio
         'Button_Adicionar
         '
         Me.Button_Adicionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Adicionar.Location = New System.Drawing.Point(132, 330)
+        Me.Button_Adicionar.Location = New System.Drawing.Point(38, 330)
         Me.Button_Adicionar.Name = "Button_Adicionar"
         Me.Button_Adicionar.Size = New System.Drawing.Size(88, 39)
         Me.Button_Adicionar.TabIndex = 46
@@ -231,7 +227,6 @@ Partial Class FormAtividades_Navio
         Me.Label7.TabIndex = 63
         Me.Label7.Text = "Data:"
         '
-<<<<<<< HEAD
         'HoraFim
         '
         Me.HoraFim.Location = New System.Drawing.Point(200, 267)
@@ -263,31 +258,16 @@ Partial Class FormAtividades_Navio
         Me.MinutoInicio.Name = "MinutoInicio"
         Me.MinutoInicio.Size = New System.Drawing.Size(35, 20)
         Me.MinutoInicio.TabIndex = 107
-=======
-        'ButtonNova
-        '
-        Me.ButtonNova.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonNova.Location = New System.Drawing.Point(38, 330)
-        Me.ButtonNova.Name = "ButtonNova"
-        Me.ButtonNova.Size = New System.Drawing.Size(88, 39)
-        Me.ButtonNova.TabIndex = 64
-        Me.ButtonNova.Text = "Nova"
-        Me.ButtonNova.UseVisualStyleBackColor = True
->>>>>>> 4c4b9c9148dffb25bf4ee37c46c885a476e0f38a
         '
         'FormAtividades_Navio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(805, 456)
-<<<<<<< HEAD
         Me.Controls.Add(Me.HoraFim)
         Me.Controls.Add(Me.HoraInicio)
         Me.Controls.Add(Me.MinutoFim)
         Me.Controls.Add(Me.MinutoInicio)
-=======
-        Me.Controls.Add(Me.ButtonNova)
->>>>>>> 4c4b9c9148dffb25bf4ee37c46c885a476e0f38a
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.DateTimePickerData)
         Me.Controls.Add(Me.Label6)
@@ -336,12 +316,8 @@ Partial Class FormAtividades_Navio
     Friend WithEvents Label6 As Label
     Friend WithEvents DateTimePickerData As DateTimePicker
     Friend WithEvents Label7 As Label
-<<<<<<< HEAD
     Friend WithEvents HoraFim As NumericUpDown
     Friend WithEvents HoraInicio As NumericUpDown
     Friend WithEvents MinutoFim As NumericUpDown
     Friend WithEvents MinutoInicio As NumericUpDown
-=======
-    Friend WithEvents ButtonNova As Button
->>>>>>> 4c4b9c9148dffb25bf4ee37c46c885a476e0f38a
 End Class

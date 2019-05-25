@@ -41,7 +41,6 @@ Partial Class FormCruzeiros
         Me.Button_modificar = New System.Windows.Forms.Button()
         Me.Button_Reservar = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ButtonNovo = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button_inicio
@@ -95,7 +94,7 @@ Partial Class FormCruzeiros
         'Button_Adicionar
         '
         Me.Button_Adicionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Adicionar.Location = New System.Drawing.Point(264, 359)
+        Me.Button_Adicionar.Location = New System.Drawing.Point(173, 359)
         Me.Button_Adicionar.Name = "Button_Adicionar"
         Me.Button_Adicionar.Size = New System.Drawing.Size(88, 39)
         Me.Button_Adicionar.TabIndex = 5
@@ -190,7 +189,7 @@ Partial Class FormCruzeiros
         'Button_modificar
         '
         Me.Button_modificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_modificar.Location = New System.Drawing.Point(66, 359)
+        Me.Button_modificar.Location = New System.Drawing.Point(79, 359)
         Me.Button_modificar.Name = "Button_modificar"
         Me.Button_modificar.Size = New System.Drawing.Size(88, 39)
         Me.Button_modificar.TabIndex = 18
@@ -200,7 +199,7 @@ Partial Class FormCruzeiros
         'Button_Reservar
         '
         Me.Button_Reservar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Reservar.Location = New System.Drawing.Point(66, 405)
+        Me.Button_Reservar.Location = New System.Drawing.Point(79, 404)
         Me.Button_Reservar.Name = "Button_Reservar"
         Me.Button_Reservar.Size = New System.Drawing.Size(88, 39)
         Me.Button_Reservar.TabIndex = 19
@@ -217,22 +216,11 @@ Partial Class FormCruzeiros
         Me.Label6.TabIndex = 62
         Me.Label6.Text = "Cruzeiros"
         '
-        'ButtonNovo
-        '
-        Me.ButtonNovo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonNovo.Location = New System.Drawing.Point(170, 359)
-        Me.ButtonNovo.Name = "ButtonNovo"
-        Me.ButtonNovo.Size = New System.Drawing.Size(88, 39)
-        Me.ButtonNovo.TabIndex = 63
-        Me.ButtonNovo.Text = "Novo"
-        Me.ButtonNovo.UseVisualStyleBackColor = True
-        '
         'FormCruzeiros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(840, 465)
-        Me.Controls.Add(Me.ButtonNovo)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button_Reservar)
         Me.Controls.Add(Me.Button_modificar)
@@ -278,5 +266,4 @@ Partial Class FormCruzeiros
     Friend WithEvents Button_modificar As Button
     Friend WithEvents Button_Reservar As Button
     Friend WithEvents Label6 As Label
-    Friend WithEvents ButtonNovo As Button
 End Class

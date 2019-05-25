@@ -27,15 +27,7 @@
             Next
         End If
     End Sub
-    Private Sub ButtonNova_Click(sender As Object, e As EventArgs) Handles ButtonNova.Click
-        Me.TextBox_nome.Clear()
-        Me.TextBox_horafim.Clear()
-        Me.TextBox_horainicio.Clear()
-        Me.TextBox_seccao.Clear()
-        Me.TextBox_tipo.Clear()
-        Me.DateTimePickerData.Value = Today
 
-    End Sub
     Private Sub Button_Adicionar_Click(sender As Object, e As EventArgs) Handles Button_Adicionar.Click
         Dim NovaAtividadeNavio As ClassAtividadeNavio
         Dim data As Date = Me.DateTimePickerData.Value

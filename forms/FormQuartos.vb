@@ -44,13 +44,7 @@
         QuartoVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count - 1
         Mostra()
     End Sub
-    Private Sub ButtonNovo_Click(sender As Object, e As EventArgs) Handles ButtonNovo.Click
-        Me.TextBox_npessoas.Clear()
-        Me.TextBox_numero.Clear()
-        Me.TextBox_preco.Clear()
-        Me.TextBox_seccao.Clear()
 
-    End Sub
     Private Sub Button_Adicionar_Click(sender As Object, e As EventArgs) Handles Button_Adicionar.Click
         Dim quarto As ClassQuarto
         quarto = New ClassQuarto(Me.TextBox_npessoas.Text, Me.TextBox_numero.Text, Me.TextBox_preco.Text, Me.TextBox_seccao.Text)
@@ -67,6 +61,4 @@
     Private Sub FormQuartos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Mostra()
     End Sub
-
-
 End Class
