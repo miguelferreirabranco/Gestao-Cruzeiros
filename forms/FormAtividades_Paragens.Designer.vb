@@ -244,23 +244,13 @@ Partial Class FormAtividades_Paragens
         Me.DateTimePickerData.Size = New System.Drawing.Size(140, 20)
         Me.DateTimePickerData.TabIndex = 83
         '
-        'ComboBoxParagem
+        'ComboBox1
         '
-        Me.ComboBoxParagem.FormattingEnabled = True
-        Me.ComboBoxParagem.Location = New System.Drawing.Point(197, 278)
-        Me.ComboBoxParagem.Name = "ComboBoxParagem"
-        Me.ComboBoxParagem.Size = New System.Drawing.Size(140, 21)
-        Me.ComboBoxParagem.TabIndex = 84
-        '
-        'ButtonNova
-        '
-        Me.ButtonNova.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonNova.Location = New System.Drawing.Point(35, 339)
-        Me.ButtonNova.Name = "ButtonNova"
-        Me.ButtonNova.Size = New System.Drawing.Size(88, 39)
-        Me.ButtonNova.TabIndex = 85
-        Me.ButtonNova.Text = "Nova"
-        Me.ButtonNova.UseVisualStyleBackColor = True
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(197, 278)
+        Me.ComboBox1.Name = "ComboBoxParagem"
+        Me.ComboBox1.Size = New System.Drawing.Size(140, 21)
+        Me.ComboBox1.TabIndex = 84
         '
         'HoraFim
         '
@@ -299,16 +289,13 @@ Partial Class FormAtividades_Paragens
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(810, 465)
-<<<<<<< HEAD
+
         Me.Controls.Add(Me.HoraFim)
         Me.Controls.Add(Me.HoraInicio)
         Me.Controls.Add(Me.MinutoFim)
         Me.Controls.Add(Me.MinutoInicio)
         Me.Controls.Add(Me.ComboBox1)
-=======
-        Me.Controls.Add(Me.ButtonNova)
-        Me.Controls.Add(Me.ComboBoxParagem)
->>>>>>> 4c4b9c9148dffb25bf4ee37c46c885a476e0f38a
+
         Me.Controls.Add(Me.DateTimePickerData)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -359,14 +346,11 @@ Partial Class FormAtividades_Paragens
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
     Friend WithEvents DateTimePickerData As DateTimePicker
-<<<<<<< HEAD
+
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents HoraFim As NumericUpDown
     Friend WithEvents HoraInicio As NumericUpDown
     Friend WithEvents MinutoFim As NumericUpDown
     Friend WithEvents MinutoInicio As NumericUpDown
-=======
-    Friend WithEvents ComboBoxParagem As ComboBox
-    Friend WithEvents ButtonNova As Button
->>>>>>> 4c4b9c9148dffb25bf4ee37c46c885a476e0f38a
+
 End Class

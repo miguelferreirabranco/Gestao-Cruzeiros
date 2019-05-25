@@ -35,7 +35,7 @@ Partial Class FormParagens
         Me.Button_inicio = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DateTimePickerData = New System.Windows.Forms.DateTimePicker()
-<<<<<<< HEAD
+
         Me.MinutoInicio = New System.Windows.Forms.NumericUpDown()
         Me.MinutoFim = New System.Windows.Forms.NumericUpDown()
         Me.HoraInicio = New System.Windows.Forms.NumericUpDown()
@@ -44,11 +44,7 @@ Partial Class FormParagens
         CType(Me.MinutoFim, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HoraInicio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HoraFim, System.ComponentModel.ISupportInitialize).BeginInit()
-=======
-        Me.TextBox_horafim = New System.Windows.Forms.TextBox()
-        Me.TextBox_horainicio = New System.Windows.Forms.TextBox()
-        Me.ButtonNova = New System.Windows.Forms.Button()
->>>>>>> 4c4b9c9148dffb25bf4ee37c46c885a476e0f38a
+
         Me.SuspendLayout()
         '
         'TextBox_local
@@ -205,29 +201,17 @@ Partial Class FormParagens
         Me.HoraFim.Size = New System.Drawing.Size(35, 20)
         Me.HoraFim.TabIndex = 106
         '
-        'ButtonNova
-        '
-        Me.ButtonNova.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonNova.Location = New System.Drawing.Point(91, 302)
-        Me.ButtonNova.Name = "ButtonNova"
-        Me.ButtonNova.Size = New System.Drawing.Size(88, 39)
-        Me.ButtonNova.TabIndex = 103
-        Me.ButtonNova.Text = "Nova"
-        Me.ButtonNova.UseVisualStyleBackColor = True
-        '
         'FormParagens
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(793, 466)
-<<<<<<< HEAD
+
         Me.Controls.Add(Me.HoraFim)
         Me.Controls.Add(Me.HoraInicio)
         Me.Controls.Add(Me.MinutoFim)
         Me.Controls.Add(Me.MinutoInicio)
-=======
-        Me.Controls.Add(Me.ButtonNova)
->>>>>>> 4c4b9c9148dffb25bf4ee37c46c885a476e0f38a
+
         Me.Controls.Add(Me.DateTimePickerData)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox_local)
@@ -265,14 +249,10 @@ Partial Class FormParagens
     Friend WithEvents Button_inicio As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents DateTimePickerData As DateTimePicker
-<<<<<<< HEAD
+
     Friend WithEvents MinutoInicio As NumericUpDown
     Friend WithEvents MinutoFim As NumericUpDown
     Friend WithEvents HoraInicio As NumericUpDown
     Friend WithEvents HoraFim As NumericUpDown
-=======
-    Friend WithEvents TextBox_horafim As TextBox
-    Friend WithEvents TextBox_horainicio As TextBox
-    Friend WithEvents ButtonNova As Button
->>>>>>> 4c4b9c9148dffb25bf4ee37c46c885a476e0f38a
+
 End Class
