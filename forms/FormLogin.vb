@@ -84,5 +84,9 @@
 
     End Sub
 
-
+    Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.FormClosed
+        If NivelVisivel = "" Then
+            FormPrincipal.Close()
+        End If
+    End Sub
 End Class
