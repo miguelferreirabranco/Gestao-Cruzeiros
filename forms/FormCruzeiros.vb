@@ -66,6 +66,9 @@
         If NivelVisivel = "Viajante" Then
             Me.Button_modificar.Visible = False
             Me.Button_Adicionar.Visible = False
+            Me.TextBox_destino.Enabled = False
+            Me.TextBox_nome.Enabled = False
+            Me.TextBox_origem.Enabled = False
         ElseIf NivelVisivel = "Funcionario" Then
             Me.Button_Reservar.Visible = False
         End If

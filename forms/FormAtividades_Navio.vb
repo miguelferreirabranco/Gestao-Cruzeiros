@@ -75,6 +75,11 @@
     Private Sub FormAtividades_Navio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If NivelVisivel = "Viajante" Then
             Me.Button_Adicionar.Visible = False
+            Me.TextBox_nome.Enabled = False
+            Me.TextBox_seccao.Enabled = False
+            Me.TextBox_tipo.Enabled = False
+            Me.TextBox_horafim.Enabled = False
+            Me.TextBox_horainicio.Enabled = False
         ElseIf NivelVisivel = "Funcionario" Then
             Me.Button_Marcar.Visible = False
             Me.Button_anular.Visible = False
