@@ -14,8 +14,8 @@
 
             TextBox_nome.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).Nome
             TextBox_tipo.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).Tipo
-            TextBox_horainicio.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).HoraInicio
-            TextBox_horafim.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).HoraFim
+            Me.DateTimePickerHoraInicio.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).HoraInicio
+            Me.DateTimePickerHoraFim.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).HoraFim
             TextBox_seccao.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).SeccaoNavio
 
             ListBox_Atividades_Navio.Items.Clear()
@@ -29,7 +29,7 @@
     Private Sub Button_Adicionar_Click(sender As Object, e As EventArgs) Handles Button_Adicionar.Click
         Dim NovaAtividadeNavio As ClassAtividadeNavio
 
-        NovaAtividadeNavio = New ClassAtividadeNavio(Me.TextBox_nome.Text, Me.TextBox_horainicio.Text, Me.TextBox_horafim.Text, Me.TextBox_tipo.Text, Me.TextBox_seccao.Text)
+        NovaAtividadeNavio = New ClassAtividadeNavio(Me.TextBox_nome.Text, Me.DateTimePickerHoraInicio.Value.ToShortTimeString, Me.DateTimePickerHoraFim.Value.ToShortTimeString, Me.TextBox_tipo.Text, Me.TextBox_seccao.Text)
 
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio.Add(NovaAtividadeNavio)
         AtividadeNavioVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio.Count - 1
@@ -80,8 +80,8 @@
             Me.TextBox_nome.Enabled = False
             Me.TextBox_seccao.Enabled = False
             Me.TextBox_tipo.Enabled = False
-            Me.TextBox_horafim.Enabled = False
-            Me.TextBox_horainicio.Enabled = False
+            Me.DateTimePickerHoraInicio.Enabled = False
+            Me.DateTimePickerHoraFim.Enabled = False
         ElseIf NivelVisivel = "Funcionario" Then
             Me.Button_Marcar.Visible = False
             Me.Button_anular.Visible = False

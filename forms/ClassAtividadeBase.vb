@@ -3,8 +3,8 @@
 Public Class ClassAtividadeBase
     Private _nome As String
     Private _data As Date
-    Private _horaInicio As Integer
-    Private _horaFim As Integer
+    Private _horaInicio As Date
+    Private _horaFim As Date
     Private _tipo As String
 
 
@@ -17,20 +17,20 @@ Public Class ClassAtividadeBase
         End Set
     End Property
 
-    Public Property HoraInicio As Integer
+    Public Property HoraInicio As Date
         Get
             Return _horaInicio
         End Get
-        Set(value As Integer)
+        Set(value As Date)
             _horaInicio = value
         End Set
     End Property
 
-    Public Property HoraFim As Integer
+    Public Property HoraFim As Date
         Get
             Return _horaFim
         End Get
-        Set(value As Integer)
+        Set(value As Date)
             _horaFim = value
         End Set
     End Property
@@ -60,7 +60,7 @@ Public Class ClassAtividadeBase
     End Sub
 
 
-    Public Sub New(ByVal Nome As String, ByVal HoraInicio As Integer, ByVal HoraFim As Integer, ByVal Tipo As String)
+    Public Sub New(ByVal Nome As String, ByVal HoraInicio As Date, ByVal HoraFim As Date, ByVal Tipo As String)
         Me.Nome = Nome
         Me.HoraInicio = HoraInicio
         Me.HoraFim = HoraFim

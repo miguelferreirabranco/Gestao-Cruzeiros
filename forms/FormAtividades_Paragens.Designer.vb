@@ -22,8 +22,6 @@ Partial Class FormAtividades_Paragens
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox_horafim = New System.Windows.Forms.TextBox()
-        Me.TextBox_horainicio = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button_anular = New System.Windows.Forms.Button()
         Me.TextBox_paragem = New System.Windows.Forms.TextBox()
@@ -43,21 +41,9 @@ Partial Class FormAtividades_Paragens
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox_local = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.DateTimePickerHoraInicio = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePickerHoraFim = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
-        '
-        'TextBox_horafim
-        '
-        Me.TextBox_horafim.Location = New System.Drawing.Point(197, 232)
-        Me.TextBox_horafim.Name = "TextBox_horafim"
-        Me.TextBox_horafim.Size = New System.Drawing.Size(140, 20)
-        Me.TextBox_horafim.TabIndex = 78
-        '
-        'TextBox_horainicio
-        '
-        Me.TextBox_horainicio.Location = New System.Drawing.Point(197, 206)
-        Me.TextBox_horainicio.Name = "TextBox_horainicio"
-        Me.TextBox_horainicio.Size = New System.Drawing.Size(140, 20)
-        Me.TextBox_horainicio.TabIndex = 77
         '
         'Label3
         '
@@ -235,16 +221,32 @@ Partial Class FormAtividades_Paragens
         Me.Label7.TabIndex = 81
         Me.Label7.Text = "Atividades nas Paragens"
         '
+        'DateTimePickerHoraInicio
+        '
+        Me.DateTimePickerHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.DateTimePickerHoraInicio.Location = New System.Drawing.Point(197, 205)
+        Me.DateTimePickerHoraInicio.Name = "DateTimePickerHoraInicio"
+        Me.DateTimePickerHoraInicio.Size = New System.Drawing.Size(140, 20)
+        Me.DateTimePickerHoraInicio.TabIndex = 82
+        '
+        'DateTimePickerHoraFim
+        '
+        Me.DateTimePickerHoraFim.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.DateTimePickerHoraFim.Location = New System.Drawing.Point(197, 231)
+        Me.DateTimePickerHoraFim.Name = "DateTimePickerHoraFim"
+        Me.DateTimePickerHoraFim.Size = New System.Drawing.Size(140, 20)
+        Me.DateTimePickerHoraFim.TabIndex = 83
+        '
         'FormAtividades_Paragens
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(810, 465)
+        Me.Controls.Add(Me.DateTimePickerHoraFim)
+        Me.Controls.Add(Me.DateTimePickerHoraInicio)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TextBox_local)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox_horafim)
-        Me.Controls.Add(Me.TextBox_horainicio)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button_anular)
         Me.Controls.Add(Me.TextBox_paragem)
@@ -267,9 +269,6 @@ Partial Class FormAtividades_Paragens
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents TextBox_horafim As TextBox
-    Friend WithEvents TextBox_horainicio As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Button_anular As Button
     Friend WithEvents TextBox_paragem As TextBox
@@ -289,4 +288,6 @@ Partial Class FormAtividades_Paragens
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox_local As TextBox
     Friend WithEvents Label7 As Label
+    Friend WithEvents DateTimePickerHoraInicio As DateTimePicker
+    Friend WithEvents DateTimePickerHoraFim As DateTimePicker
 End Class

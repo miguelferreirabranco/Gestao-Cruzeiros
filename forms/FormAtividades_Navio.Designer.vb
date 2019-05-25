@@ -38,9 +38,9 @@ Partial Class FormAtividades_Navio
         Me.Button_anterior = New System.Windows.Forms.Button()
         Me.Button_inicio = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox_horainicio = New System.Windows.Forms.TextBox()
-        Me.TextBox_horafim = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.DateTimePickerHoraInicio = New System.Windows.Forms.DateTimePicker()
+        Me.DateTimePickerHoraFim = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'Button_anular
@@ -192,20 +192,6 @@ Partial Class FormAtividades_Navio
         Me.Label3.TabIndex = 58
         Me.Label3.Text = "Secção do Navio:"
         '
-        'TextBox_horainicio
-        '
-        Me.TextBox_horainicio.Location = New System.Drawing.Point(200, 206)
-        Me.TextBox_horainicio.Name = "TextBox_horainicio"
-        Me.TextBox_horainicio.Size = New System.Drawing.Size(140, 20)
-        Me.TextBox_horainicio.TabIndex = 59
-        '
-        'TextBox_horafim
-        '
-        Me.TextBox_horafim.Location = New System.Drawing.Point(200, 232)
-        Me.TextBox_horafim.Name = "TextBox_horafim"
-        Me.TextBox_horafim.Size = New System.Drawing.Size(140, 20)
-        Me.TextBox_horafim.TabIndex = 60
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -216,14 +202,30 @@ Partial Class FormAtividades_Navio
         Me.Label6.TabIndex = 61
         Me.Label6.Text = "Atividades no Navio"
         '
+        'DateTimePickerHoraInicio
+        '
+        Me.DateTimePickerHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.DateTimePickerHoraInicio.Location = New System.Drawing.Point(200, 206)
+        Me.DateTimePickerHoraInicio.Name = "DateTimePickerHoraInicio"
+        Me.DateTimePickerHoraInicio.Size = New System.Drawing.Size(140, 20)
+        Me.DateTimePickerHoraInicio.TabIndex = 62
+        '
+        'DateTimePickerHoraFim
+        '
+        Me.DateTimePickerHoraFim.Format = System.Windows.Forms.DateTimePickerFormat.Time
+        Me.DateTimePickerHoraFim.Location = New System.Drawing.Point(200, 232)
+        Me.DateTimePickerHoraFim.Name = "DateTimePickerHoraFim"
+        Me.DateTimePickerHoraFim.Size = New System.Drawing.Size(140, 20)
+        Me.DateTimePickerHoraFim.TabIndex = 63
+        '
         'FormAtividades_Navio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(805, 456)
+        Me.Controls.Add(Me.DateTimePickerHoraFim)
+        Me.Controls.Add(Me.DateTimePickerHoraInicio)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.TextBox_horafim)
-        Me.Controls.Add(Me.TextBox_horainicio)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button_anular)
         Me.Controls.Add(Me.TextBox_seccao)
@@ -262,7 +264,7 @@ Partial Class FormAtividades_Navio
     Friend WithEvents Button_anterior As Button
     Friend WithEvents Button_inicio As Button
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox_horainicio As TextBox
-    Friend WithEvents TextBox_horafim As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents DateTimePickerHoraInicio As DateTimePicker
+    Friend WithEvents DateTimePickerHoraFim As DateTimePicker
 End Class
