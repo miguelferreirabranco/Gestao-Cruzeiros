@@ -37,6 +37,7 @@ Partial Class FormQuartos
         Me.Button_inicio = New System.Windows.Forms.Button()
         Me.TextBox_preco = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.ButtonNovo = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label5
@@ -103,7 +104,7 @@ Partial Class FormQuartos
         'Button_Adicionar
         '
         Me.Button_Adicionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Adicionar.Location = New System.Drawing.Point(30, 336)
+        Me.Button_Adicionar.Location = New System.Drawing.Point(192, 319)
         Me.Button_Adicionar.Name = "Button_Adicionar"
         Me.Button_Adicionar.Size = New System.Drawing.Size(88, 39)
         Me.Button_Adicionar.TabIndex = 25
@@ -175,11 +176,22 @@ Partial Class FormQuartos
         Me.Label6.TabIndex = 63
         Me.Label6.Text = "Quartos"
         '
+        'ButtonNovo
+        '
+        Me.ButtonNovo.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonNovo.Location = New System.Drawing.Point(98, 319)
+        Me.ButtonNovo.Name = "ButtonNovo"
+        Me.ButtonNovo.Size = New System.Drawing.Size(88, 39)
+        Me.ButtonNovo.TabIndex = 64
+        Me.ButtonNovo.Text = "Novo"
+        Me.ButtonNovo.UseVisualStyleBackColor = True
+        '
         'FormQuartos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(803, 465)
+        Me.Controls.Add(Me.ButtonNovo)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox_preco)
         Me.Controls.Add(Me.Label5)
@@ -216,4 +228,5 @@ Partial Class FormQuartos
     Friend WithEvents Button_inicio As Button
     Friend WithEvents TextBox_preco As TextBox
     Friend WithEvents Label6 As Label
+    Friend WithEvents ButtonNovo As Button
 End Class
