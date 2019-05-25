@@ -55,26 +55,6 @@
         gravar()
     End Sub
 
-<<<<<<< HEAD
-=======
-    Private Sub Button_Reservar_Click(sender As Object, e As EventArgs) Handles Button_Reservar.Click
-
-
-        EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Reservar(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).Login)
-
-
-        gravar()
-    End Sub
-
-    Private Sub Button_anular_Click(sender As Object, e As EventArgs) Handles Button_anular.Click
-
-
-        EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).AnularReserva(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).Login)
-
-        gravar()
-
-    End Sub
->>>>>>> 0d43c5f9bfbb8238f79d7091ed92511133a91aec
 
     Private Sub FormQuartos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Mostra()
