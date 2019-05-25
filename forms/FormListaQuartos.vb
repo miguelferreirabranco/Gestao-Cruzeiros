@@ -2,10 +2,11 @@
 
     Private WithEvents FormQuartos As FormQuartos
     Private QuartoVisivel As Integer = 0
-    Private UltimaLinha As Integer = Me.DataGridView1.RowCount
+    Public UltimaLinha As Integer = 1 'Me.DataGridView1.Rows.Count()
 
     Private Sub FormListaQuartos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DataGridView1.ColumnCount = 6
+        DataGridView1.RowCount = 1
         mostra()
     End Sub
 
@@ -23,7 +24,7 @@
 
         If temp = False Then
             Me.DataGridView1.RowCount = Me.DataGridView1.RowCount + 1
-            UltimaLinha = Me.DataGridView1.RowCount
+            UltimaLinha = Me.DataGridView1.Rows.Count()
             Me.DataGridView1.Item(1, UltimaLinha).Value = nquarto
         End If
 
