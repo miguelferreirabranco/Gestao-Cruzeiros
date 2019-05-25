@@ -1,8 +1,8 @@
 ﻿Public Class ClassParagem
     Private _localParagem As String
     Private _data As Date
-    Private _horaInicio As Date
-    Private _horaFim As Date
+    Private _horaInicio As Integer
+    Private _horaFim As Integer
 
     Public Property LocalParagem As String
         Get
@@ -22,20 +22,20 @@
         End Set
     End Property
 
-    Public Property HoraInicio As Date
+    Public Property HoraInicio As Integer
         Get
             Return _horaInicio
         End Get
-        Set(value As Date)
+        Set(value As Integer)
             _horaInicio = value
         End Set
     End Property
 
-    Public Property HoraFim As Date
+    Public Property HoraFim As Integer
         Get
             Return _horaFim
         End Get
-        Set(value As Date)
+        Set(value As Integer)
             _horaFim = value
         End Set
     End Property
@@ -44,7 +44,7 @@
 
     End Sub
 
-    Public Sub New(ByVal localparagem As String, ByVal data As Date, ByVal horainicio As Date, ByVal horafim As Date)
+    Public Sub New(ByVal localparagem As String, ByVal data As Date, ByVal horainicio As Integer, ByVal horafim As Integer)
         Me.LocalParagem = localparagem
         Me.Data = data
         Me.HoraInicio = horainicio

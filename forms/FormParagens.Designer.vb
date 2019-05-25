@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormParagens
     Inherits System.Windows.Forms.Form
 
     'Descartar substituições de formulário para limpar a lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FormParagens
     'OBSERVAÇÃO: o procedimento a seguir é exigido pelo Windows Form Designer
     'Pode ser modificado usando o Windows Form Designer.  
     'Não o modifique usando o editor de códigos.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.TextBox_local = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -35,8 +35,8 @@ Partial Class FormParagens
         Me.Button_inicio = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.DateTimePickerData = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePickerHoraInicio = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePickerHoraFim = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox_horafim = New System.Windows.Forms.TextBox()
+        Me.TextBox_horainicio = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'TextBox_local
@@ -161,33 +161,31 @@ Partial Class FormParagens
         Me.DateTimePickerData.Size = New System.Drawing.Size(174, 20)
         Me.DateTimePickerData.TabIndex = 102
         '
-        'DateTimePickerHoraInicio
+        'TextBox_horafim
         '
-        Me.DateTimePickerHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePickerHoraInicio.Location = New System.Drawing.Point(185, 216)
-        Me.DateTimePickerHoraInicio.Name = "DateTimePickerHoraInicio"
-        Me.DateTimePickerHoraInicio.Size = New System.Drawing.Size(174, 20)
-        Me.DateTimePickerHoraInicio.TabIndex = 103
+        Me.TextBox_horafim.Location = New System.Drawing.Point(185, 242)
+        Me.TextBox_horafim.Name = "TextBox_horafim"
+        Me.TextBox_horafim.Size = New System.Drawing.Size(174, 20)
+        Me.TextBox_horafim.TabIndex = 98
         '
-        'DateTimePickerHoraFim
+        'TextBox_horainicio
         '
-        Me.DateTimePickerHoraFim.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePickerHoraFim.Location = New System.Drawing.Point(185, 242)
-        Me.DateTimePickerHoraFim.Name = "DateTimePickerHoraFim"
-        Me.DateTimePickerHoraFim.Size = New System.Drawing.Size(174, 20)
-        Me.DateTimePickerHoraFim.TabIndex = 104
+        Me.TextBox_horainicio.Location = New System.Drawing.Point(185, 216)
+        Me.TextBox_horainicio.Name = "TextBox_horainicio"
+        Me.TextBox_horainicio.Size = New System.Drawing.Size(174, 20)
+        Me.TextBox_horainicio.TabIndex = 97
         '
         'FormParagens
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(793, 466)
-        Me.Controls.Add(Me.DateTimePickerHoraFim)
-        Me.Controls.Add(Me.DateTimePickerHoraInicio)
         Me.Controls.Add(Me.DateTimePickerData)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox_local)
         Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.TextBox_horafim)
+        Me.Controls.Add(Me.TextBox_horainicio)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
@@ -217,6 +215,6 @@ Partial Class FormParagens
     Friend WithEvents Button_inicio As Button
     Friend WithEvents Label1 As Label
     Friend WithEvents DateTimePickerData As DateTimePicker
-    Friend WithEvents DateTimePickerHoraInicio As DateTimePicker
-    Friend WithEvents DateTimePickerHoraFim As DateTimePicker
+    Friend WithEvents TextBox_horafim As TextBox
+    Friend WithEvents TextBox_horainicio As TextBox
 End Class

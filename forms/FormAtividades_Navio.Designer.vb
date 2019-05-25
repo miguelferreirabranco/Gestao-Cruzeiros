@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormAtividades_Navio
     Inherits System.Windows.Forms.Form
 
     'Descartar substituições de formulário para limpar a lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class FormAtividades_Navio
     'OBSERVAÇÃO: o procedimento a seguir é exigido pelo Windows Form Designer
     'Pode ser modificado usando o Windows Form Designer.  
     'Não o modifique usando o editor de códigos.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Button_anular = New System.Windows.Forms.Button()
         Me.TextBox_seccao = New System.Windows.Forms.TextBox()
@@ -39,8 +39,8 @@ Partial Class FormAtividades_Navio
         Me.Button_inicio = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.DateTimePickerHoraInicio = New System.Windows.Forms.DateTimePicker()
-        Me.DateTimePickerHoraFim = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox_horafim = New System.Windows.Forms.TextBox()
+        Me.TextBox_horainicio = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'Button_anular
@@ -202,30 +202,28 @@ Partial Class FormAtividades_Navio
         Me.Label6.TabIndex = 61
         Me.Label6.Text = "Atividades no Navio"
         '
-        'DateTimePickerHoraInicio
+        'TextBox_horafim
         '
-        Me.DateTimePickerHoraInicio.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePickerHoraInicio.Location = New System.Drawing.Point(200, 206)
-        Me.DateTimePickerHoraInicio.Name = "DateTimePickerHoraInicio"
-        Me.DateTimePickerHoraInicio.Size = New System.Drawing.Size(140, 20)
-        Me.DateTimePickerHoraInicio.TabIndex = 62
+        Me.TextBox_horafim.Location = New System.Drawing.Point(200, 232)
+        Me.TextBox_horafim.Name = "TextBox_horafim"
+        Me.TextBox_horafim.Size = New System.Drawing.Size(140, 20)
+        Me.TextBox_horafim.TabIndex = 60
         '
-        'DateTimePickerHoraFim
+        'TextBox_horainicio
         '
-        Me.DateTimePickerHoraFim.Format = System.Windows.Forms.DateTimePickerFormat.Time
-        Me.DateTimePickerHoraFim.Location = New System.Drawing.Point(200, 232)
-        Me.DateTimePickerHoraFim.Name = "DateTimePickerHoraFim"
-        Me.DateTimePickerHoraFim.Size = New System.Drawing.Size(140, 20)
-        Me.DateTimePickerHoraFim.TabIndex = 63
+        Me.TextBox_horainicio.Location = New System.Drawing.Point(200, 206)
+        Me.TextBox_horainicio.Name = "TextBox_horainicio"
+        Me.TextBox_horainicio.Size = New System.Drawing.Size(140, 20)
+        Me.TextBox_horainicio.TabIndex = 59
         '
         'FormAtividades_Navio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(805, 456)
-        Me.Controls.Add(Me.DateTimePickerHoraFim)
-        Me.Controls.Add(Me.DateTimePickerHoraInicio)
         Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.TextBox_horafim)
+        Me.Controls.Add(Me.TextBox_horainicio)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button_anular)
         Me.Controls.Add(Me.TextBox_seccao)
@@ -265,6 +263,6 @@ Partial Class FormAtividades_Navio
     Friend WithEvents Button_inicio As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents DateTimePickerHoraInicio As DateTimePicker
-    Friend WithEvents DateTimePickerHoraFim As DateTimePicker
+    Friend WithEvents TextBox_horafim As TextBox
+    Friend WithEvents TextBox_horainicio As TextBox
 End Class
