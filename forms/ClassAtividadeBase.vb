@@ -2,9 +2,8 @@
 
 Public Class ClassAtividadeBase
     Private _nome As String
-    Private _data As Date
-    Private _horaInicio As Integer
-    Private _horaFim As Integer
+    Private _datainicio As Date
+    Private _dataFim As Date
     Private _tipo As String
 
 
@@ -17,23 +16,7 @@ Public Class ClassAtividadeBase
         End Set
     End Property
 
-    Public Property HoraInicio As Integer
-        Get
-            Return _horaInicio
-        End Get
-        Set(value As Integer)
-            _horaInicio = value
-        End Set
-    End Property
 
-    Public Property HoraFim As Integer
-        Get
-            Return _horaFim
-        End Get
-        Set(value As Integer)
-            _horaFim = value
-        End Set
-    End Property
 
     Public Property Tipo As String
         Get
@@ -46,12 +29,21 @@ Public Class ClassAtividadeBase
 
 
 
-    Public Property Data As Date
+    Public Property DataInicio As Date
         Get
-            Return _data
+            Return _datainicio
         End Get
         Set(value As Date)
-            _data = value
+            _datainicio = value
+        End Set
+    End Property
+
+    Public Property DataFim As Date
+        Get
+            Return _dataFim
+        End Get
+        Set(value As Date)
+            _dataFim = value
         End Set
     End Property
 
@@ -60,17 +52,17 @@ Public Class ClassAtividadeBase
     End Sub
 
 
-    Public Sub New(ByVal Nome As String, ByVal data As Date, ByVal HoraInicio As Integer, ByVal HoraFim As Integer, ByVal Tipo As String)
+    Public Sub New(ByVal Nome As String, ByVal DataInicio As Date, ByVal DataFim As Date, ByVal Tipo As String)
         Me.Nome = Nome
-        Me.Data = data
-        Me.HoraInicio = HoraInicio
-        Me.HoraFim = HoraFim
+        Me.DataInicio = DataInicio
+        Me.DataFim = DataFim
+
         Me.Tipo = Tipo
 
     End Sub
 
     Public Overridable Function AtividadeParaString() As String
-        Return Me.Nome & vbTab & Me.Tipo & vbTab & Me.Data & vbTab & Me.HoraInicio & vbTab & Me.HoraFim
+        Return Me.Nome & vbTab & Me.Tipo & vbTab & Me.DataInicio.ToShortDateString & vbTab & Me.DataInicio.Hour & ":" & Me.DataInicio.Minute & vbTab & Me.DataFim.Hour & ":" & Me.DataFim.Minute
     End Function
 
 End Class
