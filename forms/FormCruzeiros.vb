@@ -69,6 +69,8 @@
             Me.TextBox_destino.Enabled = False
             Me.TextBox_nome.Enabled = False
             Me.TextBox_origem.Enabled = False
+            Me.DateTimePicker_datainicial.Enabled = False
+            Me.DateTimePicker_datafinal.Enabled = False
         ElseIf NivelVisivel = "Funcionario" Then
             Me.Button_Reservar.Visible = False
         End If

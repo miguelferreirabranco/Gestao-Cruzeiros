@@ -85,6 +85,13 @@
     Private Sub FormAtividades_Paragens_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         If NivelVisivel = "Viajante" Then
             Me.Button_Adicionar.Visible = False
+            Me.TextBox_horafim.Enabled = False
+            Me.TextBox_horainicio.Enabled = False
+            Me.TextBox_local.Enabled = False
+            Me.TextBox_nome.Enabled = False
+            Me.TextBox_paragem.Enabled = False
+            Me.TextBox_tipo.Enabled = False
+
         ElseIf NivelVisivel = "Funcionario" Then
             Me.Button_Marcar.Visible = False
             Me.Button_anular.Visible = False
