@@ -45,6 +45,11 @@
         paragemvisivel = paragemvisivel + 1
         mostra()
     End Sub
+    Private Sub ButtonNova_Click(sender As Object, e As EventArgs) Handles ButtonNova.Click
+        Me.TextBox_local.Clear()
+        Me.TextBox_horainicio.Clear()
+        Me.TextBox_horafim.Clear()
+    End Sub
 
     Private Sub Button_Adicionar_Click(sender As Object, e As EventArgs) Handles Button_Adicionar.Click
         Dim paragem As ClassParagem
@@ -55,8 +60,6 @@
         gravar()
 
         mostra()
-
-
 
     End Sub
 
@@ -71,4 +74,6 @@
 
         mostra()
     End Sub
+
+
 End Class

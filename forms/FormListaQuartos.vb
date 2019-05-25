@@ -1,14 +1,11 @@
 ﻿Public Class FormListaQuartos
 
-    Private WithEvents FormQuartos As FormQuartos
+    Private WithEvents FormQuartos As New FormQuartos
     Private QuartoVisivel As Integer = 0
     Public UltimaLinha As Integer
 
     Private Sub FormListaQuartos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If NivelVisivel = "Funcionario" Then
-            FormQuartos = New FormQuartos
-            FormQuartos.ShowDialog()
-        End If
+
 
         DataGridView1.ColumnCount = 4
         Me.DataGridView1.RowCount = 1

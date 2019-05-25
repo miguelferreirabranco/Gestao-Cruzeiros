@@ -37,6 +37,7 @@ Partial Class FormParagens
         Me.DateTimePickerData = New System.Windows.Forms.DateTimePicker()
         Me.TextBox_horafim = New System.Windows.Forms.TextBox()
         Me.TextBox_horainicio = New System.Windows.Forms.TextBox()
+        Me.ButtonNova = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'TextBox_local
@@ -89,7 +90,7 @@ Partial Class FormParagens
         'Button_Adicionar
         '
         Me.Button_Adicionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Adicionar.Location = New System.Drawing.Point(23, 331)
+        Me.Button_Adicionar.Location = New System.Drawing.Point(185, 302)
         Me.Button_Adicionar.Name = "Button_Adicionar"
         Me.Button_Adicionar.Size = New System.Drawing.Size(88, 39)
         Me.Button_Adicionar.TabIndex = 86
@@ -175,11 +176,22 @@ Partial Class FormParagens
         Me.TextBox_horainicio.Size = New System.Drawing.Size(174, 20)
         Me.TextBox_horainicio.TabIndex = 97
         '
+        'ButtonNova
+        '
+        Me.ButtonNova.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonNova.Location = New System.Drawing.Point(91, 302)
+        Me.ButtonNova.Name = "ButtonNova"
+        Me.ButtonNova.Size = New System.Drawing.Size(88, 39)
+        Me.ButtonNova.TabIndex = 103
+        Me.ButtonNova.Text = "Nova"
+        Me.ButtonNova.UseVisualStyleBackColor = True
+        '
         'FormParagens
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(793, 466)
+        Me.Controls.Add(Me.ButtonNova)
         Me.Controls.Add(Me.DateTimePickerData)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox_local)
@@ -217,4 +229,5 @@ Partial Class FormParagens
     Friend WithEvents DateTimePickerData As DateTimePicker
     Friend WithEvents TextBox_horafim As TextBox
     Friend WithEvents TextBox_horainicio As TextBox
+    Friend WithEvents ButtonNova As Button
 End Class

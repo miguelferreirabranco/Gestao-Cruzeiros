@@ -43,6 +43,7 @@ Partial Class FormAtividades_Navio
         Me.TextBox_horainicio = New System.Windows.Forms.TextBox()
         Me.DateTimePickerData = New System.Windows.Forms.DateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.ButtonNova = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button_anular
@@ -86,7 +87,7 @@ Partial Class FormAtividades_Navio
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(73, 238)
+        Me.Label4.Location = New System.Drawing.Point(73, 233)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(111, 20)
         Me.Label4.TabIndex = 52
@@ -129,7 +130,7 @@ Partial Class FormAtividades_Navio
         'Button_Adicionar
         '
         Me.Button_Adicionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Adicionar.Location = New System.Drawing.Point(38, 330)
+        Me.Button_Adicionar.Location = New System.Drawing.Point(132, 330)
         Me.Button_Adicionar.Name = "Button_Adicionar"
         Me.Button_Adicionar.Size = New System.Drawing.Size(88, 39)
         Me.Button_Adicionar.TabIndex = 46
@@ -235,11 +236,22 @@ Partial Class FormAtividades_Navio
         Me.Label7.TabIndex = 63
         Me.Label7.Text = "Data:"
         '
+        'ButtonNova
+        '
+        Me.ButtonNova.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonNova.Location = New System.Drawing.Point(38, 330)
+        Me.ButtonNova.Name = "ButtonNova"
+        Me.ButtonNova.Size = New System.Drawing.Size(88, 39)
+        Me.ButtonNova.TabIndex = 64
+        Me.ButtonNova.Text = "Nova"
+        Me.ButtonNova.UseVisualStyleBackColor = True
+        '
         'FormAtividades_Navio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(805, 456)
+        Me.Controls.Add(Me.ButtonNova)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.DateTimePickerData)
         Me.Controls.Add(Me.Label6)
@@ -288,4 +300,5 @@ Partial Class FormAtividades_Navio
     Friend WithEvents TextBox_horainicio As TextBox
     Friend WithEvents DateTimePickerData As DateTimePicker
     Friend WithEvents Label7 As Label
+    Friend WithEvents ButtonNova As Button
 End Class
