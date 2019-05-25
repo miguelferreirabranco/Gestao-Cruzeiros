@@ -22,8 +22,8 @@
         End Set
     End Property
 
-    Public Overrides Function Pessoa_str() As String
-        Return MyBase.Pessoa_str() & vbTab & vbTab & Me.Nib
-    End Function
+    'Public Overrides Function Pessoa_str() As String
+    '    Return MyBase.Pessoa_str() & vbTab & vbTab & Me.Nib
+    'End Function
 
 End Class

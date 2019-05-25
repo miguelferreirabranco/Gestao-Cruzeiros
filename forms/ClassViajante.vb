@@ -26,9 +26,9 @@
         End Set
     End Property
 
-    Public Overrides Function Pessoa_str() As String
-        Return MyBase.Pessoa_str() & vbTab & vbTab & Me.Nif
-    End Function
+    'Public Overrides Function Pessoa_str() As String
+    '    Return MyBase.Pessoa_str() & vbTab & vbTab & Me.Nif
+    'End Function
 
     Public Sub MarcarAtividadeNavio(ByVal novaatividadenavio As ClassAtividadeNavio)
         Dim temp As Boolean = False

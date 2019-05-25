@@ -22,10 +22,15 @@
             Me.MinutoFim.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(paragemvisivel).DataFim.Minute
             Me.TextBox_local.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(paragemvisivel).LocalParagem
 
-            Me.ListBox_Paragens.Items.Clear()
+
+
+            ListView1.Items.Clear()
 
             For k = 0 To EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens.Count - 1
-                Me.ListBox_Paragens.Items.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(k).ParaString)
+                Dim item As New ListViewItem(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(k).LocalParagem)
+                item.SubItems.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(k).DataInicio.ToShortDateString)
+                item.SubItems.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(k).DataInicio.Hour & ":" & EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(k).DataInicio.Minute & " - " & EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(k).DataFim.Hour & ":" & EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(k).DataFim.Minute)
+                ListView1.Items.Add(item)
             Next
         End If
     End Sub

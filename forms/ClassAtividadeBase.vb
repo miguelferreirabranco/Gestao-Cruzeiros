@@ -61,8 +61,8 @@ Public Class ClassAtividadeBase
 
     End Sub
 
-    Public Overridable Function AtividadeParaString() As String
-        Return Me.Nome & vbTab & Me.Tipo & vbTab & Me.DataInicio.ToShortDateString & vbTab & Me.DataInicio.Hour & ":" & Me.DataInicio.Minute & vbTab & Me.DataFim.Hour & ":" & Me.DataFim.Minute
-    End Function
+    'Public Overridable Function AtividadeParaString() As String
+    '    Return Me.Nome & vbTab & Me.Tipo & vbTab & Me.DataInicio.ToShortDateString & vbTab & Me.DataInicio.Hour & ":" & Me.DataInicio.Minute & vbTab & Me.DataFim.Hour & ":" & Me.DataFim.Minute
+    'End Function
 
 End Class

@@ -30,7 +30,6 @@ Partial Class FormAtividades_Navio
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox_nome = New System.Windows.Forms.TextBox()
         Me.Button_Adicionar = New System.Windows.Forms.Button()
-        Me.ListBox_Atividades_Navio = New System.Windows.Forms.ListBox()
         Me.Button_fim = New System.Windows.Forms.Button()
         Me.Button_seguinte = New System.Windows.Forms.Button()
         Me.Button_anterior = New System.Windows.Forms.Button()
@@ -46,6 +45,12 @@ Partial Class FormAtividades_Navio
         Me.ComboBoxTipo = New System.Windows.Forms.ComboBox()
         Me.ComboBoxSeccao = New System.Windows.Forms.ComboBox()
         Me.ButtonNova = New System.Windows.Forms.Button()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ColumnHeaderNome = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderTipo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderData = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderHoras = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderSecao = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         CType(Me.HoraFim, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HoraInicio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MinutoFim, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -55,7 +60,7 @@ Partial Class FormAtividades_Navio
         'Button_anular
         '
         Me.Button_anular.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_anular.Location = New System.Drawing.Point(132, 375)
+        Me.Button_anular.Location = New System.Drawing.Point(117, 375)
         Me.Button_anular.Name = "Button_anular"
         Me.Button_anular.Size = New System.Drawing.Size(88, 39)
         Me.Button_anular.TabIndex = 56
@@ -65,7 +70,7 @@ Partial Class FormAtividades_Navio
         'Button_Marcar
         '
         Me.Button_Marcar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Marcar.Location = New System.Drawing.Point(38, 375)
+        Me.Button_Marcar.Location = New System.Drawing.Point(23, 375)
         Me.Button_Marcar.Name = "Button_Marcar"
         Me.Button_Marcar.Size = New System.Drawing.Size(88, 39)
         Me.Button_Marcar.TabIndex = 54
@@ -76,7 +81,7 @@ Partial Class FormAtividades_Navio
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(141, 180)
+        Me.Label5.Location = New System.Drawing.Point(126, 180)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(43, 20)
         Me.Label5.TabIndex = 53
@@ -86,7 +91,7 @@ Partial Class FormAtividades_Navio
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(73, 233)
+        Me.Label4.Location = New System.Drawing.Point(58, 233)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(111, 20)
         Me.Label4.TabIndex = 52
@@ -96,7 +101,7 @@ Partial Class FormAtividades_Navio
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(83, 264)
+        Me.Label2.Location = New System.Drawing.Point(68, 264)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(100, 20)
         Me.Label2.TabIndex = 51
@@ -106,7 +111,7 @@ Partial Class FormAtividades_Navio
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(128, 154)
+        Me.Label1.Location = New System.Drawing.Point(113, 154)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(55, 20)
         Me.Label1.TabIndex = 50
@@ -114,7 +119,7 @@ Partial Class FormAtividades_Navio
         '
         'TextBox_nome
         '
-        Me.TextBox_nome.Location = New System.Drawing.Point(200, 154)
+        Me.TextBox_nome.Location = New System.Drawing.Point(185, 154)
         Me.TextBox_nome.Name = "TextBox_nome"
         Me.TextBox_nome.Size = New System.Drawing.Size(140, 20)
         Me.TextBox_nome.TabIndex = 47
@@ -122,25 +127,17 @@ Partial Class FormAtividades_Navio
         'Button_Adicionar
         '
         Me.Button_Adicionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Adicionar.Location = New System.Drawing.Point(132, 330)
+        Me.Button_Adicionar.Location = New System.Drawing.Point(117, 330)
         Me.Button_Adicionar.Name = "Button_Adicionar"
         Me.Button_Adicionar.Size = New System.Drawing.Size(88, 39)
         Me.Button_Adicionar.TabIndex = 46
         Me.Button_Adicionar.Text = "Adicionar"
         Me.Button_Adicionar.UseVisualStyleBackColor = True
         '
-        'ListBox_Atividades_Navio
-        '
-        Me.ListBox_Atividades_Navio.FormattingEnabled = True
-        Me.ListBox_Atividades_Navio.Location = New System.Drawing.Point(449, 141)
-        Me.ListBox_Atividades_Navio.Name = "ListBox_Atividades_Navio"
-        Me.ListBox_Atividades_Navio.Size = New System.Drawing.Size(329, 303)
-        Me.ListBox_Atividades_Navio.TabIndex = 45
-        '
         'Button_fim
         '
         Me.Button_fim.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_fim.Location = New System.Drawing.Point(281, 72)
+        Me.Button_fim.Location = New System.Drawing.Point(266, 72)
         Me.Button_fim.Name = "Button_fim"
         Me.Button_fim.Size = New System.Drawing.Size(75, 39)
         Me.Button_fim.TabIndex = 44
@@ -150,7 +147,7 @@ Partial Class FormAtividades_Navio
         'Button_seguinte
         '
         Me.Button_seguinte.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_seguinte.Location = New System.Drawing.Point(200, 72)
+        Me.Button_seguinte.Location = New System.Drawing.Point(185, 72)
         Me.Button_seguinte.Name = "Button_seguinte"
         Me.Button_seguinte.Size = New System.Drawing.Size(75, 39)
         Me.Button_seguinte.TabIndex = 43
@@ -160,7 +157,7 @@ Partial Class FormAtividades_Navio
         'Button_anterior
         '
         Me.Button_anterior.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_anterior.Location = New System.Drawing.Point(119, 72)
+        Me.Button_anterior.Location = New System.Drawing.Point(104, 72)
         Me.Button_anterior.Name = "Button_anterior"
         Me.Button_anterior.Size = New System.Drawing.Size(75, 39)
         Me.Button_anterior.TabIndex = 42
@@ -170,7 +167,7 @@ Partial Class FormAtividades_Navio
         'Button_inicio
         '
         Me.Button_inicio.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_inicio.Location = New System.Drawing.Point(38, 72)
+        Me.Button_inicio.Location = New System.Drawing.Point(23, 72)
         Me.Button_inicio.Name = "Button_inicio"
         Me.Button_inicio.Size = New System.Drawing.Size(75, 39)
         Me.Button_inicio.TabIndex = 41
@@ -181,7 +178,7 @@ Partial Class FormAtividades_Navio
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(51, 291)
+        Me.Label3.Location = New System.Drawing.Point(36, 291)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(132, 20)
         Me.Label3.TabIndex = 58
@@ -199,7 +196,7 @@ Partial Class FormAtividades_Navio
         '
         'DateTimePickerData
         '
-        Me.DateTimePickerData.Location = New System.Drawing.Point(200, 207)
+        Me.DateTimePickerData.Location = New System.Drawing.Point(185, 207)
         Me.DateTimePickerData.Name = "DateTimePickerData"
         Me.DateTimePickerData.Size = New System.Drawing.Size(140, 20)
         Me.DateTimePickerData.TabIndex = 62
@@ -208,7 +205,7 @@ Partial Class FormAtividades_Navio
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(135, 208)
+        Me.Label7.Location = New System.Drawing.Point(120, 208)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(48, 20)
         Me.Label7.TabIndex = 63
@@ -216,7 +213,7 @@ Partial Class FormAtividades_Navio
         '
         'HoraFim
         '
-        Me.HoraFim.Location = New System.Drawing.Point(200, 267)
+        Me.HoraFim.Location = New System.Drawing.Point(185, 267)
         Me.HoraFim.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.HoraFim.Name = "HoraFim"
         Me.HoraFim.Size = New System.Drawing.Size(35, 20)
@@ -224,7 +221,7 @@ Partial Class FormAtividades_Navio
         '
         'HoraInicio
         '
-        Me.HoraInicio.Location = New System.Drawing.Point(200, 238)
+        Me.HoraInicio.Location = New System.Drawing.Point(185, 238)
         Me.HoraInicio.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.HoraInicio.Name = "HoraInicio"
         Me.HoraInicio.Size = New System.Drawing.Size(35, 20)
@@ -232,7 +229,7 @@ Partial Class FormAtividades_Navio
         '
         'MinutoFim
         '
-        Me.MinutoFim.Location = New System.Drawing.Point(241, 267)
+        Me.MinutoFim.Location = New System.Drawing.Point(226, 267)
         Me.MinutoFim.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.MinutoFim.Name = "MinutoFim"
         Me.MinutoFim.Size = New System.Drawing.Size(35, 20)
@@ -240,7 +237,7 @@ Partial Class FormAtividades_Navio
         '
         'MinutoInicio
         '
-        Me.MinutoInicio.Location = New System.Drawing.Point(241, 238)
+        Me.MinutoInicio.Location = New System.Drawing.Point(226, 238)
         Me.MinutoInicio.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.MinutoInicio.Name = "MinutoInicio"
         Me.MinutoInicio.Size = New System.Drawing.Size(35, 20)
@@ -250,7 +247,7 @@ Partial Class FormAtividades_Navio
         '
         Me.ComboBoxTipo.FormattingEnabled = True
         Me.ComboBoxTipo.Items.AddRange(New Object() {"Entretenimento", "Cultural", "Lazer", "Desportivo"})
-        Me.ComboBoxTipo.Location = New System.Drawing.Point(200, 178)
+        Me.ComboBoxTipo.Location = New System.Drawing.Point(185, 178)
         Me.ComboBoxTipo.Name = "ComboBoxTipo"
         Me.ComboBoxTipo.Size = New System.Drawing.Size(140, 21)
         Me.ComboBoxTipo.TabIndex = 111
@@ -259,7 +256,7 @@ Partial Class FormAtividades_Navio
         '
         Me.ComboBoxSeccao.FormattingEnabled = True
         Me.ComboBoxSeccao.Items.AddRange(New Object() {"Convés Superior", "Convés Inferior", "Sala de Eventos", "Piscina/Jacuzi"})
-        Me.ComboBoxSeccao.Location = New System.Drawing.Point(200, 291)
+        Me.ComboBoxSeccao.Location = New System.Drawing.Point(185, 291)
         Me.ComboBoxSeccao.Name = "ComboBoxSeccao"
         Me.ComboBoxSeccao.Size = New System.Drawing.Size(140, 21)
         Me.ComboBoxSeccao.TabIndex = 112
@@ -267,18 +264,54 @@ Partial Class FormAtividades_Navio
         'ButtonNova
         '
         Me.ButtonNova.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonNova.Location = New System.Drawing.Point(38, 330)
+        Me.ButtonNova.Location = New System.Drawing.Point(23, 330)
         Me.ButtonNova.Name = "ButtonNova"
         Me.ButtonNova.Size = New System.Drawing.Size(88, 39)
         Me.ButtonNova.TabIndex = 113
         Me.ButtonNova.Text = "Nova"
         Me.ButtonNova.UseVisualStyleBackColor = True
         '
+        'ListView1
+        '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeaderNome, Me.ColumnHeaderTipo, Me.ColumnHeaderData, Me.ColumnHeaderHoras, Me.ColumnHeaderSecao})
+        Me.ListView1.Location = New System.Drawing.Point(337, 128)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(575, 301)
+        Me.ListView1.TabIndex = 114
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeaderNome
+        '
+        Me.ColumnHeaderNome.Text = "Nome"
+        Me.ColumnHeaderNome.Width = 99
+        '
+        'ColumnHeaderTipo
+        '
+        Me.ColumnHeaderTipo.Text = "Tipo"
+        Me.ColumnHeaderTipo.Width = 106
+        '
+        'ColumnHeaderData
+        '
+        Me.ColumnHeaderData.Text = "Data"
+        Me.ColumnHeaderData.Width = 88
+        '
+        'ColumnHeaderHoras
+        '
+        Me.ColumnHeaderHoras.Text = "Horas Inicial-Hora Final"
+        Me.ColumnHeaderHoras.Width = 152
+        '
+        'ColumnHeaderSecao
+        '
+        Me.ColumnHeaderSecao.Text = "Secção"
+        Me.ColumnHeaderSecao.Width = 115
+        '
         'FormAtividades_Navio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(805, 456)
+        Me.ClientSize = New System.Drawing.Size(915, 456)
+        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.ButtonNova)
         Me.Controls.Add(Me.ComboBoxSeccao)
         Me.Controls.Add(Me.ComboBoxTipo)
@@ -298,7 +331,6 @@ Partial Class FormAtividades_Navio
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox_nome)
         Me.Controls.Add(Me.Button_Adicionar)
-        Me.Controls.Add(Me.ListBox_Atividades_Navio)
         Me.Controls.Add(Me.Button_fim)
         Me.Controls.Add(Me.Button_seguinte)
         Me.Controls.Add(Me.Button_anterior)
@@ -321,7 +353,6 @@ Partial Class FormAtividades_Navio
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox_nome As TextBox
     Friend WithEvents Button_Adicionar As Button
-    Friend WithEvents ListBox_Atividades_Navio As ListBox
     Friend WithEvents Button_fim As Button
     Friend WithEvents Button_seguinte As Button
     Friend WithEvents Button_anterior As Button
@@ -338,6 +369,10 @@ Partial Class FormAtividades_Navio
     Friend WithEvents ComboBoxTipo As ComboBox
     Friend WithEvents ComboBoxSeccao As ComboBox
     Friend WithEvents ButtonNova As Button
-
-
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents ColumnHeaderNome As ColumnHeader
+    Friend WithEvents ColumnHeaderTipo As ColumnHeader
+    Friend WithEvents ColumnHeaderData As ColumnHeader
+    Friend WithEvents ColumnHeaderHoras As ColumnHeader
+    Friend WithEvents ColumnHeaderSecao As ColumnHeader
 End Class

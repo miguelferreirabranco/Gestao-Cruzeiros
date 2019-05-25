@@ -141,8 +141,8 @@ Public Class ClassCruzeiro
         Me.LocalInicio = localInicio
         Me.LocalFim = LocalFim
     End Sub
-    Public Function CruzeiroParaString() As String
-        Return Me.Nome & vbTab & Me.DataInicio & " - " & Me.DataFim & vbTab & Me.LocalInicio & vbTab & Me.LocalFim
+    'Public Function CruzeiroParaString() As String
+    '    Return Me.Nome & vbTab & Me.DataInicio & " - " & Me.DataFim & vbTab & Me.LocalInicio & vbTab & Me.LocalFim
 
-    End Function
+    'End Function
 End Class

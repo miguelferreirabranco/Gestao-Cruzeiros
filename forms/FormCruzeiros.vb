@@ -14,12 +14,16 @@
             DateTimePicker_datainicial.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).DataInicio
             DateTimePicker_datafinal.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).DataFim
 
-            ListBox_Cruzeiros.Items.Clear()
+            ListView1.Items.Clear()
 
             For k = 0 To EmpresaCruzeiros.Cruzeiros.Count - 1
-                ListBox_Cruzeiros.Items.Add(EmpresaCruzeiros.Cruzeiros(k).CruzeiroParaString)
+                Dim item As New ListViewItem(EmpresaCruzeiros.Cruzeiros(k).Nome)
+                item.SubItems.Add(EmpresaCruzeiros.Cruzeiros(k).LocalInicio)
+                item.SubItems.Add(EmpresaCruzeiros.Cruzeiros(k).LocalFim)
+                item.SubItems.Add(EmpresaCruzeiros.Cruzeiros(k).DataInicio.ToShortDateString)
+                item.SubItems.Add(EmpresaCruzeiros.Cruzeiros(k).DataFim.ToShortDateString)
+                ListView1.Items.Add(item)
             Next
-
         End If
     End Sub
 

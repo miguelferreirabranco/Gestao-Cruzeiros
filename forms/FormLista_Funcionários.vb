@@ -4,14 +4,16 @@
 
         ler()
 
-        ListBox_funcionarios.Items.Clear()
 
-        For i = 0 To EmpresaCruzeiros.Funcionarios.Count - 1
+        ListView1.Items.Clear()
 
-            ListBox_funcionarios.Items.Add(EmpresaCruzeiros.Funcionarios(i).Pessoa_str)
-
+        For k = 0 To EmpresaCruzeiros.Funcionarios.Count - 1
+            Dim item As New ListViewItem(EmpresaCruzeiros.Funcionarios(k).Login)
+            item.SubItems.Add(EmpresaCruzeiros.Funcionarios(k).Nome)
+            item.SubItems.Add(EmpresaCruzeiros.Funcionarios(k).Numero_cc)
+            item.SubItems.Add(EmpresaCruzeiros.Funcionarios(k).Nib)
+            ListView1.Items.Add(item)
         Next
-
     End Sub
 
 End Class

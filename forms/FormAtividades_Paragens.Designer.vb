@@ -31,7 +31,6 @@ Partial Class FormAtividades_Paragens
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox_nome = New System.Windows.Forms.TextBox()
         Me.Button_Adicionar = New System.Windows.Forms.Button()
-        Me.ListBox_Atividades_Paragens = New System.Windows.Forms.ListBox()
         Me.Button_fim = New System.Windows.Forms.Button()
         Me.Button_seguinte = New System.Windows.Forms.Button()
         Me.Button_anterior = New System.Windows.Forms.Button()
@@ -48,6 +47,13 @@ Partial Class FormAtividades_Paragens
         Me.MinutoInicio = New System.Windows.Forms.NumericUpDown()
         Me.ButtonNova1 = New System.Windows.Forms.Button()
         Me.ComboBoxTipo1 = New System.Windows.Forms.ComboBox()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ColumnHeaderNome = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderTipo = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderData = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderHoras = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderParagem = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderLocal = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         CType(Me.HoraFim, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.HoraInicio, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.MinutoFim, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -58,7 +64,7 @@ Partial Class FormAtividades_Paragens
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(104, 278)
+        Me.Label3.Location = New System.Drawing.Point(43, 278)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(77, 20)
         Me.Label3.TabIndex = 76
@@ -88,7 +94,7 @@ Partial Class FormAtividades_Paragens
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(138, 167)
+        Me.Label5.Location = New System.Drawing.Point(77, 167)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(43, 20)
         Me.Label5.TabIndex = 72
@@ -98,7 +104,7 @@ Partial Class FormAtividades_Paragens
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(70, 220)
+        Me.Label4.Location = New System.Drawing.Point(9, 220)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(111, 20)
         Me.Label4.TabIndex = 71
@@ -108,7 +114,7 @@ Partial Class FormAtividades_Paragens
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(80, 248)
+        Me.Label2.Location = New System.Drawing.Point(19, 248)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(100, 20)
         Me.Label2.TabIndex = 70
@@ -118,7 +124,7 @@ Partial Class FormAtividades_Paragens
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(125, 141)
+        Me.Label1.Location = New System.Drawing.Point(64, 141)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(55, 20)
         Me.Label1.TabIndex = 69
@@ -126,7 +132,7 @@ Partial Class FormAtividades_Paragens
         '
         'TextBox_nome
         '
-        Me.TextBox_nome.Location = New System.Drawing.Point(197, 141)
+        Me.TextBox_nome.Location = New System.Drawing.Point(136, 141)
         Me.TextBox_nome.Name = "TextBox_nome"
         Me.TextBox_nome.Size = New System.Drawing.Size(140, 20)
         Me.TextBox_nome.TabIndex = 67
@@ -140,14 +146,6 @@ Partial Class FormAtividades_Paragens
         Me.Button_Adicionar.TabIndex = 66
         Me.Button_Adicionar.Text = "Adicionar"
         Me.Button_Adicionar.UseVisualStyleBackColor = True
-        '
-        'ListBox_Atividades_Paragens
-        '
-        Me.ListBox_Atividades_Paragens.FormattingEnabled = True
-        Me.ListBox_Atividades_Paragens.Location = New System.Drawing.Point(446, 141)
-        Me.ListBox_Atividades_Paragens.Name = "ListBox_Atividades_Paragens"
-        Me.ListBox_Atividades_Paragens.Size = New System.Drawing.Size(329, 303)
-        Me.ListBox_Atividades_Paragens.TabIndex = 65
         '
         'Button_fim
         '
@@ -193,7 +191,7 @@ Partial Class FormAtividades_Paragens
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(129, 304)
+        Me.Label6.Location = New System.Drawing.Point(68, 304)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(51, 20)
         Me.Label6.TabIndex = 79
@@ -201,7 +199,7 @@ Partial Class FormAtividades_Paragens
         '
         'TextBox_local
         '
-        Me.TextBox_local.Location = New System.Drawing.Point(197, 304)
+        Me.TextBox_local.Location = New System.Drawing.Point(136, 304)
         Me.TextBox_local.Name = "TextBox_local"
         Me.TextBox_local.Size = New System.Drawing.Size(140, 20)
         Me.TextBox_local.TabIndex = 80
@@ -220,7 +218,7 @@ Partial Class FormAtividades_Paragens
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(137, 194)
+        Me.Label8.Location = New System.Drawing.Point(76, 194)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(48, 20)
         Me.Label8.TabIndex = 82
@@ -228,7 +226,7 @@ Partial Class FormAtividades_Paragens
         '
         'DateTimePickerData
         '
-        Me.DateTimePickerData.Location = New System.Drawing.Point(197, 193)
+        Me.DateTimePickerData.Location = New System.Drawing.Point(136, 193)
         Me.DateTimePickerData.Name = "DateTimePickerData"
         Me.DateTimePickerData.Size = New System.Drawing.Size(140, 20)
         Me.DateTimePickerData.TabIndex = 83
@@ -236,14 +234,14 @@ Partial Class FormAtividades_Paragens
         'ComboBoxParagem
         '
         Me.ComboBoxParagem.FormattingEnabled = True
-        Me.ComboBoxParagem.Location = New System.Drawing.Point(197, 278)
+        Me.ComboBoxParagem.Location = New System.Drawing.Point(136, 278)
         Me.ComboBoxParagem.Name = "ComboBoxParagem"
         Me.ComboBoxParagem.Size = New System.Drawing.Size(140, 21)
         Me.ComboBoxParagem.TabIndex = 84
         '
         'HoraFim
         '
-        Me.HoraFim.Location = New System.Drawing.Point(197, 249)
+        Me.HoraFim.Location = New System.Drawing.Point(136, 249)
         Me.HoraFim.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.HoraFim.Name = "HoraFim"
         Me.HoraFim.Size = New System.Drawing.Size(35, 20)
@@ -251,7 +249,7 @@ Partial Class FormAtividades_Paragens
         '
         'HoraInicio
         '
-        Me.HoraInicio.Location = New System.Drawing.Point(197, 220)
+        Me.HoraInicio.Location = New System.Drawing.Point(136, 220)
         Me.HoraInicio.Maximum = New Decimal(New Integer() {23, 0, 0, 0})
         Me.HoraInicio.Name = "HoraInicio"
         Me.HoraInicio.Size = New System.Drawing.Size(35, 20)
@@ -259,7 +257,7 @@ Partial Class FormAtividades_Paragens
         '
         'MinutoFim
         '
-        Me.MinutoFim.Location = New System.Drawing.Point(238, 249)
+        Me.MinutoFim.Location = New System.Drawing.Point(177, 249)
         Me.MinutoFim.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.MinutoFim.Name = "MinutoFim"
         Me.MinutoFim.Size = New System.Drawing.Size(35, 20)
@@ -267,7 +265,7 @@ Partial Class FormAtividades_Paragens
         '
         'MinutoInicio
         '
-        Me.MinutoInicio.Location = New System.Drawing.Point(238, 220)
+        Me.MinutoInicio.Location = New System.Drawing.Point(177, 220)
         Me.MinutoInicio.Maximum = New Decimal(New Integer() {59, 0, 0, 0})
         Me.MinutoInicio.Name = "MinutoInicio"
         Me.MinutoInicio.Size = New System.Drawing.Size(35, 20)
@@ -287,16 +285,56 @@ Partial Class FormAtividades_Paragens
         '
         Me.ComboBoxTipo1.FormattingEnabled = True
         Me.ComboBoxTipo1.Items.AddRange(New Object() {"Cultural", "Entretenimento", "Lazer", "Desportivo"})
-        Me.ComboBoxTipo1.Location = New System.Drawing.Point(197, 165)
+        Me.ComboBoxTipo1.Location = New System.Drawing.Point(136, 165)
         Me.ComboBoxTipo1.Name = "ComboBoxTipo1"
         Me.ComboBoxTipo1.Size = New System.Drawing.Size(140, 21)
         Me.ComboBoxTipo1.TabIndex = 112
+        '
+        'ListView1
+        '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeaderNome, Me.ColumnHeaderTipo, Me.ColumnHeaderData, Me.ColumnHeaderHoras, Me.ColumnHeaderParagem, Me.ColumnHeaderLocal})
+        Me.ListView1.Location = New System.Drawing.Point(292, 122)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(618, 301)
+        Me.ListView1.TabIndex = 115
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeaderNome
+        '
+        Me.ColumnHeaderNome.Text = "Nome"
+        Me.ColumnHeaderNome.Width = 99
+        '
+        'ColumnHeaderTipo
+        '
+        Me.ColumnHeaderTipo.Text = "Tipo"
+        Me.ColumnHeaderTipo.Width = 106
+        '
+        'ColumnHeaderData
+        '
+        Me.ColumnHeaderData.Text = "Data"
+        Me.ColumnHeaderData.Width = 88
+        '
+        'ColumnHeaderHoras
+        '
+        Me.ColumnHeaderHoras.Text = "Horas Inicial-Hora Final"
+        Me.ColumnHeaderHoras.Width = 152
+        '
+        'ColumnHeaderParagem
+        '
+        Me.ColumnHeaderParagem.Text = "Paragem"
+        Me.ColumnHeaderParagem.Width = 115
+        '
+        'ColumnHeaderLocal
+        '
+        Me.ColumnHeaderLocal.Text = "Local"
         '
         'FormAtividades_Paragens
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(810, 465)
+        Me.ClientSize = New System.Drawing.Size(924, 465)
+        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.ComboBoxTipo1)
         Me.Controls.Add(Me.ButtonNova1)
         Me.Controls.Add(Me.HoraFim)
@@ -318,7 +356,6 @@ Partial Class FormAtividades_Paragens
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox_nome)
         Me.Controls.Add(Me.Button_Adicionar)
-        Me.Controls.Add(Me.ListBox_Atividades_Paragens)
         Me.Controls.Add(Me.Button_fim)
         Me.Controls.Add(Me.Button_seguinte)
         Me.Controls.Add(Me.Button_anterior)
@@ -342,7 +379,6 @@ Partial Class FormAtividades_Paragens
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox_nome As TextBox
     Friend WithEvents Button_Adicionar As Button
-    Friend WithEvents ListBox_Atividades_Paragens As ListBox
     Friend WithEvents Button_fim As Button
     Friend WithEvents Button_seguinte As Button
     Friend WithEvents Button_anterior As Button
@@ -365,4 +401,11 @@ Partial Class FormAtividades_Paragens
     Friend WithEvents ComboBoxTipo As ComboBox
     Friend WithEvents ButtonNova1 As Button
     Friend WithEvents ComboBoxTipo1 As ComboBox
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents ColumnHeaderNome As ColumnHeader
+    Friend WithEvents ColumnHeaderTipo As ColumnHeader
+    Friend WithEvents ColumnHeaderData As ColumnHeader
+    Friend WithEvents ColumnHeaderHoras As ColumnHeader
+    Friend WithEvents ColumnHeaderParagem As ColumnHeader
+    Friend WithEvents ColumnHeaderLocal As ColumnHeader
 End Class

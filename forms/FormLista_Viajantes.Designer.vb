@@ -22,21 +22,13 @@ Partial Class FormLista_Viajantes
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.ListBox_viajantes = New System.Windows.Forms.ListBox()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ColumnHeaderLogin = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderNome = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderCC = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderNIF = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
-        '
-        'ListBox_viajantes
-        '
-        Me.ListBox_viajantes.FormattingEnabled = True
-        Me.ListBox_viajantes.Location = New System.Drawing.Point(67, 85)
-        Me.ListBox_viajantes.Name = "ListBox_viajantes"
-        Me.ListBox_viajantes.Size = New System.Drawing.Size(425, 251)
-        Me.ListBox_viajantes.TabIndex = 0
         '
         'Label6
         '
@@ -48,68 +40,53 @@ Partial Class FormLista_Viajantes
         Me.Label6.TabIndex = 64
         Me.Label6.Text = "Lista dos Viajantes"
         '
-        'Label4
+        'ListView1
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(422, 62)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(39, 20)
-        Me.Label4.TabIndex = 71
-        Me.Label4.Text = "NIB"
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeaderLogin, Me.ColumnHeaderNome, Me.ColumnHeaderCC, Me.ColumnHeaderNIF})
+        Me.ListView1.Location = New System.Drawing.Point(46, 62)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(480, 301)
+        Me.ListView1.TabIndex = 117
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
         '
-        'Label3
+        'ColumnHeaderLogin
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(304, 62)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(33, 20)
-        Me.Label3.TabIndex = 70
-        Me.Label3.Text = "CC"
+        Me.ColumnHeaderLogin.Text = "Login"
+        Me.ColumnHeaderLogin.Width = 104
         '
-        'Label2
+        'ColumnHeaderNome
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(178, 62)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(55, 20)
-        Me.Label2.TabIndex = 69
-        Me.Label2.Text = "Nome"
+        Me.ColumnHeaderNome.Text = "Nome"
+        Me.ColumnHeaderNome.Width = 137
         '
-        'Label1
+        'ColumnHeaderCC
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(63, 62)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 20)
-        Me.Label1.TabIndex = 68
-        Me.Label1.Text = "Login"
+        Me.ColumnHeaderCC.Text = "CC"
+        Me.ColumnHeaderCC.Width = 131
+        '
+        'ColumnHeaderNIF
+        '
+        Me.ColumnHeaderNIF.Text = "NIF"
+        Me.ColumnHeaderNIF.Width = 102
         '
         'FormLista_Viajantes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(590, 389)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.ListBox_viajantes)
         Me.Name = "FormLista_Viajantes"
         Me.Text = "Lista_Viajantes"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents ListBox_viajantes As ListBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents ColumnHeaderLogin As ColumnHeader
+    Friend WithEvents ColumnHeaderNome As ColumnHeader
+    Friend WithEvents ColumnHeaderCC As ColumnHeader
+    Friend WithEvents ColumnHeaderNIF As ColumnHeader
 End Class

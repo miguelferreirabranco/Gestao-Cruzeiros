@@ -23,10 +23,15 @@
             Me.MinutoFim.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).DataFim.Minute
 
 
-            ListBox_Atividades_Navio.Items.Clear()
+            ListView1.Items.Clear()
 
             For k = 0 To EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio.Count - 1
-                ListBox_Atividades_Navio.Items.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(k).AtividadeParaString)
+                Dim item As New ListViewItem(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(k).Nome)
+                item.SubItems.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(k).Tipo)
+                item.SubItems.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(k).DataInicio.ToShortDateString)
+                item.SubItems.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(k).DataInicio.Hour & ":" & EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(k).DataInicio.Minute & " - " & EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(k).DataFim.Hour & ":" & EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(k).DataFim.Minute)
+                item.SubItems.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(k).SeccaoNavio)
+                ListView1.Items.Add(item)
             Next
         End If
     End Sub
@@ -111,5 +116,6 @@
         ler()
         mostra()
     End Sub
+
 
 End Class

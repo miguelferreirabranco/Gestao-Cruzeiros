@@ -26,7 +26,6 @@ Partial Class FormCruzeiros
         Me.Button_anterior = New System.Windows.Forms.Button()
         Me.Button_seguinte = New System.Windows.Forms.Button()
         Me.Button_fim = New System.Windows.Forms.Button()
-        Me.ListBox_Cruzeiros = New System.Windows.Forms.ListBox()
         Me.Button_Adicionar = New System.Windows.Forms.Button()
         Me.TextBox_nome = New System.Windows.Forms.TextBox()
         Me.TextBox_destino = New System.Windows.Forms.TextBox()
@@ -42,6 +41,12 @@ Partial Class FormCruzeiros
         Me.Button_Reservar = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ButtonNovo = New System.Windows.Forms.Button()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ColumnHeaderNome = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderOrigem = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderDestino = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderDataInicial1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderDataFinal1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'Button_inicio
@@ -83,14 +88,6 @@ Partial Class FormCruzeiros
         Me.Button_fim.TabIndex = 3
         Me.Button_fim.Text = ">>"
         Me.Button_fim.UseVisualStyleBackColor = True
-        '
-        'ListBox_Cruzeiros
-        '
-        Me.ListBox_Cruzeiros.FormattingEnabled = True
-        Me.ListBox_Cruzeiros.Location = New System.Drawing.Point(381, 76)
-        Me.ListBox_Cruzeiros.Name = "ListBox_Cruzeiros"
-        Me.ListBox_Cruzeiros.Size = New System.Drawing.Size(437, 368)
-        Me.ListBox_Cruzeiros.TabIndex = 4
         '
         'Button_Adicionar
         '
@@ -227,11 +224,47 @@ Partial Class FormCruzeiros
         Me.ButtonNovo.Text = "Novo"
         Me.ButtonNovo.UseVisualStyleBackColor = True
         '
+        'ListView1
+        '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeaderNome, Me.ColumnHeaderOrigem, Me.ColumnHeaderDestino, Me.ColumnHeaderDataInicial1, Me.ColumnHeaderDataFinal1})
+        Me.ListView1.Location = New System.Drawing.Point(361, 130)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(467, 301)
+        Me.ListView1.TabIndex = 115
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeaderNome
+        '
+        Me.ColumnHeaderNome.Text = "Nome"
+        Me.ColumnHeaderNome.Width = 99
+        '
+        'ColumnHeaderOrigem
+        '
+        Me.ColumnHeaderOrigem.Text = "Origem"
+        Me.ColumnHeaderOrigem.Width = 79
+        '
+        'ColumnHeaderDestino
+        '
+        Me.ColumnHeaderDestino.Text = "Destino"
+        Me.ColumnHeaderDestino.Width = 81
+        '
+        'ColumnHeaderDataInicial1
+        '
+        Me.ColumnHeaderDataInicial1.Text = "Data Inicial"
+        Me.ColumnHeaderDataInicial1.Width = 98
+        '
+        'ColumnHeaderDataFinal1
+        '
+        Me.ColumnHeaderDataFinal1.Text = "Data Final"
+        Me.ColumnHeaderDataFinal1.Width = 105
+        '
         'FormCruzeiros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(840, 465)
+        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.ButtonNovo)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button_Reservar)
@@ -247,7 +280,6 @@ Partial Class FormCruzeiros
         Me.Controls.Add(Me.TextBox_destino)
         Me.Controls.Add(Me.TextBox_nome)
         Me.Controls.Add(Me.Button_Adicionar)
-        Me.Controls.Add(Me.ListBox_Cruzeiros)
         Me.Controls.Add(Me.Button_fim)
         Me.Controls.Add(Me.Button_seguinte)
         Me.Controls.Add(Me.Button_anterior)
@@ -263,7 +295,6 @@ Partial Class FormCruzeiros
     Friend WithEvents Button_anterior As Button
     Friend WithEvents Button_seguinte As Button
     Friend WithEvents Button_fim As Button
-    Friend WithEvents ListBox_Cruzeiros As ListBox
     Friend WithEvents Button_Adicionar As Button
     Friend WithEvents TextBox_nome As TextBox
     Friend WithEvents TextBox_destino As TextBox
@@ -279,4 +310,10 @@ Partial Class FormCruzeiros
     Friend WithEvents Button_Reservar As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents ButtonNovo As Button
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents ColumnHeaderNome As ColumnHeader
+    Friend WithEvents ColumnHeaderOrigem As ColumnHeader
+    Friend WithEvents ColumnHeaderDestino As ColumnHeader
+    Friend WithEvents ColumnHeaderDataInicial1 As ColumnHeader
+    Friend WithEvents ColumnHeaderDataFinal1 As ColumnHeader
 End Class
