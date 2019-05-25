@@ -39,7 +39,7 @@
         Me.MinutoInicio.Value = 0
         Me.HoraFim.Value = 0
         Me.MinutoFim.Value = 0
-        Me.ComboBoxTipo.Text = ""
+        Me.ComboBoxTipo1.Text = ""
         Me.TextBox_local.Clear()
         Me.ComboBoxParagem.Text = ""
         Me.DateTimePickerData.Value = Today

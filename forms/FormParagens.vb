@@ -15,7 +15,7 @@
 
             End If
 
-            Me.DateTimePickerData.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(paragemvisivel).DataInicio
+            Me.DateTimePickerData.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(paragemvisivel).DataInicio.Date
             Me.HoraInicio.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(paragemvisivel).DataInicio.Hour
             Me.MinutoInicio.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(paragemvisivel).DataInicio.Minute
             Me.HoraFim.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(paragemvisivel).DataFim.Hour

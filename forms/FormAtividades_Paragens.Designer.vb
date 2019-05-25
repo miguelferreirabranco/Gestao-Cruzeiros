@@ -286,6 +286,7 @@ Partial Class FormAtividades_Paragens
         'ComboBoxTipo1
         '
         Me.ComboBoxTipo1.FormattingEnabled = True
+        Me.ComboBoxTipo1.Items.AddRange(New Object() {"Cultural", "Entretenimento", "Lazer", "Desportivo"})
         Me.ComboBoxTipo1.Location = New System.Drawing.Point(197, 165)
         Me.ComboBoxTipo1.Name = "ComboBoxTipo1"
         Me.ComboBoxTipo1.Size = New System.Drawing.Size(140, 21)
