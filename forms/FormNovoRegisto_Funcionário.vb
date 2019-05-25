@@ -59,4 +59,7 @@
         Return temp
     End Function
 
+    Private Sub ComboBoxSexo_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxSexo.SelectedIndexChanged
+
+    End Sub
 End Class

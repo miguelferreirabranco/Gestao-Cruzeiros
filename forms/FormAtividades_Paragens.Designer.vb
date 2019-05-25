@@ -24,7 +24,6 @@ Partial Class FormAtividades_Paragens
     Private Sub InitializeComponent()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Button_anular = New System.Windows.Forms.Button()
-        Me.TextBox_paragem = New System.Windows.Forms.TextBox()
         Me.Button_Marcar = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -45,6 +44,7 @@ Partial Class FormAtividades_Paragens
         Me.TextBox_horainicio = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.DateTimePickerData = New System.Windows.Forms.DateTimePicker()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Label3
@@ -66,13 +66,6 @@ Partial Class FormAtividades_Paragens
         Me.Button_anular.TabIndex = 75
         Me.Button_anular.Text = "Anular"
         Me.Button_anular.UseVisualStyleBackColor = True
-        '
-        'TextBox_paragem
-        '
-        Me.TextBox_paragem.Location = New System.Drawing.Point(197, 278)
-        Me.TextBox_paragem.Name = "TextBox_paragem"
-        Me.TextBox_paragem.Size = New System.Drawing.Size(140, 20)
-        Me.TextBox_paragem.TabIndex = 74
         '
         'Button_Marcar
         '
@@ -254,11 +247,20 @@ Partial Class FormAtividades_Paragens
         Me.DateTimePickerData.Size = New System.Drawing.Size(140, 20)
         Me.DateTimePickerData.TabIndex = 83
         '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(197, 278)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(140, 21)
+        Me.ComboBox1.TabIndex = 84
+        '
         'FormAtividades_Paragens
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(810, 465)
+        Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.DateTimePickerData)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -268,7 +270,6 @@ Partial Class FormAtividades_Paragens
         Me.Controls.Add(Me.TextBox_horainicio)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button_anular)
-        Me.Controls.Add(Me.TextBox_paragem)
         Me.Controls.Add(Me.Button_Marcar)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
@@ -290,7 +291,6 @@ Partial Class FormAtividades_Paragens
     End Sub
     Friend WithEvents Label3 As Label
     Friend WithEvents Button_anular As Button
-    Friend WithEvents TextBox_paragem As TextBox
     Friend WithEvents Button_Marcar As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
@@ -311,4 +311,5 @@ Partial Class FormAtividades_Paragens
     Friend WithEvents TextBox_horainicio As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents DateTimePickerData As DateTimePicker
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

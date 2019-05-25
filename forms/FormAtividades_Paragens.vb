@@ -34,13 +34,7 @@
         Dim temp As Boolean
         Dim paragem As ClassParagem
 
-        While k <= EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens.Count - 1
-            If Me.TextBox_paragem.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(k).LocalParagem Then
-                temp = True
-                paragem = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens(k)
-            End If
-            k = k + 1
-        End While
+
 
         NovaAtividadeParagem = New ClassAtividadeParagens(Me.TextBox_nome.Text, Me.DateTimePickerData.Value.ToShortDateString, Me.TextBox_horainicio.Text, Me.TextBox_horafim.Text, Me.TextBox_tipo.Text, paragem, Me.TextBox_local.Text)
 
@@ -84,6 +78,9 @@
     End Sub
 
     Private Sub FormAtividades_Paragens_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        For i = 0 To EmpresaCruzeiros.Cruzeiros(Visible).Paragens.Count - 1
+            Me.ComboBox1.Items.Add(EmpresaCruzeiros.Cruzeiros(Visible).Paragens(i).LocalParagem)
+        Next
         If NivelVisivel = "Viajante" Then
             Me.Button_Adicionar.Visible = False
             Me.TextBox_horainicio.Enabled = False
@@ -91,7 +88,7 @@
             Me.TextBox_horafim.Enabled = False
             Me.TextBox_local.Enabled = False
             Me.TextBox_nome.Enabled = False
-            Me.TextBox_paragem.Enabled = False
+            Me.ComboBox1.Enabled = False
             Me.TextBox_tipo.Enabled = False
 
         ElseIf NivelVisivel = "Funcionario" Then
