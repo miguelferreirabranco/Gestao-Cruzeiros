@@ -29,7 +29,6 @@ Partial Class FormAtividades_Paragens
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox_tipo = New System.Windows.Forms.TextBox()
         Me.TextBox_nome = New System.Windows.Forms.TextBox()
         Me.Button_Adicionar = New System.Windows.Forms.Button()
         Me.ListBox_Atividades_Paragens = New System.Windows.Forms.ListBox()
@@ -55,7 +54,11 @@ Partial Class FormAtividades_Paragens
 =======
         Me.ComboBoxParagem = New System.Windows.Forms.ComboBox()
         Me.ButtonNova = New System.Windows.Forms.Button()
+<<<<<<< HEAD
+        Me.ComboBoxTipo = New System.Windows.Forms.ComboBox()
+=======
 >>>>>>> 4c4b9c9148dffb25bf4ee37c46c885a476e0f38a
+>>>>>>> 58412672bb3db65893f77cf3477ed9d112e94097
         Me.SuspendLayout()
         '
         'Label3
@@ -127,13 +130,6 @@ Partial Class FormAtividades_Paragens
         Me.Label1.Size = New System.Drawing.Size(55, 20)
         Me.Label1.TabIndex = 69
         Me.Label1.Text = "Nome:"
-        '
-        'TextBox_tipo
-        '
-        Me.TextBox_tipo.Location = New System.Drawing.Point(197, 167)
-        Me.TextBox_tipo.Name = "TextBox_tipo"
-        Me.TextBox_tipo.Size = New System.Drawing.Size(140, 20)
-        Me.TextBox_tipo.TabIndex = 68
         '
         'TextBox_nome
         '
@@ -252,6 +248,16 @@ Partial Class FormAtividades_Paragens
         Me.ComboBox1.Size = New System.Drawing.Size(140, 21)
         Me.ComboBox1.TabIndex = 84
         '
+<<<<<<< HEAD
+        'ComboBoxTipo
+        '
+        Me.ComboBoxTipo.FormattingEnabled = True
+        Me.ComboBoxTipo.Items.AddRange(New Object() {"Cultural", "Desportivo", "Lazer", "Entretenimento"})
+        Me.ComboBoxTipo.Location = New System.Drawing.Point(197, 169)
+        Me.ComboBoxTipo.Name = "ComboBoxTipo"
+        Me.ComboBoxTipo.Size = New System.Drawing.Size(140, 21)
+        Me.ComboBoxTipo.TabIndex = 86
+=======
         'HoraFim
         '
         Me.HoraFim.Location = New System.Drawing.Point(197, 249)
@@ -283,19 +289,35 @@ Partial Class FormAtividades_Paragens
         Me.MinutoInicio.Name = "MinutoInicio"
         Me.MinutoInicio.Size = New System.Drawing.Size(35, 20)
         Me.MinutoInicio.TabIndex = 107
+>>>>>>> 58412672bb3db65893f77cf3477ed9d112e94097
         '
         'FormAtividades_Paragens
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(810, 465)
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+        Me.Controls.Add(Me.ComboBoxTipo)
+=======
+<<<<<<< HEAD
+>>>>>>> 0dc2834190ac8f397fbe6e882c81d21d5840c470
         Me.Controls.Add(Me.HoraFim)
         Me.Controls.Add(Me.HoraInicio)
         Me.Controls.Add(Me.MinutoFim)
         Me.Controls.Add(Me.MinutoInicio)
         Me.Controls.Add(Me.ComboBox1)
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> 58412672bb3db65893f77cf3477ed9d112e94097
+        Me.Controls.Add(Me.ButtonNova)
+        Me.Controls.Add(Me.ComboBoxParagem)
+>>>>>>> 4c4b9c9148dffb25bf4ee37c46c885a476e0f38a
+>>>>>>> 0dc2834190ac8f397fbe6e882c81d21d5840c470
         Me.Controls.Add(Me.DateTimePickerData)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
@@ -308,7 +330,6 @@ Partial Class FormAtividades_Paragens
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox_tipo)
         Me.Controls.Add(Me.TextBox_nome)
         Me.Controls.Add(Me.Button_Adicionar)
         Me.Controls.Add(Me.ListBox_Atividades_Paragens)
@@ -333,7 +354,6 @@ Partial Class FormAtividades_Paragens
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox_tipo As TextBox
     Friend WithEvents TextBox_nome As TextBox
     Friend WithEvents Button_Adicionar As Button
     Friend WithEvents ListBox_Atividades_Paragens As ListBox
@@ -352,5 +372,16 @@ Partial Class FormAtividades_Paragens
     Friend WithEvents HoraInicio As NumericUpDown
     Friend WithEvents MinutoFim As NumericUpDown
     Friend WithEvents MinutoInicio As NumericUpDown
+<<<<<<< HEAD
 
+=======
+=======
+    Friend WithEvents ComboBoxParagem As ComboBox
+    Friend WithEvents ButtonNova As Button
+<<<<<<< HEAD
+    Friend WithEvents ComboBoxTipo As ComboBox
+=======
+>>>>>>> 4c4b9c9148dffb25bf4ee37c46c885a476e0f38a
+>>>>>>> 58412672bb3db65893f77cf3477ed9d112e94097
+>>>>>>> 0dc2834190ac8f397fbe6e882c81d21d5840c470
 End Class

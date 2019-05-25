@@ -27,7 +27,6 @@ Partial Class FormQuartos
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox_npessoas = New System.Windows.Forms.TextBox()
-        Me.TextBox_seccao = New System.Windows.Forms.TextBox()
         Me.TextBox_numero = New System.Windows.Forms.TextBox()
         Me.Button_Adicionar = New System.Windows.Forms.Button()
         Me.ListBox_Quartos = New System.Windows.Forms.ListBox()
@@ -38,6 +37,7 @@ Partial Class FormQuartos
         Me.TextBox_preco = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ButtonNovo = New System.Windows.Forms.Button()
+        Me.ComboBoxSeccao = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'Label5
@@ -86,13 +86,6 @@ Partial Class FormQuartos
         Me.TextBox_npessoas.Name = "TextBox_npessoas"
         Me.TextBox_npessoas.Size = New System.Drawing.Size(140, 20)
         Me.TextBox_npessoas.TabIndex = 28
-        '
-        'TextBox_seccao
-        '
-        Me.TextBox_seccao.Location = New System.Drawing.Point(192, 221)
-        Me.TextBox_seccao.Name = "TextBox_seccao"
-        Me.TextBox_seccao.Size = New System.Drawing.Size(140, 20)
-        Me.TextBox_seccao.TabIndex = 27
         '
         'TextBox_numero
         '
@@ -186,11 +179,21 @@ Partial Class FormQuartos
         Me.ButtonNovo.Text = "Novo"
         Me.ButtonNovo.UseVisualStyleBackColor = True
         '
+        'ComboBoxSeccao
+        '
+        Me.ComboBoxSeccao.FormattingEnabled = True
+        Me.ComboBoxSeccao.Items.AddRange(New Object() {"Camarote Interior", "Camarote Exterior", "Camarote Com Varanda", "Suite"})
+        Me.ComboBoxSeccao.Location = New System.Drawing.Point(192, 221)
+        Me.ComboBoxSeccao.Name = "ComboBoxSeccao"
+        Me.ComboBoxSeccao.Size = New System.Drawing.Size(140, 21)
+        Me.ComboBoxSeccao.TabIndex = 67
+        '
         'FormQuartos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(803, 465)
+        Me.Controls.Add(Me.ComboBoxSeccao)
         Me.Controls.Add(Me.ButtonNovo)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox_preco)
@@ -199,7 +202,6 @@ Partial Class FormQuartos
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox_npessoas)
-        Me.Controls.Add(Me.TextBox_seccao)
         Me.Controls.Add(Me.TextBox_numero)
         Me.Controls.Add(Me.Button_Adicionar)
         Me.Controls.Add(Me.ListBox_Quartos)
@@ -218,7 +220,6 @@ Partial Class FormQuartos
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox_npessoas As TextBox
-    Friend WithEvents TextBox_seccao As TextBox
     Friend WithEvents TextBox_numero As TextBox
     Friend WithEvents Button_Adicionar As Button
     Friend WithEvents ListBox_Quartos As ListBox
@@ -229,4 +230,5 @@ Partial Class FormQuartos
     Friend WithEvents TextBox_preco As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents ButtonNovo As Button
+    Friend WithEvents ComboBoxSeccao As ComboBox
 End Class

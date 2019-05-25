@@ -12,6 +12,14 @@
                 AtividadeNavioVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio.Count - 1
             End If
 
+<<<<<<< HEAD
+            Me.TextBox_nome.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).Nome
+            Me.ComboBoxTipo.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).Tipo
+            Me.DateTimePickerData.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).Data
+            Me.TextBox_horainicio.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).HoraInicio
+            Me.TextBox_horafim.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).HoraFim
+            Me.ComboBoxSeccao.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).SeccaoNavio
+=======
             TextBox_nome.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).Nome
             TextBox_tipo.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).Tipo
             Me.HoraInicio.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).DataInicio.Hour
@@ -19,6 +27,7 @@
             Me.HoraFim.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).DataFim.Hour
             Me.MinutoFim.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).DataFim.Minute
             TextBox_seccao.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel).SeccaoNavio
+>>>>>>> 58412672bb3db65893f77cf3477ed9d112e94097
 
             ListBox_Atividades_Navio.Items.Clear()
 
@@ -31,8 +40,8 @@
         Me.TextBox_nome.Clear()
         Me.TextBox_horafim.Clear()
         Me.TextBox_horainicio.Clear()
-        Me.TextBox_seccao.Clear()
-        Me.TextBox_tipo.Clear()
+        Me.ComboBoxSeccao.Text = ""
+        Me.ComboBoxTipo.Text = ""
         Me.DateTimePickerData.Value = Today
 
     End Sub
@@ -42,7 +51,11 @@
         Dim datainicio As New System.DateTime(data.Year, data.Month, data.Day, Me.HoraInicio.Value, Me.MinutoInicio.Value, 0)
         Dim datafim As New System.DateTime(data.Year, data.Month, data.Day, Me.HoraFim.Value, Me.MinutoFim.Value, 0)
 
+<<<<<<< HEAD
+        NovaAtividadeNavio = New ClassAtividadeNavio(Me.TextBox_nome.Text, Me.DateTimePickerData.Value.ToShortDateString, Me.TextBox_horainicio.Text, Me.TextBox_horafim.Text, Me.ComboBoxTipo.Text, Me.ComboBoxSeccao.Text)
+=======
         NovaAtividadeNavio = New ClassAtividadeNavio(Me.TextBox_nome.Text, datainicio, datafim, Me.TextBox_tipo.Text, Me.TextBox_seccao.Text)
+>>>>>>> 58412672bb3db65893f77cf3477ed9d112e94097
 
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio.Add(NovaAtividadeNavio)
         AtividadeNavioVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio.Count - 1
@@ -91,8 +104,8 @@
         If NivelVisivel = "Viajante" Then
             Me.Button_Adicionar.Visible = False
             Me.TextBox_nome.Enabled = False
-            Me.TextBox_seccao.Enabled = False
-            Me.TextBox_tipo.Enabled = False
+            Me.ComboBoxSeccao.Enabled = False
+            Me.ComboBoxTipo.Enabled = False
             Me.DateTimePickerData.Enabled = False
             Me.HoraFim.Enabled = False
             Me.HoraInicio.Enabled = False

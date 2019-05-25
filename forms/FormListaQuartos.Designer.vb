@@ -29,10 +29,10 @@ Partial Class FormListaQuartos
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox_npessoas = New System.Windows.Forms.TextBox()
-        Me.TextBox_seccao = New System.Windows.Forms.TextBox()
         Me.TextBox_numero = New System.Windows.Forms.TextBox()
         Me.Button_anular = New System.Windows.Forms.Button()
         Me.Button_Reservar = New System.Windows.Forms.Button()
+        Me.ComboBoxSeccao = New System.Windows.Forms.ComboBox()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -98,13 +98,6 @@ Partial Class FormListaQuartos
         Me.TextBox_npessoas.Size = New System.Drawing.Size(140, 20)
         Me.TextBox_npessoas.TabIndex = 41
         '
-        'TextBox_seccao
-        '
-        Me.TextBox_seccao.Location = New System.Drawing.Point(194, 156)
-        Me.TextBox_seccao.Name = "TextBox_seccao"
-        Me.TextBox_seccao.Size = New System.Drawing.Size(140, 20)
-        Me.TextBox_seccao.TabIndex = 40
-        '
         'TextBox_numero
         '
         Me.TextBox_numero.Location = New System.Drawing.Point(194, 130)
@@ -132,11 +125,21 @@ Partial Class FormListaQuartos
         Me.Button_Reservar.Text = "Reservar"
         Me.Button_Reservar.UseVisualStyleBackColor = True
         '
+        'ComboBoxSeccao
+        '
+        Me.ComboBoxSeccao.FormattingEnabled = True
+        Me.ComboBoxSeccao.Items.AddRange(New Object() {"Convés Superior", "Convés Inferior", "Sala de eventos", "Piscina"})
+        Me.ComboBoxSeccao.Location = New System.Drawing.Point(194, 155)
+        Me.ComboBoxSeccao.Name = "ComboBoxSeccao"
+        Me.ComboBoxSeccao.Size = New System.Drawing.Size(140, 21)
+        Me.ComboBoxSeccao.TabIndex = 67
+        '
         'FormListaQuartos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(848, 409)
+        Me.Controls.Add(Me.ComboBoxSeccao)
         Me.Controls.Add(Me.Button_anular)
         Me.Controls.Add(Me.Button_Reservar)
         Me.Controls.Add(Me.TextBox_preco)
@@ -145,7 +148,6 @@ Partial Class FormListaQuartos
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.TextBox_npessoas)
-        Me.Controls.Add(Me.TextBox_seccao)
         Me.Controls.Add(Me.TextBox_numero)
         Me.Controls.Add(Me.DataGridView1)
         Me.Name = "FormListaQuartos"
@@ -163,8 +165,8 @@ Partial Class FormListaQuartos
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents TextBox_npessoas As TextBox
-    Friend WithEvents TextBox_seccao As TextBox
     Friend WithEvents TextBox_numero As TextBox
     Friend WithEvents Button_anular As Button
     Friend WithEvents Button_Reservar As Button
+    Friend WithEvents ComboBoxSeccao As ComboBox
 End Class

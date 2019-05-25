@@ -23,13 +23,11 @@ Partial Class FormAtividades_Navio
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.Button_anular = New System.Windows.Forms.Button()
-        Me.TextBox_seccao = New System.Windows.Forms.TextBox()
         Me.Button_Marcar = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox_tipo = New System.Windows.Forms.TextBox()
         Me.TextBox_nome = New System.Windows.Forms.TextBox()
         Me.Button_Adicionar = New System.Windows.Forms.Button()
         Me.ListBox_Atividades_Navio = New System.Windows.Forms.ListBox()
@@ -52,7 +50,12 @@ Partial Class FormAtividades_Navio
         CType(Me.MinutoInicio, System.ComponentModel.ISupportInitialize).BeginInit()
 =======
         Me.ButtonNova = New System.Windows.Forms.Button()
+<<<<<<< HEAD
+        Me.ComboBoxTipo = New System.Windows.Forms.ComboBox()
+        Me.ComboBoxSeccao = New System.Windows.Forms.ComboBox()
+=======
 >>>>>>> 4c4b9c9148dffb25bf4ee37c46c885a476e0f38a
+>>>>>>> 58412672bb3db65893f77cf3477ed9d112e94097
         Me.SuspendLayout()
         '
         'Button_anular
@@ -65,6 +68,8 @@ Partial Class FormAtividades_Navio
         Me.Button_anular.Text = "Anular"
         Me.Button_anular.UseVisualStyleBackColor = True
         '
+<<<<<<< HEAD
+=======
         'TextBox_seccao
         '
         Me.TextBox_seccao.Location = New System.Drawing.Point(200, 293)
@@ -72,6 +77,7 @@ Partial Class FormAtividades_Navio
         Me.TextBox_seccao.Size = New System.Drawing.Size(140, 20)
         Me.TextBox_seccao.TabIndex = 55
         '
+>>>>>>> 58412672bb3db65893f77cf3477ed9d112e94097
         'Button_Marcar
         '
         Me.Button_Marcar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -121,13 +127,6 @@ Partial Class FormAtividades_Navio
         Me.Label1.Size = New System.Drawing.Size(55, 20)
         Me.Label1.TabIndex = 50
         Me.Label1.Text = "Nome:"
-        '
-        'TextBox_tipo
-        '
-        Me.TextBox_tipo.Location = New System.Drawing.Point(200, 180)
-        Me.TextBox_tipo.Name = "TextBox_tipo"
-        Me.TextBox_tipo.Size = New System.Drawing.Size(140, 20)
-        Me.TextBox_tipo.TabIndex = 48
         '
         'TextBox_nome
         '
@@ -275,17 +274,40 @@ Partial Class FormAtividades_Navio
         Me.ButtonNova.UseVisualStyleBackColor = True
 >>>>>>> 4c4b9c9148dffb25bf4ee37c46c885a476e0f38a
         '
+        'ComboBoxTipo
+        '
+        Me.ComboBoxTipo.FormattingEnabled = True
+        Me.ComboBoxTipo.Items.AddRange(New Object() {"Cultural", "Desportivo", "Lazer", "Entretenimento"})
+        Me.ComboBoxTipo.Location = New System.Drawing.Point(200, 180)
+        Me.ComboBoxTipo.Name = "ComboBoxTipo"
+        Me.ComboBoxTipo.Size = New System.Drawing.Size(140, 21)
+        Me.ComboBoxTipo.TabIndex = 65
+        '
+        'ComboBoxSeccao
+        '
+        Me.ComboBoxSeccao.FormattingEnabled = True
+        Me.ComboBoxSeccao.Items.AddRange(New Object() {"Convés Superior", "Convés Inferior", "Sala de eventos", "Piscina"})
+        Me.ComboBoxSeccao.Location = New System.Drawing.Point(200, 286)
+        Me.ComboBoxSeccao.Name = "ComboBoxSeccao"
+        Me.ComboBoxSeccao.Size = New System.Drawing.Size(140, 21)
+        Me.ComboBoxSeccao.TabIndex = 66
+        '
         'FormAtividades_Navio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(805, 456)
 <<<<<<< HEAD
+        Me.Controls.Add(Me.ComboBoxSeccao)
+        Me.Controls.Add(Me.ComboBoxTipo)
+=======
+<<<<<<< HEAD
         Me.Controls.Add(Me.HoraFim)
         Me.Controls.Add(Me.HoraInicio)
         Me.Controls.Add(Me.MinutoFim)
         Me.Controls.Add(Me.MinutoInicio)
 =======
+>>>>>>> 58412672bb3db65893f77cf3477ed9d112e94097
         Me.Controls.Add(Me.ButtonNova)
 >>>>>>> 4c4b9c9148dffb25bf4ee37c46c885a476e0f38a
         Me.Controls.Add(Me.Label7)
@@ -293,13 +315,11 @@ Partial Class FormAtividades_Navio
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button_anular)
-        Me.Controls.Add(Me.TextBox_seccao)
         Me.Controls.Add(Me.Button_Marcar)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox_tipo)
         Me.Controls.Add(Me.TextBox_nome)
         Me.Controls.Add(Me.Button_Adicionar)
         Me.Controls.Add(Me.ListBox_Atividades_Navio)
@@ -318,13 +338,11 @@ Partial Class FormAtividades_Navio
 
     End Sub
     Friend WithEvents Button_anular As Button
-    Friend WithEvents TextBox_seccao As TextBox
     Friend WithEvents Button_Marcar As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox_tipo As TextBox
     Friend WithEvents TextBox_nome As TextBox
     Friend WithEvents Button_Adicionar As Button
     Friend WithEvents ListBox_Atividades_Navio As ListBox
@@ -343,5 +361,10 @@ Partial Class FormAtividades_Navio
     Friend WithEvents MinutoInicio As NumericUpDown
 =======
     Friend WithEvents ButtonNova As Button
+<<<<<<< HEAD
+    Friend WithEvents ComboBoxTipo As ComboBox
+    Friend WithEvents ComboBoxSeccao As ComboBox
+=======
 >>>>>>> 4c4b9c9148dffb25bf4ee37c46c885a476e0f38a
+>>>>>>> 58412672bb3db65893f77cf3477ed9d112e94097
 End Class
