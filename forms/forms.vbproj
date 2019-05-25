@@ -235,13 +235,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\cruzeiros-cruzeiros-pelo-mundo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\msc1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\msc2.jpg" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
