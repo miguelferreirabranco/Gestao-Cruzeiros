@@ -31,8 +31,6 @@ Partial Class FormLogin
         Me.Label3 = New System.Windows.Forms.Label()
         Me.RadioButtonFuncionario = New System.Windows.Forms.RadioButton()
         Me.RadioButtonViajante = New System.Windows.Forms.RadioButton()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -122,21 +120,11 @@ Partial Class FormLogin
         Me.RadioButtonViajante.Text = "Viajante"
         Me.RadioButtonViajante.UseVisualStyleBackColor = True
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.forms.My.Resources.Resources.cruzeiros_cruzeiros_pelo_mundo
-        Me.PictureBox1.Location = New System.Drawing.Point(69, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(451, 192)
-        Me.PictureBox1.TabIndex = 61
-        Me.PictureBox1.TabStop = False
-        '
         'FormLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(606, 392)
-        Me.Controls.Add(Me.PictureBox1)
+        Me.ClientSize = New System.Drawing.Size(619, 414)
         Me.Controls.Add(Me.RadioButtonViajante)
         Me.Controls.Add(Me.RadioButtonFuncionario)
         Me.Controls.Add(Me.Label3)
@@ -148,7 +136,6 @@ Partial Class FormLogin
         Me.Controls.Add(Me.Label1)
         Me.Name = "FormLogin"
         Me.Text = "Login"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -163,5 +150,4 @@ Partial Class FormLogin
     Friend WithEvents Label3 As Label
     Friend WithEvents RadioButtonFuncionario As RadioButton
     Friend WithEvents RadioButtonViajante As RadioButton
-    Friend WithEvents PictureBox1 As PictureBox
 End Class
