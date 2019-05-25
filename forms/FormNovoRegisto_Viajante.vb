@@ -16,7 +16,7 @@
                 MsgBox("Este nome de utilizador já existe! Experimente outro diferente!")
                 Me.TextBox_username.Clear()
             Else
-                novoviajante = New ClassViajante(TextBox_nome.Text, ComboBoxSexo.SelectedItem, DateTimePicker_datanasc.Value,
+                novoviajante = New ClassViajante(TextBox_nome.Text, ComboBoxSexo.SelectedItem, DateTimePicker_datanasc.Value.ToShortDateString,
                                                TextBox_ncc.Text, TextBox_username.Text, TextBox_password.Text,
                                               TextBox_nif.Text)
 

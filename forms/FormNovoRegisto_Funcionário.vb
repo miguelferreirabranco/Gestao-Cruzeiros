@@ -16,7 +16,7 @@
                 MsgBox("Este nome de utilizador já existe! Experimente outro diferente!")
                 Me.TextBox_username.Clear()
             Else
-                novofuncionario = New ClassFuncionario(TextBox_nome.Text, ComboBoxSexo.SelectedItem, DateTimePicker_datanasc.Value,
+                novofuncionario = New ClassFuncionario(TextBox_nome.Text, ComboBoxSexo.SelectedItem, DateTimePicker_datanasc.Value.ToShortDateString,
                                               TextBox_ncc.Text, TextBox_username.Text, TextBox_password.Text,
                                              TextBox_nib.Text)
                 EmpresaCruzeiros.Funcionarios.Add(novofuncionario)

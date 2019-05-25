@@ -65,6 +65,15 @@ Partial Class FormPrincipal
         Me.SearchToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CruzeirosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QuartosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AtividadesNavioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ParagensToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NavioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ParagensToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListaDePessoasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ViajantesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FuncionáriosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip = New System.Windows.Forms.ToolStrip()
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -77,15 +86,6 @@ Partial Class FormPrincipal
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
-        Me.CruzeirosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.QuartosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AtividadesNavioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ParagensToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NavioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ParagensToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ListaDePessoasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ViajantesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FuncionáriosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -97,7 +97,7 @@ Partial Class FormPrincipal
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
-        Me.MenuStrip.Size = New System.Drawing.Size(781, 24)
+        Me.MenuStrip.Size = New System.Drawing.Size(984, 24)
         Me.MenuStrip.TabIndex = 5
         Me.MenuStrip.Text = "MenuStrip"
         '
@@ -377,12 +377,68 @@ Partial Class FormPrincipal
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(173, 22)
         Me.AboutToolStripMenuItem.Text = "&Sobre ..."
         '
+        'CruzeirosToolStripMenuItem
+        '
+        Me.CruzeirosToolStripMenuItem.Name = "CruzeirosToolStripMenuItem"
+        Me.CruzeirosToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
+        Me.CruzeirosToolStripMenuItem.Text = "Cruzeiros"
+        '
+        'QuartosToolStripMenuItem
+        '
+        Me.QuartosToolStripMenuItem.Name = "QuartosToolStripMenuItem"
+        Me.QuartosToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.QuartosToolStripMenuItem.Text = "Quartos"
+        '
+        'AtividadesNavioToolStripMenuItem
+        '
+        Me.AtividadesNavioToolStripMenuItem.Name = "AtividadesNavioToolStripMenuItem"
+        Me.AtividadesNavioToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
+        Me.AtividadesNavioToolStripMenuItem.Text = "Paragens"
+        '
+        'ParagensToolStripMenuItem
+        '
+        Me.ParagensToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NavioToolStripMenuItem, Me.ParagensToolStripMenuItem1})
+        Me.ParagensToolStripMenuItem.Name = "ParagensToolStripMenuItem"
+        Me.ParagensToolStripMenuItem.Size = New System.Drawing.Size(74, 20)
+        Me.ParagensToolStripMenuItem.Text = "Atividades"
+        '
+        'NavioToolStripMenuItem
+        '
+        Me.NavioToolStripMenuItem.Name = "NavioToolStripMenuItem"
+        Me.NavioToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.NavioToolStripMenuItem.Text = "Navio"
+        '
+        'ParagensToolStripMenuItem1
+        '
+        Me.ParagensToolStripMenuItem1.Name = "ParagensToolStripMenuItem1"
+        Me.ParagensToolStripMenuItem1.Size = New System.Drawing.Size(122, 22)
+        Me.ParagensToolStripMenuItem1.Text = "Paragens"
+        '
+        'ListaDePessoasToolStripMenuItem
+        '
+        Me.ListaDePessoasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViajantesToolStripMenuItem, Me.FuncionáriosToolStripMenuItem})
+        Me.ListaDePessoasToolStripMenuItem.Name = "ListaDePessoasToolStripMenuItem"
+        Me.ListaDePessoasToolStripMenuItem.Size = New System.Drawing.Size(103, 20)
+        Me.ListaDePessoasToolStripMenuItem.Text = "Lista de Pessoas"
+        '
+        'ViajantesToolStripMenuItem
+        '
+        Me.ViajantesToolStripMenuItem.Name = "ViajantesToolStripMenuItem"
+        Me.ViajantesToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.ViajantesToolStripMenuItem.Text = "Viajantes"
+        '
+        'FuncionáriosToolStripMenuItem
+        '
+        Me.FuncionáriosToolStripMenuItem.Name = "FuncionáriosToolStripMenuItem"
+        Me.FuncionáriosToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
+        Me.FuncionáriosToolStripMenuItem.Text = "Funcionários"
+        '
         'ToolStrip
         '
         Me.ToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewToolStripButton, Me.OpenToolStripButton, Me.SaveToolStripButton, Me.ToolStripSeparator1, Me.PrintToolStripButton, Me.PrintPreviewToolStripButton, Me.ToolStripSeparator2, Me.HelpToolStripButton})
         Me.ToolStrip.Location = New System.Drawing.Point(0, 24)
         Me.ToolStrip.Name = "ToolStrip"
-        Me.ToolStrip.Size = New System.Drawing.Size(781, 25)
+        Me.ToolStrip.Size = New System.Drawing.Size(984, 25)
         Me.ToolStrip.TabIndex = 6
         Me.ToolStrip.Text = "ToolStrip"
         '
@@ -453,9 +509,9 @@ Partial Class FormPrincipal
         'StatusStrip
         '
         Me.StatusStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel})
-        Me.StatusStrip.Location = New System.Drawing.Point(0, 323)
+        Me.StatusStrip.Location = New System.Drawing.Point(0, 727)
         Me.StatusStrip.Name = "StatusStrip"
-        Me.StatusStrip.Size = New System.Drawing.Size(781, 22)
+        Me.StatusStrip.Size = New System.Drawing.Size(984, 22)
         Me.StatusStrip.TabIndex = 7
         Me.StatusStrip.Text = "StatusStrip"
         '
@@ -465,67 +521,11 @@ Partial Class FormPrincipal
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(39, 17)
         Me.ToolStripStatusLabel.Text = "Status"
         '
-        'CruzeirosToolStripMenuItem
-        '
-        Me.CruzeirosToolStripMenuItem.Name = "CruzeirosToolStripMenuItem"
-        Me.CruzeirosToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
-        Me.CruzeirosToolStripMenuItem.Text = "Cruzeiros"
-        '
-        'QuartosToolStripMenuItem
-        '
-        Me.QuartosToolStripMenuItem.Name = "QuartosToolStripMenuItem"
-        Me.QuartosToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
-        Me.QuartosToolStripMenuItem.Text = "Quartos"
-        '
-        'AtividadesNavioToolStripMenuItem
-        '
-        Me.AtividadesNavioToolStripMenuItem.Name = "AtividadesNavioToolStripMenuItem"
-        Me.AtividadesNavioToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
-        Me.AtividadesNavioToolStripMenuItem.Text = "Paragens"
-        '
-        'ParagensToolStripMenuItem
-        '
-        Me.ParagensToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NavioToolStripMenuItem, Me.ParagensToolStripMenuItem1})
-        Me.ParagensToolStripMenuItem.Name = "ParagensToolStripMenuItem"
-        Me.ParagensToolStripMenuItem.Size = New System.Drawing.Size(74, 20)
-        Me.ParagensToolStripMenuItem.Text = "Atividades"
-        '
-        'NavioToolStripMenuItem
-        '
-        Me.NavioToolStripMenuItem.Name = "NavioToolStripMenuItem"
-        Me.NavioToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.NavioToolStripMenuItem.Text = "Navio"
-        '
-        'ParagensToolStripMenuItem1
-        '
-        Me.ParagensToolStripMenuItem1.Name = "ParagensToolStripMenuItem1"
-        Me.ParagensToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
-        Me.ParagensToolStripMenuItem1.Text = "Paragens"
-        '
-        'ListaDePessoasToolStripMenuItem
-        '
-        Me.ListaDePessoasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViajantesToolStripMenuItem, Me.FuncionáriosToolStripMenuItem})
-        Me.ListaDePessoasToolStripMenuItem.Name = "ListaDePessoasToolStripMenuItem"
-        Me.ListaDePessoasToolStripMenuItem.Size = New System.Drawing.Size(103, 20)
-        Me.ListaDePessoasToolStripMenuItem.Text = "Lista de Pessoas"
-        '
-        'ViajantesToolStripMenuItem
-        '
-        Me.ViajantesToolStripMenuItem.Name = "ViajantesToolStripMenuItem"
-        Me.ViajantesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.ViajantesToolStripMenuItem.Text = "Viajantes"
-        '
-        'FuncionáriosToolStripMenuItem
-        '
-        Me.FuncionáriosToolStripMenuItem.Name = "FuncionáriosToolStripMenuItem"
-        Me.FuncionáriosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
-        Me.FuncionáriosToolStripMenuItem.Text = "Funcionários"
-        '
         'FormPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(781, 345)
+        Me.ClientSize = New System.Drawing.Size(984, 749)
         Me.Controls.Add(Me.ToolStrip)
         Me.Controls.Add(Me.MenuStrip)
         Me.Controls.Add(Me.StatusStrip)
