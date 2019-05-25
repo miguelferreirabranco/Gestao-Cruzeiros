@@ -37,9 +37,10 @@ Partial Class FormLogin
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(169, 243)
+        Me.Label1.Location = New System.Drawing.Point(835, 254)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(82, 20)
+        Me.Label1.Size = New System.Drawing.Size(126, 29)
         Me.Label1.TabIndex = 51
         Me.Label1.Text = "Password:"
         '
@@ -47,33 +48,37 @@ Partial Class FormLogin
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(126, 187)
+        Me.Label2.Location = New System.Drawing.Point(835, 209)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(147, 20)
+        Me.Label2.Size = New System.Drawing.Size(226, 29)
         Me.Label2.TabIndex = 52
         Me.Label2.Text = "Nome de Utilizador:"
         '
         'TextBox_username
         '
-        Me.TextBox_username.Location = New System.Drawing.Point(257, 210)
+        Me.TextBox_username.Location = New System.Drawing.Point(1069, 213)
+        Me.TextBox_username.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox_username.Name = "TextBox_username"
-        Me.TextBox_username.Size = New System.Drawing.Size(171, 20)
+        Me.TextBox_username.Size = New System.Drawing.Size(254, 26)
         Me.TextBox_username.TabIndex = 53
         '
         'TextBox_password
         '
-        Me.TextBox_password.Location = New System.Drawing.Point(257, 245)
+        Me.TextBox_password.Location = New System.Drawing.Point(969, 257)
+        Me.TextBox_password.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.TextBox_password.Name = "TextBox_password"
         Me.TextBox_password.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox_password.Size = New System.Drawing.Size(171, 20)
+        Me.TextBox_password.Size = New System.Drawing.Size(254, 26)
         Me.TextBox_password.TabIndex = 54
         '
         'Button_Adicionar
         '
         Me.Button_Adicionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Adicionar.Location = New System.Drawing.Point(80, 309)
+        Me.Button_Adicionar.Location = New System.Drawing.Point(120, 475)
+        Me.Button_Adicionar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button_Adicionar.Name = "Button_Adicionar"
-        Me.Button_Adicionar.Size = New System.Drawing.Size(88, 46)
+        Me.Button_Adicionar.Size = New System.Drawing.Size(132, 71)
         Me.Button_Adicionar.TabIndex = 55
         Me.Button_Adicionar.Text = "Novo Registo"
         Me.Button_Adicionar.UseVisualStyleBackColor = True
@@ -81,9 +86,10 @@ Partial Class FormLogin
         'Button_entrar
         '
         Me.Button_entrar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_entrar.Location = New System.Drawing.Point(469, 271)
+        Me.Button_entrar.Location = New System.Drawing.Point(1031, 456)
+        Me.Button_entrar.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Button_entrar.Name = "Button_entrar"
-        Me.Button_entrar.Size = New System.Drawing.Size(88, 39)
+        Me.Button_entrar.Size = New System.Drawing.Size(132, 60)
         Me.Button_entrar.TabIndex = 56
         Me.Button_entrar.Text = "Entrar"
         Me.Button_entrar.UseVisualStyleBackColor = True
@@ -91,19 +97,19 @@ Partial Class FormLogin
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(32, 271)
+        Me.Label3.Location = New System.Drawing.Point(48, 417)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(190, 13)
+        Me.Label3.Size = New System.Drawing.Size(284, 20)
         Me.Label3.TabIndex = 57
         Me.Label3.Text = "Ainda não tem conta? Registe-se aqui!"
         '
         'RadioButtonFuncionario
         '
         Me.RadioButtonFuncionario.AutoSize = True
-        Me.RadioButtonFuncionario.Location = New System.Drawing.Point(45, 361)
-        Me.RadioButtonFuncionario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.RadioButtonFuncionario.Location = New System.Drawing.Point(68, 555)
         Me.RadioButtonFuncionario.Name = "RadioButtonFuncionario"
-        Me.RadioButtonFuncionario.Size = New System.Drawing.Size(80, 17)
+        Me.RadioButtonFuncionario.Size = New System.Drawing.Size(117, 24)
         Me.RadioButtonFuncionario.TabIndex = 59
         Me.RadioButtonFuncionario.TabStop = True
         Me.RadioButtonFuncionario.Text = "Funcionario"
@@ -112,9 +118,10 @@ Partial Class FormLogin
         'RadioButtonViajante
         '
         Me.RadioButtonViajante.AutoSize = True
-        Me.RadioButtonViajante.Location = New System.Drawing.Point(130, 361)
+        Me.RadioButtonViajante.Location = New System.Drawing.Point(195, 555)
+        Me.RadioButtonViajante.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.RadioButtonViajante.Name = "RadioButtonViajante"
-        Me.RadioButtonViajante.Size = New System.Drawing.Size(63, 17)
+        Me.RadioButtonViajante.Size = New System.Drawing.Size(92, 24)
         Me.RadioButtonViajante.TabIndex = 60
         Me.RadioButtonViajante.TabStop = True
         Me.RadioButtonViajante.Text = "Viajante"
@@ -122,11 +129,11 @@ Partial Class FormLogin
         '
         'FormLogin
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.forms.My.Resources.Resources.cruzeiros_cruzeiros_pelo_mundo
+        Me.BackgroundImage = Global.forms.My.Resources.Resources.contrucao_navios_cruzeiros_2_1_
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(913, 474)
+        Me.ClientSize = New System.Drawing.Size(1370, 729)
         Me.Controls.Add(Me.RadioButtonViajante)
         Me.Controls.Add(Me.RadioButtonFuncionario)
         Me.Controls.Add(Me.Label3)
@@ -136,6 +143,7 @@ Partial Class FormLogin
         Me.Controls.Add(Me.TextBox_username)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "FormLogin"
         Me.Text = "Login"
         Me.ResumeLayout(False)

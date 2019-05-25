@@ -237,5 +237,8 @@
   <ItemGroup>
     <None Include="Resources\cruzeiros-cruzeiros-pelo-mundo.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contrucao-navios-cruzeiros-2[1].jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
