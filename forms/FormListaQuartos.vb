@@ -6,28 +6,29 @@
 
     Private Sub FormListaQuartos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DataGridView1.ColumnCount = 4
-        DataGridView1.RowCount = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count()
         UltimaLinha = Me.DataGridView1.Rows.Count()
         mostra()
     End Sub
 
 
     Private Sub QuartoAdicionado(ByVal nquarto As Integer) Handles FormQuartos.AdicionarQuarto
-        Dim k As Integer = 1
-        Dim temp As Boolean = False
-        While k <= 4 And temp = False
-            If Me.DataGridView1.Item(k, UltimaLinha).Value = "" Then
-                Me.DataGridView1.Item(k, UltimaLinha).Value = nquarto
-                temp = True
-            End If
-            k = k + 1
-        End While
+        'Dim k As Integer = 1
+        'Dim temp As Boolean = False
+        'While k <= 4 And temp = False
+        '    If Me.DataGridView1.Item(k, UltimaLinha).Value = "" Then
+        '        Me.DataGridView1.Item(k, UltimaLinha).Value = nquarto
+        '        temp = True
+        '    End If
+        '    k = k + 1
+        'End While
 
-        If temp = False Then
-            Me.DataGridView1.RowCount = Me.DataGridView1.RowCount + 1
-            UltimaLinha = Me.DataGridView1.Rows.Count()
-            Me.DataGridView1.Item(1, UltimaLinha).Value = nquarto
-        End If
+        'If temp = False Then
+        '    Me.DataGridView1.RowCount = Me.DataGridView1.RowCount + 1
+        '    UltimaLinha = Me.DataGridView1.Rows.Count()
+        '    Me.DataGridView1.Item(1, UltimaLinha).Value = nquarto
+        'End If
+
+        Me.DataGridView1.Item(3, 1).Value = 103
 
     End Sub
 
@@ -62,8 +63,10 @@
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        Dim nlinha As Integer = e.RowIndex
-        Dim ncoluna As Integer = e.ColumnIndex
+        ' Dim nlinha As Integer = e.RowIndex
+        ' Dim ncoluna As Integer = e.ColumnIndex
+        'Dim nlinha As Integer = 1
+        'Dim ncoluna As Integer = 1
         Dim numeroquarto As Integer 'numero que apareca na celula
         Dim numeroposicao As Integer 'posicao do quarto na lista
 

@@ -52,6 +52,7 @@
         QuartoVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count - 1
         RaiseEvent AdicionarQuarto(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Nquarto)
         gravar()
+        Mostra()
     End Sub
 
 
