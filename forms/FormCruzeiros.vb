@@ -55,11 +55,13 @@
 
     Private Sub Button_modificar_Click(sender As Object, e As EventArgs) Handles Button_modificar.Click
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).modificar(Me.TextBox_nome.Text, Me.DateTimePicker_datainicial.Value.ToShortDateString, Me.DateTimePicker_datafinal.Value.ToShortDateString, Me.TextBox_origem.Text, Me.TextBox_destino.Text)
+        gravar()
         mostra()
     End Sub
 
     Private Sub Button_Reservar_Click(sender As Object, e As EventArgs) Handles Button_Reservar.Click
         EmpresaCruzeiros.Viajantes(ViajanteVisivel).CruzeirosMarcados.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel))
+        gravar()
     End Sub
 
     Private Sub FormCruzeiros_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -74,6 +76,7 @@
         ElseIf NivelVisivel = "Funcionario" Then
             Me.Button_Reservar.Visible = False
         End If
+        ler()
         mostra()
     End Sub
 End Class

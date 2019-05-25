@@ -96,6 +96,7 @@
             Me.Button_Marcar.Visible = False
             Me.Button_anular.Visible = False
         End If
+        ler()
         mostra()
     End Sub
 End Class
