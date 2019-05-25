@@ -205,9 +205,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="FormNovoRegisto_Funcionário.resx">
       <DependentUpon>FormNovoRegisto_Funcionário.vb</DependentUpon>
@@ -236,6 +236,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cruzeiros-cruzeiros-pelo-mundo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msc1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\msc2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

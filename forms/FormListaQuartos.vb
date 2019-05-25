@@ -6,6 +6,7 @@
 
     Private Sub FormListaQuartos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DataGridView1.ColumnCount = 4
+        DataGridView1.RowCount = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count()
         UltimaLinha = Me.DataGridView1.Rows.Count()
         mostra()
     End Sub
