@@ -62,6 +62,8 @@
     Private Sub Button_Reservar_Click(sender As Object, e As EventArgs) Handles Button_Reservar.Click
         EmpresaCruzeiros.Viajantes(ViajanteVisivel).CruzeirosMarcados.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel))
         gravar()
+
+        MsgBox("Reservou o cruzeiro!")
     End Sub
 
     Private Sub FormCruzeiros_Load(sender As Object, e As EventArgs) Handles MyBase.Load

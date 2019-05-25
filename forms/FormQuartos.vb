@@ -47,7 +47,7 @@
 
     Private Sub Button_Adicionar_Click(sender As Object, e As EventArgs) Handles Button_Adicionar.Click
         Dim quarto As ClassQuarto
-        quarto = New ClassQuarto(Me.TextBox_npessoas.Text, EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count + 1, Me.TextBox_preco.Text, Me.TextBox_seccao.Text)
+        quarto = New ClassQuarto(Me.TextBox_npessoas.Text, Me.TextBox_numero.Text, Me.TextBox_preco.Text, Me.TextBox_seccao.Text)
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Add(quarto)
         QuartoVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count - 1
         RaiseEvent AdicionarQuarto(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Nquarto)

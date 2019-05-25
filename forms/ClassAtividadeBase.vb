@@ -60,8 +60,9 @@ Public Class ClassAtividadeBase
     End Sub
 
 
-    Public Sub New(ByVal Nome As String, ByVal HoraInicio As Integer, ByVal HoraFim As Integer, ByVal Tipo As String)
+    Public Sub New(ByVal Nome As String, ByVal data As Date, ByVal HoraInicio As Integer, ByVal HoraFim As Integer, ByVal Tipo As String)
         Me.Nome = Nome
+        Me.Data = data
         Me.HoraInicio = HoraInicio
         Me.HoraFim = HoraFim
         Me.Tipo = Tipo

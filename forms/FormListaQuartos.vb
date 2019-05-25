@@ -2,11 +2,11 @@
 
     Private WithEvents FormQuartos As FormQuartos
     Private QuartoVisivel As Integer = 0
-    Public UltimaLinha As Integer = 1 'Me.DataGridView1.Rows.Count()
+    Public UltimaLinha As Integer
 
     Private Sub FormListaQuartos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        DataGridView1.ColumnCount = 6
-        DataGridView1.RowCount = 1
+        DataGridView1.ColumnCount = 4
+        UltimaLinha = Me.DataGridView1.Rows.Count()
         mostra()
     End Sub
 
@@ -14,10 +14,10 @@
     Private Sub QuartoAdicionado(ByVal nquarto As Integer) Handles FormQuartos.AdicionarQuarto
         Dim k As Integer = 1
         Dim temp As Boolean = False
-        While k <= 6 And temp = False
+        While k <= 4 And temp = False
             If Me.DataGridView1.Item(k, UltimaLinha).Value = "" Then
-                temp = True
                 Me.DataGridView1.Item(k, UltimaLinha).Value = nquarto
+                temp = True
             End If
             k = k + 1
         End While

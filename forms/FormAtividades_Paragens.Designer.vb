@@ -43,13 +43,15 @@ Partial Class FormAtividades_Paragens
         Me.Label7 = New System.Windows.Forms.Label()
         Me.TextBox_horafim = New System.Windows.Forms.TextBox()
         Me.TextBox_horainicio = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.DateTimePickerData = New System.Windows.Forms.DateTimePicker()
         Me.SuspendLayout()
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(103, 258)
+        Me.Label3.Location = New System.Drawing.Point(104, 278)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(77, 20)
         Me.Label3.TabIndex = 76
@@ -67,7 +69,7 @@ Partial Class FormAtividades_Paragens
         '
         'TextBox_paragem
         '
-        Me.TextBox_paragem.Location = New System.Drawing.Point(197, 258)
+        Me.TextBox_paragem.Location = New System.Drawing.Point(197, 278)
         Me.TextBox_paragem.Name = "TextBox_paragem"
         Me.TextBox_paragem.Size = New System.Drawing.Size(140, 20)
         Me.TextBox_paragem.TabIndex = 74
@@ -86,7 +88,7 @@ Partial Class FormAtividades_Paragens
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(138, 180)
+        Me.Label5.Location = New System.Drawing.Point(138, 167)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(43, 20)
         Me.Label5.TabIndex = 72
@@ -96,7 +98,7 @@ Partial Class FormAtividades_Paragens
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(69, 206)
+        Me.Label4.Location = New System.Drawing.Point(70, 220)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(111, 20)
         Me.Label4.TabIndex = 71
@@ -106,7 +108,7 @@ Partial Class FormAtividades_Paragens
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(80, 232)
+        Me.Label2.Location = New System.Drawing.Point(80, 248)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(100, 20)
         Me.Label2.TabIndex = 70
@@ -116,7 +118,7 @@ Partial Class FormAtividades_Paragens
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(125, 154)
+        Me.Label1.Location = New System.Drawing.Point(125, 141)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(55, 20)
         Me.Label1.TabIndex = 69
@@ -124,14 +126,14 @@ Partial Class FormAtividades_Paragens
         '
         'TextBox_tipo
         '
-        Me.TextBox_tipo.Location = New System.Drawing.Point(197, 180)
+        Me.TextBox_tipo.Location = New System.Drawing.Point(197, 167)
         Me.TextBox_tipo.Name = "TextBox_tipo"
         Me.TextBox_tipo.Size = New System.Drawing.Size(140, 20)
         Me.TextBox_tipo.TabIndex = 68
         '
         'TextBox_nome
         '
-        Me.TextBox_nome.Location = New System.Drawing.Point(197, 154)
+        Me.TextBox_nome.Location = New System.Drawing.Point(197, 141)
         Me.TextBox_nome.Name = "TextBox_nome"
         Me.TextBox_nome.Size = New System.Drawing.Size(140, 20)
         Me.TextBox_nome.TabIndex = 67
@@ -198,7 +200,7 @@ Partial Class FormAtividades_Paragens
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(129, 284)
+        Me.Label6.Location = New System.Drawing.Point(129, 304)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(51, 20)
         Me.Label6.TabIndex = 79
@@ -206,7 +208,7 @@ Partial Class FormAtividades_Paragens
         '
         'TextBox_local
         '
-        Me.TextBox_local.Location = New System.Drawing.Point(197, 284)
+        Me.TextBox_local.Location = New System.Drawing.Point(197, 304)
         Me.TextBox_local.Name = "TextBox_local"
         Me.TextBox_local.Size = New System.Drawing.Size(140, 20)
         Me.TextBox_local.TabIndex = 80
@@ -223,23 +225,42 @@ Partial Class FormAtividades_Paragens
         '
         'TextBox_horafim
         '
-        Me.TextBox_horafim.Location = New System.Drawing.Point(197, 232)
+        Me.TextBox_horafim.Location = New System.Drawing.Point(197, 248)
         Me.TextBox_horafim.Name = "TextBox_horafim"
         Me.TextBox_horafim.Size = New System.Drawing.Size(140, 20)
         Me.TextBox_horafim.TabIndex = 78
         '
         'TextBox_horainicio
         '
-        Me.TextBox_horainicio.Location = New System.Drawing.Point(197, 206)
+        Me.TextBox_horainicio.Location = New System.Drawing.Point(197, 222)
         Me.TextBox_horainicio.Name = "TextBox_horainicio"
         Me.TextBox_horainicio.Size = New System.Drawing.Size(140, 20)
         Me.TextBox_horainicio.TabIndex = 77
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(137, 194)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(48, 20)
+        Me.Label8.TabIndex = 82
+        Me.Label8.Text = "Data:"
+        '
+        'DateTimePickerData
+        '
+        Me.DateTimePickerData.Location = New System.Drawing.Point(197, 196)
+        Me.DateTimePickerData.Name = "DateTimePickerData"
+        Me.DateTimePickerData.Size = New System.Drawing.Size(140, 20)
+        Me.DateTimePickerData.TabIndex = 83
         '
         'FormAtividades_Paragens
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(810, 465)
+        Me.Controls.Add(Me.DateTimePickerData)
+        Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.TextBox_local)
         Me.Controls.Add(Me.Label6)
@@ -288,4 +309,6 @@ Partial Class FormAtividades_Paragens
     Friend WithEvents Label7 As Label
     Friend WithEvents TextBox_horafim As TextBox
     Friend WithEvents TextBox_horainicio As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents DateTimePickerData As DateTimePicker
 End Class

@@ -16,8 +16,8 @@
     Public Sub New()
 
     End Sub
-    Public Sub New(ByVal Nome As String, ByVal HoraInicio As Integer, ByVal HoraFim As Integer, ByVal Tipo As String, ByVal SeccaoNavio As String)
-        MyBase.New(Nome, HoraInicio, HoraFim, Tipo)
+    Public Sub New(ByVal Nome As String, ByVal data As Date, ByVal HoraInicio As Integer, ByVal HoraFim As Integer, ByVal Tipo As String, ByVal SeccaoNavio As String)
+        MyBase.New(Nome, data, HoraInicio, HoraFim, Tipo)
         Me.SeccaoNavio = SeccaoNavio
     End Sub
 
