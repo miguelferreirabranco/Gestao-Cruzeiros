@@ -13,7 +13,7 @@
             End If
 
             TextBox_nome.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).Nome
-            TextBox_tipo.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).Tipo
+            Me.ComboBoxTipo.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).Tipo
             Me.DateTimePickerData.Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).Data
             TextBox_horainicio.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).HoraInicio
             TextBox_horafim.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel).HoraFim
@@ -31,7 +31,7 @@
         Me.TextBox_nome.Clear()
         Me.TextBox_horafim.Clear()
         Me.TextBox_horainicio.Clear()
-        Me.TextBox_tipo.Clear()
+        Me.ComboBoxTipo.Text = ""
         Me.TextBox_local.Clear()
         Me.ComboBoxParagem.Text = ""
         Me.DateTimePickerData.Value = Today
@@ -43,7 +43,7 @@
         Dim paragem As ClassParagem
 
 
-        NovaAtividadeParagem = New ClassAtividadeParagens(Me.TextBox_nome.Text, Me.DateTimePickerData.Value.ToShortDateString, Me.TextBox_horainicio.Text, Me.TextBox_horafim.Text, Me.TextBox_tipo.Text, paragem, Me.TextBox_local.Text)
+        NovaAtividadeParagem = New ClassAtividadeParagens(Me.TextBox_nome.Text, Me.DateTimePickerData.Value.ToShortDateString, Me.TextBox_horainicio.Text, Me.TextBox_horafim.Text, Me.ComboBoxTipo.Text, paragem, Me.TextBox_local.Text)
 
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens.Add(NovaAtividadeParagem)
         AtividadeParagemVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens.Count - 1
@@ -51,7 +51,9 @@
         gravar()
         mostra()
     End Sub
-
+    'Public Sub EncontrarParagem()
+    'Verrrrrr
+    ' End Sub
     Private Sub Button_Marcar_Click(sender As Object, e As EventArgs) Handles Button_Marcar.Click
         EmpresaCruzeiros.Viajantes(ViajanteVisivel).MarcarAtividadeParagem(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens(AtividadeParagemVisivel))
         AtividadeParagemVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesParagens.Count - 1
@@ -100,7 +102,7 @@
             Me.TextBox_local.Enabled = False
             Me.TextBox_nome.Enabled = False
             Me.ComboBoxParagem.Enabled = False
-            Me.TextBox_tipo.Enabled = False
+            Me.ComboBoxTipo.Enabled = False
 
         ElseIf NivelVisivel = "Funcionario" Then
             Me.Button_Marcar.Visible = False
