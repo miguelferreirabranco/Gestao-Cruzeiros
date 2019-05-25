@@ -41,6 +41,8 @@ Partial Class FormAtividades_Navio
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TextBox_horafim = New System.Windows.Forms.TextBox()
         Me.TextBox_horainicio = New System.Windows.Forms.TextBox()
+        Me.DateTimePickerData = New System.Windows.Forms.DateTimePicker()
+        Me.Label7 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Button_anular
@@ -55,7 +57,7 @@ Partial Class FormAtividades_Navio
         '
         'TextBox_seccao
         '
-        Me.TextBox_seccao.Location = New System.Drawing.Point(200, 258)
+        Me.TextBox_seccao.Location = New System.Drawing.Point(200, 286)
         Me.TextBox_seccao.Name = "TextBox_seccao"
         Me.TextBox_seccao.Size = New System.Drawing.Size(140, 20)
         Me.TextBox_seccao.TabIndex = 55
@@ -84,7 +86,7 @@ Partial Class FormAtividades_Navio
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(72, 206)
+        Me.Label4.Location = New System.Drawing.Point(73, 238)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(111, 20)
         Me.Label4.TabIndex = 52
@@ -94,7 +96,7 @@ Partial Class FormAtividades_Navio
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(83, 232)
+        Me.Label2.Location = New System.Drawing.Point(83, 258)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(100, 20)
         Me.Label2.TabIndex = 51
@@ -186,7 +188,7 @@ Partial Class FormAtividades_Navio
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(51, 258)
+        Me.Label3.Location = New System.Drawing.Point(52, 284)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(132, 20)
         Me.Label3.TabIndex = 58
@@ -204,23 +206,42 @@ Partial Class FormAtividades_Navio
         '
         'TextBox_horafim
         '
-        Me.TextBox_horafim.Location = New System.Drawing.Point(200, 232)
+        Me.TextBox_horafim.Location = New System.Drawing.Point(200, 260)
         Me.TextBox_horafim.Name = "TextBox_horafim"
         Me.TextBox_horafim.Size = New System.Drawing.Size(140, 20)
         Me.TextBox_horafim.TabIndex = 60
         '
         'TextBox_horainicio
         '
-        Me.TextBox_horainicio.Location = New System.Drawing.Point(200, 206)
+        Me.TextBox_horainicio.Location = New System.Drawing.Point(200, 234)
         Me.TextBox_horainicio.Name = "TextBox_horainicio"
         Me.TextBox_horainicio.Size = New System.Drawing.Size(140, 20)
         Me.TextBox_horainicio.TabIndex = 59
+        '
+        'DateTimePickerData
+        '
+        Me.DateTimePickerData.Location = New System.Drawing.Point(200, 207)
+        Me.DateTimePickerData.Name = "DateTimePickerData"
+        Me.DateTimePickerData.Size = New System.Drawing.Size(140, 20)
+        Me.DateTimePickerData.TabIndex = 62
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Location = New System.Drawing.Point(140, 207)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(48, 20)
+        Me.Label7.TabIndex = 63
+        Me.Label7.Text = "Data:"
         '
         'FormAtividades_Navio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(805, 456)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.DateTimePickerData)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox_horafim)
         Me.Controls.Add(Me.TextBox_horainicio)
@@ -265,4 +286,6 @@ Partial Class FormAtividades_Navio
     Friend WithEvents Label6 As Label
     Friend WithEvents TextBox_horafim As TextBox
     Friend WithEvents TextBox_horainicio As TextBox
+    Friend WithEvents DateTimePickerData As DateTimePicker
+    Friend WithEvents Label7 As Label
 End Class
