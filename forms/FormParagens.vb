@@ -52,10 +52,11 @@
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens.Add(paragem)
 
         paragemvisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens.Count - 1
+        gravar()
 
         mostra()
 
-        gravar()
+
 
     End Sub
 
@@ -67,5 +68,7 @@
             Me.TextBox_local.Enabled = False
             Me.DateTimePickerData.Enabled = False
         End If
+
+        mostra()
     End Sub
 End Class
