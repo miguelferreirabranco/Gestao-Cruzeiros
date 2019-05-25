@@ -5,6 +5,7 @@
     Private _ppessoa As Single
     Private _NomedeReserva As String
 
+
     Public Property Npessoas As Integer
         Get
             Return _npessoas
@@ -52,6 +53,7 @@
         End Set
     End Property
 
+
     Public Sub New()
     End Sub
 
@@ -62,6 +64,7 @@
         Me.Seccao = seccao
         Me.Nomedereserva = ""
     End Sub
+
     Public Sub Reservar(ByVal Nome As String)
         If Me.Nomedereserva = "" Then
             Me.Nomedereserva = Nome
@@ -82,6 +85,16 @@
 
     Public Function ParaString() As String
         Return Me.Nquarto & vbTab & Me.Seccao & vbTab & Me.Npessoas & vbTab & Me.Ppessoa
+    End Function
+
+    Public Function Reservado() As Boolean
+        Dim temp As Boolean = False
+        If Me.Nomedereserva = "" Then
+            temp = False
+        Else
+            temp = True
+        End If
+        Return temp
     End Function
 
 End Class
