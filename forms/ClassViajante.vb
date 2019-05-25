@@ -27,7 +27,7 @@
     End Property
 
     Public Overrides Function Pessoa_str() As String
-        Return MyBase.Pessoa_str() & vbTab & Me.Nif
+        Return MyBase.Pessoa_str() & vbTab & vbTab & Me.Nif
     End Function
 
     Public Sub MarcarAtividadeNavio(ByVal novaatividadenavio As ClassAtividadeNavio)

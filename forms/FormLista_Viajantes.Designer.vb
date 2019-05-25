@@ -35,7 +35,7 @@ Partial Class FormLista_Viajantes
         Me.ListBox_viajantes.FormattingEnabled = True
         Me.ListBox_viajantes.Location = New System.Drawing.Point(67, 85)
         Me.ListBox_viajantes.Name = "ListBox_viajantes"
-        Me.ListBox_viajantes.Size = New System.Drawing.Size(461, 251)
+        Me.ListBox_viajantes.Size = New System.Drawing.Size(425, 251)
         Me.ListBox_viajantes.TabIndex = 0
         '
         'Label6
@@ -52,7 +52,7 @@ Partial Class FormLista_Viajantes
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(347, 62)
+        Me.Label4.Location = New System.Drawing.Point(422, 62)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(39, 20)
         Me.Label4.TabIndex = 71
@@ -62,7 +62,7 @@ Partial Class FormLista_Viajantes
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(263, 62)
+        Me.Label3.Location = New System.Drawing.Point(304, 62)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(33, 20)
         Me.Label3.TabIndex = 70
@@ -72,7 +72,7 @@ Partial Class FormLista_Viajantes
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(166, 62)
+        Me.Label2.Location = New System.Drawing.Point(178, 62)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(55, 20)
         Me.Label2.TabIndex = 69
