@@ -44,8 +44,8 @@
 
     End Sub
 
-    Private Sub FormLogin_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+    Private Sub FormLogin_Load1(sender As Object, e As EventArgs) Handles MyBase.Closed
+        FormPrincipal.Close()
 
     End Sub
 

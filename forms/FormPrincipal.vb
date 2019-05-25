@@ -192,4 +192,7 @@ Public Class FormPrincipal
         FormLogin.ShowDialog()
 
     End Sub
+    Private Sub FormPrincipal_Load1(sender As Object, e As EventArgs) Handles Me.Closed
+        gravar()
+    End Sub
 End Class
