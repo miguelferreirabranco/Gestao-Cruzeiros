@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class FormPrincipal
     Inherits System.Windows.Forms.Form
 
     'Descartar substituições de formulário para limpar a lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -21,7 +21,7 @@ Partial Class FormPrincipal
     'OBSERVAÇÃO: o procedimento a seguir é exigido pelo Windows Form Designer
     'Pode ser modificado usando o Windows Form Designer.  
     'Não o modifique usando o editor de códigos.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormPrincipal))
@@ -66,14 +66,12 @@ Partial Class FormPrincipal
         Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CruzeirosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.QuartosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AtividadesNavioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ParagensToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.NavioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ParagensToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AtNavioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AtParagensToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ListaDePessoasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ViajantesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.FuncionáriosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListaViajantesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ListaFuncionáriosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStrip = New System.Windows.Forms.ToolStrip()
         Me.NewToolStripButton = New System.Windows.Forms.ToolStripButton()
         Me.OpenToolStripButton = New System.Windows.Forms.ToolStripButton()
@@ -86,6 +84,10 @@ Partial Class FormPrincipal
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ParagensToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QuartosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QuartosViajantesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.QuartosFuncionáriosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -93,7 +95,7 @@ Partial Class FormPrincipal
         '
         'MenuStrip
         '
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.EditMenu, Me.ViewMenu, Me.ToolsMenu, Me.WindowsMenu, Me.HelpMenu, Me.CruzeirosToolStripMenuItem, Me.QuartosToolStripMenuItem, Me.AtividadesNavioToolStripMenuItem, Me.ParagensToolStripMenuItem, Me.ListaDePessoasToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.EditMenu, Me.ViewMenu, Me.ToolsMenu, Me.WindowsMenu, Me.HelpMenu, Me.CruzeirosToolStripMenuItem, Me.QuartosToolStripMenuItem, Me.ParagensToolStripMenuItem1, Me.ParagensToolStripMenuItem, Me.ListaDePessoasToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
@@ -383,55 +385,43 @@ Partial Class FormPrincipal
         Me.CruzeirosToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
         Me.CruzeirosToolStripMenuItem.Text = "Cruzeiros"
         '
-        'QuartosToolStripMenuItem
-        '
-        Me.QuartosToolStripMenuItem.Name = "QuartosToolStripMenuItem"
-        Me.QuartosToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
-        Me.QuartosToolStripMenuItem.Text = "Quartos"
-        '
-        'AtividadesNavioToolStripMenuItem
-        '
-        Me.AtividadesNavioToolStripMenuItem.Name = "AtividadesNavioToolStripMenuItem"
-        Me.AtividadesNavioToolStripMenuItem.Size = New System.Drawing.Size(67, 20)
-        Me.AtividadesNavioToolStripMenuItem.Text = "Paragens"
-        '
         'ParagensToolStripMenuItem
         '
-        Me.ParagensToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NavioToolStripMenuItem, Me.ParagensToolStripMenuItem1})
+        Me.ParagensToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AtNavioToolStripMenuItem, Me.AtParagensToolStripMenuItem1})
         Me.ParagensToolStripMenuItem.Name = "ParagensToolStripMenuItem"
         Me.ParagensToolStripMenuItem.Size = New System.Drawing.Size(74, 20)
         Me.ParagensToolStripMenuItem.Text = "Atividades"
         '
-        'NavioToolStripMenuItem
+        'AtNavioToolStripMenuItem
         '
-        Me.NavioToolStripMenuItem.Name = "NavioToolStripMenuItem"
-        Me.NavioToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
-        Me.NavioToolStripMenuItem.Text = "Navio"
+        Me.AtNavioToolStripMenuItem.Name = "AtNavioToolStripMenuItem"
+        Me.AtNavioToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.AtNavioToolStripMenuItem.Text = "Navio"
         '
-        'ParagensToolStripMenuItem1
+        'AtParagensToolStripMenuItem1
         '
-        Me.ParagensToolStripMenuItem1.Name = "ParagensToolStripMenuItem1"
-        Me.ParagensToolStripMenuItem1.Size = New System.Drawing.Size(122, 22)
-        Me.ParagensToolStripMenuItem1.Text = "Paragens"
+        Me.AtParagensToolStripMenuItem1.Name = "AtParagensToolStripMenuItem1"
+        Me.AtParagensToolStripMenuItem1.Size = New System.Drawing.Size(152, 22)
+        Me.AtParagensToolStripMenuItem1.Text = "Paragens"
         '
         'ListaDePessoasToolStripMenuItem
         '
-        Me.ListaDePessoasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ViajantesToolStripMenuItem, Me.FuncionáriosToolStripMenuItem})
+        Me.ListaDePessoasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ListaViajantesToolStripMenuItem, Me.ListaFuncionáriosToolStripMenuItem})
         Me.ListaDePessoasToolStripMenuItem.Name = "ListaDePessoasToolStripMenuItem"
         Me.ListaDePessoasToolStripMenuItem.Size = New System.Drawing.Size(103, 20)
         Me.ListaDePessoasToolStripMenuItem.Text = "Lista de Pessoas"
         '
-        'ViajantesToolStripMenuItem
+        'ListaViajantesToolStripMenuItem
         '
-        Me.ViajantesToolStripMenuItem.Name = "ViajantesToolStripMenuItem"
-        Me.ViajantesToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
-        Me.ViajantesToolStripMenuItem.Text = "Viajantes"
+        Me.ListaViajantesToolStripMenuItem.Name = "ListaViajantesToolStripMenuItem"
+        Me.ListaViajantesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ListaViajantesToolStripMenuItem.Text = "Viajantes"
         '
-        'FuncionáriosToolStripMenuItem
+        'ListaFuncionáriosToolStripMenuItem
         '
-        Me.FuncionáriosToolStripMenuItem.Name = "FuncionáriosToolStripMenuItem"
-        Me.FuncionáriosToolStripMenuItem.Size = New System.Drawing.Size(142, 22)
-        Me.FuncionáriosToolStripMenuItem.Text = "Funcionários"
+        Me.ListaFuncionáriosToolStripMenuItem.Name = "ListaFuncionáriosToolStripMenuItem"
+        Me.ListaFuncionáriosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ListaFuncionáriosToolStripMenuItem.Text = "Funcionários"
         '
         'ToolStrip
         '
@@ -521,6 +511,31 @@ Partial Class FormPrincipal
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(39, 17)
         Me.ToolStripStatusLabel.Text = "Status"
         '
+        'ParagensToolStripMenuItem1
+        '
+        Me.ParagensToolStripMenuItem1.Name = "ParagensToolStripMenuItem1"
+        Me.ParagensToolStripMenuItem1.Size = New System.Drawing.Size(67, 20)
+        Me.ParagensToolStripMenuItem1.Text = "Paragens"
+        '
+        'QuartosToolStripMenuItem
+        '
+        Me.QuartosToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.QuartosViajantesToolStripMenuItem, Me.QuartosFuncionáriosToolStripMenuItem})
+        Me.QuartosToolStripMenuItem.Name = "QuartosToolStripMenuItem"
+        Me.QuartosToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.QuartosToolStripMenuItem.Text = "Quartos"
+        '
+        'QuartosViajantesToolStripMenuItem
+        '
+        Me.QuartosViajantesToolStripMenuItem.Name = "QuartosViajantesToolStripMenuItem"
+        Me.QuartosViajantesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.QuartosViajantesToolStripMenuItem.Text = "Viajantes"
+        '
+        'QuartosFuncionáriosToolStripMenuItem
+        '
+        Me.QuartosFuncionáriosToolStripMenuItem.Name = "QuartosFuncionáriosToolStripMenuItem"
+        Me.QuartosFuncionáriosToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.QuartosFuncionáriosToolStripMenuItem.Text = "Funcionários"
+        '
         'FormPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -596,12 +611,14 @@ Partial Class FormPrincipal
     Friend WithEvents StatusBarToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolsMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CruzeirosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents QuartosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AtividadesNavioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ParagensToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents NavioToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ParagensToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents AtNavioToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AtParagensToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ListaDePessoasToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ViajantesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents FuncionáriosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ListaViajantesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ListaFuncionáriosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ParagensToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents QuartosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents QuartosViajantesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents QuartosFuncionáriosToolStripMenuItem As ToolStripMenuItem
 End Class
