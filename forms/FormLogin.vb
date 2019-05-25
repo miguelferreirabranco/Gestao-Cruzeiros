@@ -13,17 +13,18 @@
 
 
         If Verloginok = True Then
-            NivelVisivel = Nivel
-            RaiseEvent LoginOK(TextBox_username.Text, NivelVisivel)
+                NivelVisivel = Nivel
+                RaiseEvent LoginOK(TextBox_username.Text, NivelVisivel)
             Me.Close()
 
         Else
-            Me.TextBox_username.Clear()
-            Me.TextBox_password.Clear()
+                Me.TextBox_username.Clear()
+                Me.TextBox_password.Clear()
 
-            RaiseEvent LoginErro()
+                RaiseEvent LoginErro()
 
-        End If
+            End If
+
 
     End Sub
 
@@ -44,10 +45,7 @@
 
     End Sub
 
-    Private Sub FormLogin_Load1(sender As Object, e As EventArgs) Handles MyBase.Closed
-        FormPrincipal.Close()
 
-    End Sub
 
 
     Private Sub ValidaLogin(ByVal NomeUser As String, ByVal Password As String, ByRef loginok As Boolean, ByRef Nivel As String)

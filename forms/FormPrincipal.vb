@@ -174,6 +174,8 @@ Public Class FormPrincipal
 
     Private Sub LoginOK(ByVal username As String, ByVal nivel As String) Handles FormLogin.LoginOK
         MsgBox("Login efetuado com sucesso com o username " & username & " como " & nivel & "!")
+        Me.Show()
+
         If NivelVisivel = "Viajante" Then
             FuncionáriosToolStripMenuItem.Visible = False
             ViajantesToolStripMenuItem.Visible = False
@@ -192,7 +194,5 @@ Public Class FormPrincipal
         FormLogin.ShowDialog()
 
     End Sub
-    Private Sub FormPrincipal_Load1(sender As Object, e As EventArgs) Handles Me.Closed
-        gravar()
-    End Sub
+
 End Class
