@@ -101,6 +101,12 @@
     <Compile Include="FormCruzeiros.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormListaQuartos.Designer.vb">
+      <DependentUpon>FormListaQuartos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormListaQuartos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormPrincipal.Designer.vb">
       <DependentUpon>FormPrincipal.vb</DependentUpon>
     </Compile>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCruzeiros.resx">
       <DependentUpon>FormCruzeiros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListaQuartos.resx">
+      <DependentUpon>FormListaQuartos.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.vb</DependentUpon>

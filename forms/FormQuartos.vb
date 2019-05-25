@@ -1,6 +1,8 @@
 ﻿Public Class FormQuartos
     Dim QuartoVisivel As Integer = 0
 
+    Public Event AdicionarQuarto()
+
     Public Sub Mostra()
 
         If EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count > 0 Then
@@ -48,35 +50,13 @@
         quarto = New ClassQuarto(Me.TextBox_npessoas.Text, EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count + 1, Me.TextBox_preco.Text, Me.TextBox_seccao.Text)
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Add(quarto)
         QuartoVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count - 1
+        RaiseEvent AdicionarQuarto()
 
         gravar()
     End Sub
 
-    Private Sub Button_Reservar_Click(sender As Object, e As EventArgs) Handles Button_Reservar.Click
-
-
-        EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Reservar(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).Nome) ' ajustar quando se puser um login
-
-
-        gravar()
-    End Sub
-
-    Private Sub Button_anular_Click(sender As Object, e As EventArgs) Handles Button_anular.Click
-
-
-        EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).AnularReserva(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).Nome) ' ajustar quando se puser um login
-
-        gravar()
-
-    End Sub
 
     Private Sub FormQuartos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        If NivelVisivel = "Viajante" Then
-            Me.Button_Adicionar.Visible = False
-        ElseIf NivelVisivel = "Funcionario" Then
-            Me.Button_anular.Visible = False
-            Me.Button_Reservar.Visible = False
-        End If
         Mostra()
     End Sub
 End Class

@@ -22,7 +22,6 @@ Partial Class FormQuartos
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button_Reservar = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -37,19 +36,8 @@ Partial Class FormQuartos
         Me.Button_anterior = New System.Windows.Forms.Button()
         Me.Button_inicio = New System.Windows.Forms.Button()
         Me.TextBox_preco = New System.Windows.Forms.TextBox()
-        Me.Button_anular = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
-        '
-        'Button_Reservar
-        '
-        Me.Button_Reservar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Reservar.Location = New System.Drawing.Point(30, 364)
-        Me.Button_Reservar.Name = "Button_Reservar"
-        Me.Button_Reservar.Size = New System.Drawing.Size(88, 39)
-        Me.Button_Reservar.TabIndex = 37
-        Me.Button_Reservar.Text = "Reservar"
-        Me.Button_Reservar.UseVisualStyleBackColor = True
         '
         'Label5
         '
@@ -115,7 +103,7 @@ Partial Class FormQuartos
         'Button_Adicionar
         '
         Me.Button_Adicionar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Adicionar.Location = New System.Drawing.Point(30, 319)
+        Me.Button_Adicionar.Location = New System.Drawing.Point(30, 336)
         Me.Button_Adicionar.Name = "Button_Adicionar"
         Me.Button_Adicionar.Size = New System.Drawing.Size(88, 39)
         Me.Button_Adicionar.TabIndex = 25
@@ -125,7 +113,7 @@ Partial Class FormQuartos
         'ListBox_Quartos
         '
         Me.ListBox_Quartos.FormattingEnabled = True
-        Me.ListBox_Quartos.Location = New System.Drawing.Point(441, 150)
+        Me.ListBox_Quartos.Location = New System.Drawing.Point(439, 124)
         Me.ListBox_Quartos.Name = "ListBox_Quartos"
         Me.ListBox_Quartos.Size = New System.Drawing.Size(329, 303)
         Me.ListBox_Quartos.TabIndex = 24
@@ -177,16 +165,6 @@ Partial Class FormQuartos
         Me.TextBox_preco.Size = New System.Drawing.Size(140, 20)
         Me.TextBox_preco.TabIndex = 38
         '
-        'Button_anular
-        '
-        Me.Button_anular.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_anular.Location = New System.Drawing.Point(124, 364)
-        Me.Button_anular.Name = "Button_anular"
-        Me.Button_anular.Size = New System.Drawing.Size(88, 39)
-        Me.Button_anular.TabIndex = 39
-        Me.Button_anular.Text = "Anular"
-        Me.Button_anular.UseVisualStyleBackColor = True
-        '
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -203,9 +181,7 @@ Partial Class FormQuartos
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(803, 465)
         Me.Controls.Add(Me.Label6)
-        Me.Controls.Add(Me.Button_anular)
         Me.Controls.Add(Me.TextBox_preco)
-        Me.Controls.Add(Me.Button_Reservar)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label2)
@@ -225,8 +201,6 @@ Partial Class FormQuartos
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents Button_Reservar As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label2 As Label
@@ -241,6 +215,5 @@ Partial Class FormQuartos
     Friend WithEvents Button_anterior As Button
     Friend WithEvents Button_inicio As Button
     Friend WithEvents TextBox_preco As TextBox
-    Friend WithEvents Button_anular As Button
     Friend WithEvents Label6 As Label
 End Class
