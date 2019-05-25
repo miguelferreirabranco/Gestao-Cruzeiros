@@ -131,13 +131,9 @@ Partial Class FormLogin
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-<<<<<<< HEAD
-        Me.ClientSize = New System.Drawing.Size(619, 414)
-=======
         Me.BackgroundImage = Global.forms.My.Resources.Resources.cruzeiros_cruzeiros_pelo_mundo
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(1367, 665)
->>>>>>> 7eebf7f4e71f813106386586fae34d61e3a19974
+        Me.ClientSize = New System.Drawing.Size(1520, 641)
         Me.Controls.Add(Me.RadioButtonViajante)
         Me.Controls.Add(Me.RadioButtonFuncionario)
         Me.Controls.Add(Me.Label3)
