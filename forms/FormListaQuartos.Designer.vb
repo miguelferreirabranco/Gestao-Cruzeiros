@@ -42,9 +42,11 @@ Partial Class FormListaQuartos
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.ColumnHeadersVisible = False
         Me.DataGridView1.Location = New System.Drawing.Point(393, 12)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(443, 384)
+        Me.DataGridView1.RowHeadersVisible = False
+        Me.DataGridView1.Size = New System.Drawing.Size(409, 384)
         Me.DataGridView1.TabIndex = 0
         '
         'TextBox_preco
