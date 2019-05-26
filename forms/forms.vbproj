@@ -153,7 +153,9 @@
     <Compile Include="My Project\Form1.Designer.vb">
       <DependentUpon>Form1.vb</DependentUpon>
     </Compile>
-    <Compile Include="My Project\Form1.vb" />
+    <Compile Include="My Project\Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -195,7 +197,9 @@
     <Compile Include="My Project\VerificaFuncionario.Designer.vb">
       <DependentUpon>VerificaFuncionario.vb</DependentUpon>
     </Compile>
-    <Compile Include="My Project\VerificaFuncionario.vb" />
+    <Compile Include="My Project\VerificaFuncionario.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="VariavelGlobal.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -225,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormReservas.resx">
       <DependentUpon>FormReservas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormValidacao.resx">
+      <DependentUpon>FormValidacao.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
