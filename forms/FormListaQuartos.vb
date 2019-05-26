@@ -2,65 +2,79 @@
 
     Private WithEvents FormQuartos As New FormQuartos
     Private QuartoVisivel As Integer = 0
-    Public UltimaLinha As Integer
+    'Public UltimaLinha As Integer
 
     Private Sub FormListaQuartos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
 
         DataGridView1.ColumnCount = 4
-        Me.DataGridView1.RowCount = 1
-        UltimaLinha = Me.DataGridView1.Rows.Count()
-        mostra()
+        mostradatagrid()
+        mostratext()
     End Sub
 
 
-    Private Sub QuartoAdicionado(ByVal nquarto As Integer) Handles FormQuartos.AdicionarQuarto
-        Dim k As Integer = 1
-        Dim temp As Boolean = False
-        While k <= 4 And temp = False
-            If Me.DataGridView1.Item(k, UltimaLinha).Value = "" Then
-                Me.DataGridView1.Item(k, UltimaLinha).Value = nquarto
-                temp = True
-            End If
-            k = k + 1
-        End While
+    'Private Sub QuartoAdicionado(ByVal nquarto As Integer) Handles FormQuartos.AdicionarQuarto
+    '    Dim k As Integer = 1
+    '    Dim temp As Boolean = False
+    '    While k <= 4 And temp = False
+    '        If Me.DataGridView1.Item(k, UltimaLinha).Value = "" Then
+    '            Me.DataGridView1.Item(k, UltimaLinha).Value = nquarto
+    '            temp = True
+    '        End If
+    '        k = k + 1
+    '    End While
 
-        If temp = False Then
-            Me.DataGridView1.RowCount = Me.DataGridView1.RowCount + 1
-            UltimaLinha = Me.DataGridView1.Rows.Count()
-            Me.DataGridView1.Item(1, UltimaLinha).Value = nquarto
-        End If
+    '    If temp = False Then
+    '        Me.DataGridView1.RowCount = Me.DataGridView1.RowCount + 1
+    '        UltimaLinha = Me.DataGridView1.Rows.Count()
+    '        Me.DataGridView1.Item(1, UltimaLinha).Value = nquarto
+    '    End If
 
 
 
-    End Sub
+    'End Sub
 
-    Public Sub mostra()
-        Dim k, j, l As Integer
-
+    Public Sub mostratext()
         Me.TextBox_numero.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Nquarto
         Me.TextBox_npessoas.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Npessoas
         Me.TextBox_preco.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Ppessoa
         Me.ComboBoxSeccao.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Seccao
 
-        l = 0
-        j = 0
-        k = 0
-        While k < EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count
+    End Sub
+    Public Sub mostradatagrid()
+        Dim k, j, l As Integer
+        Dim Len As Integer
+        Dim aux As Integer
 
-            If j = 4 Then
-                j = 0
-                l = l + 1
-                Me.DataGridView1.Item(j, l).Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k).Nquarto
-            Else
-                Me.DataGridView1.Item(j, l).Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k).Nquarto
-            End If
-            j = j + 1
+
+        Me.DataGridView1.Rows.Clear()
+
+        Len = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count
+        aux = Len Mod 4
+
+        k = 0
+        While k < (Len - aux) / 4
+            Me.DataGridView1.Rows.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k).Nquarto, EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k + 1).Nquarto, EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k + 2).Nquarto, EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k + 3).Nquarto)
             k = k + 1
         End While
 
-    End Sub
 
+        k = Len - aux
+        If aux = 0 Then
+            Me.DataGridView1.Rows.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k).Nquarto, EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k + 1).Nquarto, EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k + 2).Nquarto, EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k + 3).Nquarto)
+        ElseIf aux = 1 Then
+            Me.DataGridView1.Rows.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k).Nquarto, "", "", "")
+        ElseIf aux = 2 Then
+            Me.DataGridView1.Rows.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k).Nquarto, EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k + 1).Nquarto, "", "")
+        ElseIf aux = 3 Then
+            Me.DataGridView1.Rows.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k).Nquarto, EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k + 1).Nquarto, EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k + 2).Nquarto, "")
+        End If
+
+        k = 0
+        While k <= EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count - 1
+            k = k + 1
+        End While
+    End Sub
     Private Function ProcurarQuarto(ByVal numero As Integer) As Integer
         Dim temp As Integer = -1
         Dim k As Integer = 0
@@ -84,19 +98,24 @@
         End If
     End Sub
 
-    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
+    Private Sub DataGridView1_CellcontentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
         Dim nlinha As Integer = e.RowIndex
         Dim ncoluna As Integer = e.ColumnIndex
 
         Dim numeroquarto As Integer 'numero que apareca na celula
         Dim numeroposicao As Integer 'posicao do quarto na lista
 
-        numeroquarto = DataGridView1.Item(ncoluna, nlinha).Value
-        numeroposicao = ProcurarQuarto(numeroquarto)
-        MudarCor(numeroposicao, nlinha, ncoluna)
+
+        If DataGridView1.Item(ncoluna, nlinha).Value.ToString <> "" Then
+            numeroquarto = DataGridView1.Item(ncoluna, nlinha).Value
+            numeroposicao = ProcurarQuarto(numeroquarto)
+            MudarCor(numeroposicao, nlinha, ncoluna)
+        Else
+            MsgBox("Esse quarto não existe!")
+        End If
 
         QuartoVisivel = numeroposicao
-        mostra()
+        mostratext()
     End Sub
 
 
