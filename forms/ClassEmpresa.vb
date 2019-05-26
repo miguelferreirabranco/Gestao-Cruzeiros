@@ -45,7 +45,7 @@ Public Class ClassEmpresa
 
         If Me.Cruzeiros.Count > 0 Then
             For k = 0 To Me.Cruzeiros.Count - 1
-                resultado = resultado & Me.Cruzeiros(k).ReceitaTotal
+                resultado = resultado + Me.Cruzeiros(k).ReceitaTotal
             Next
         End If
 
