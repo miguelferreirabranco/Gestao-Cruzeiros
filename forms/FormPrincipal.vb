@@ -113,6 +113,12 @@ Public Class FormPrincipal
         ElseIf NivelVisivel = "Funcionario" Then
             ReservasToolStripMenuItem.Visible = False
         End If
+
+        If EmpresaCruzeiros.Viajantes(ViajanteVisivel).CruzeirosMarcados.Count = 0 Then
+            QuartosToolStripMenuItem.Visible = False
+            ParagensToolStripMenuItem.Visible = False
+        End If
+
     End Sub
 
     Private Sub LoginErro() Handles FormLogin.LoginErro
