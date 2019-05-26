@@ -2,7 +2,7 @@
 
     Private WithEvents FormQuartos As New FormQuartos
     Private QuartoVisivel As Integer = 0
-    'Public UltimaLinha As Integer
+
 
     Private Sub FormListaQuartos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -13,26 +13,6 @@
     End Sub
 
 
-    'Private Sub QuartoAdicionado(ByVal nquarto As Integer) Handles FormQuartos.AdicionarQuarto
-    '    Dim k As Integer = 1
-    '    Dim temp As Boolean = False
-    '    While k <= 4 And temp = False
-    '        If Me.DataGridView1.Item(k, UltimaLinha).Value = "" Then
-    '            Me.DataGridView1.Item(k, UltimaLinha).Value = nquarto
-    '            temp = True
-    '        End If
-    '        k = k + 1
-    '    End While
-
-    '    If temp = False Then
-    '        Me.DataGridView1.RowCount = Me.DataGridView1.RowCount + 1
-    '        UltimaLinha = Me.DataGridView1.Rows.Count()
-    '        Me.DataGridView1.Item(1, UltimaLinha).Value = nquarto
-    '    End If
-
-
-
-    'End Sub
 
     Public Sub mostratext()
         Me.TextBox_numero.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Nquarto
@@ -101,7 +81,7 @@
         End If
     End Sub
 
-    Private Sub DataGridView1_CellcontentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+    Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
         Dim nlinha As Integer = e.RowIndex
         Dim ncoluna As Integer = e.ColumnIndex
 
