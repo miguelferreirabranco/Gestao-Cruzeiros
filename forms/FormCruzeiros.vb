@@ -75,7 +75,7 @@
         EmpresaCruzeiros.Viajantes(ViajanteVisivel).CruzeirosMarcados.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel))
         gravar()
 
-        MsgBox("Reservou o cruzeiro!")
+        MsgBox("Reservou o cruzeiro com sucesso, efetue agora a reserva do quarto e das atividades!")
     End Sub
 
     Private Sub FormCruzeiros_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -87,6 +87,7 @@
             Me.TextBox_origem.Enabled = False
             Me.DateTimePicker_datainicial.Enabled = False
             Me.DateTimePicker_datafinal.Enabled = False
+            Me.ButtonNovo.Visible = False
         ElseIf NivelVisivel = "Funcionario" Then
             Me.Button_Reservar.Visible = False
         End If

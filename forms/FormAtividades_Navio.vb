@@ -65,6 +65,7 @@
     Private Sub Button_Marcar_Click(sender As Object, e As EventArgs) Handles Button_Marcar.Click
         EmpresaCruzeiros.Viajantes(ViajanteVisivel).MarcarAtividadeNavio(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio(AtividadeNavioVisivel))
         AtividadeNavioVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).AtividadesNavio.Count - 1
+
         gravar()
         mostra()
     End Sub
@@ -109,6 +110,7 @@
             Me.HoraInicio.Enabled = False
             Me.MinutoFim.Enabled = False
             Me.MinutoInicio.Enabled = False
+            Me.ButtonNova.Visible = False
         ElseIf NivelVisivel = "Funcionario" Then
             Me.Button_Marcar.Visible = False
             Me.Button_anular.Visible = False

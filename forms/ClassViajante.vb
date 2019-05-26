@@ -59,6 +59,7 @@
                 End While
                 If temp = False Then
                     Me.AtividadesNavioMarcadas.Add(novaatividadenavio)
+                    MsgBox("A atividade foi marcada!")
                 Else
                     MsgBox("Já tem uma atividade marcada nesse horário!")
 
@@ -76,6 +77,7 @@
         While k <= Me.AtividadesNavioMarcadas.Count - 1 And temp = False
             If Me.AtividadesNavioMarcadas(k).Nome = NomeAtividade Then
                 Me.AtividadesNavioMarcadas.RemoveAt(k)
+                MsgBox("A marcação desta atividade foi anulada!")
                 temp = True
             End If
 
@@ -118,6 +120,7 @@
 
                 If temp = False Then
                     Me.AtividadesParagensMarcadas.Add(novaatividadeparagem)
+                    MsgBox("A atividade foi marcada!")
                 Else
                     MsgBox("Já tem uma atividade marcada nesse horário!")
                 End If
@@ -135,6 +138,7 @@
         While k <= Me.AtividadesParagensMarcadas.Count - 1 And temp = False
             If Me.AtividadesParagensMarcadas(k).Nome = NomeAtividade Then
                 Me.AtividadesParagensMarcadas.RemoveAt(k)
+                MsgBox("A marcação desta atividade foi anulada!")
                 temp = True
             End If
 

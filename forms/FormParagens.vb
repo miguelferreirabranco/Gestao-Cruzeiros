@@ -78,6 +78,7 @@
             Me.MinutoInicio.Enabled = False
             Me.TextBox_local.Enabled = False
             Me.DateTimePickerData.Enabled = False
+            Me.ButtonNova.Visible = False
         End If
 
         mostra()
