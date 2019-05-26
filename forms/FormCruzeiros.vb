@@ -78,8 +78,25 @@
     End Sub
 
     Private Sub Button_Reservar_Click(sender As Object, e As EventArgs) Handles Button_Reservar.Click
-        EmpresaCruzeiros.Viajantes(ViajanteVisivel).CruzeirosMarcados.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel))
-        gravar()
+        Dim k As Integer = 0
+        Dim temp As Boolean = False
+
+        If EmpresaCruzeiros.Viajantes(ViajanteVisivel).CruzeirosMarcados.Count > 0 Then
+            While k <= EmpresaCruzeiros.Viajantes(ViajanteVisivel).CruzeirosMarcados.Count - 1 And temp = False
+                If (EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).DataInicio >= EmpresaCruzeiros.Cruzeiros(k).DataInicio And EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).DataInicio <= EmpresaCruzeiros.Cruzeiros(k).DataFim) Or (EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).DataFim >= EmpresaCruzeiros.Cruzeiros(k).DataInicio And EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).DataFim <= EmpresaCruzeiros.Cruzeiros(k).DataFim) Then
+                    temp = True
+                End If
+                k = k + 1
+            End While
+        End If
+
+        If temp = True Then
+            MsgBox("Já tem um cruzeiro marcado nesse intervalo!")
+        Else
+            EmpresaCruzeiros.Viajantes(ViajanteVisivel).CruzeirosMarcados.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel))
+            gravar()
+        End If
+
 
         MsgBox("Reservou o cruzeiro com sucesso, efetue agora a reserva do quarto e das atividades!")
     End Sub
