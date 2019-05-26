@@ -30,10 +30,11 @@
 
     Private Sub Button_Adicionar_Click(sender As Object, e As EventArgs) Handles Button_Adicionar.Click
         Dim TempFormViajante As New FormNovoRegisto_Viajante
-        Dim TempFormFuncionario As New FormNovoRegisto_Funcionário
+
+        Dim TempFormValidacao As New FormValidacao
 
         If RadioButtonFuncionario.Checked Then
-            TempFormFuncionario.Show()
+            TempFormValidacao.Show()
         ElseIf RadioButtonViajante.Checked Then
             TempFormViajante.Show()
         Else
