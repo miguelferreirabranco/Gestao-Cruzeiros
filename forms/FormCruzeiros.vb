@@ -25,12 +25,13 @@
                 ListView1.Items.Add(item)
             Next
 
+            If NivelVisivel = "Funcionario" Then
+                Me.LabelReceitaEmpresa.Text = EmpresaCruzeiros.ReceitaTotal & "€"
+                Me.LabelReceitaCruzeiroV.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).ReceitaTotal & "€"
+            End If
         End If
 
-        If NivelVisivel = "Funcionario" Then
-            Me.LabelReceitaEmpresa.Text = EmpresaCruzeiros.ReceitaTotal & "€"
-            Me.LabelReceitaCruzeiroV.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).ReceitaTotal & "€"
-        End If
+
     End Sub
 
     Private Sub Button_inicio_Click(sender As Object, e As EventArgs) Handles Button_inicio.Click
