@@ -71,9 +71,12 @@
         End If
 
         k = 0
-        While k <= EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count - 1
-            k = k + 1
-        End While
+        Dim coluna As Integer = 0
+        Dim linha As Integer = 0
+
+
+
+
     End Sub
     Private Function ProcurarQuarto(ByVal numero As Integer) As Integer
         Dim temp As Integer = -1

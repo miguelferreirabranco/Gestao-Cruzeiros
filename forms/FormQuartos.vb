@@ -53,6 +53,7 @@
         Me.TextBox_numero.Clear()
         Me.TextBox_preco.Clear()
         Me.ComboBoxSeccao.Text = ""
+        Me.TextBox_npessoas.Select()
 
     End Sub
     Private Sub Button_Adicionar_Click(sender As Object, e As EventArgs) Handles Button_Adicionar.Click
