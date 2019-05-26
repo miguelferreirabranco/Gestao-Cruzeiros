@@ -91,7 +91,5 @@
         End Set
     End Property
 
-    'Public Overridable Function Pessoa_str() As String
-    '    Return Me.Login & vbTab & vbTab & Me.Nome & vbTab & vbTab & Me.Numero_cc
-    'End Function
+
 End Class

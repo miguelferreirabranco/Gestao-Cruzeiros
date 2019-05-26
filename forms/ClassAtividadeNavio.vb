@@ -21,7 +21,5 @@
         Me.SeccaoNavio = SeccaoNavio
     End Sub
 
-    'Public Overrides Function AtividadeParaString() As String
-    '    Return MyBase.AtividadeParaString() & vbTab & Me.SeccaoNavio
-    'End Function
+
 End Class

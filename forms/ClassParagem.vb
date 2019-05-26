@@ -44,8 +44,6 @@
 
     End Sub
 
-    'Public Function ParaString() As String
-    '    Return Me.LocalParagem & vbTab & Me.DataInicio.ToShortDateString & vbTab & Me.DataInicio.Hour & ":" & Me.DataInicio.Minute & vbTab & Me.DataFim.Hour & ":" & Me.DataFim.Minute
-    'End Function
+
 
 End Class
