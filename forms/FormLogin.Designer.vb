@@ -22,6 +22,7 @@ Partial Class FormLogin
     'Não o modifique usando o editor de códigos.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormLogin))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox_username = New System.Windows.Forms.TextBox()
@@ -112,6 +113,7 @@ Partial Class FormLogin
         'RadioButtonViajante
         '
         Me.RadioButtonViajante.AutoSize = True
+        Me.RadioButtonViajante.BackgroundImage = CType(resources.GetObject("RadioButtonViajante.BackgroundImage"), System.Drawing.Image)
         Me.RadioButtonViajante.Location = New System.Drawing.Point(130, 361)
         Me.RadioButtonViajante.Name = "RadioButtonViajante"
         Me.RadioButtonViajante.Size = New System.Drawing.Size(63, 17)
