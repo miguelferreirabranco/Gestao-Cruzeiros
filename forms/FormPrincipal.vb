@@ -110,6 +110,8 @@ Public Class FormPrincipal
             ListaFuncionáriosToolStripMenuItem.Visible = False
             ListaViajantesToolStripMenuItem.Visible = False
             QuartosFuncionáriosToolStripMenuItem.Visible = False
+        ElseIf NivelVisivel = "Funcionario" Then
+            ReservasToolStripMenuItem.Visible = False
         End If
     End Sub
 
@@ -201,6 +203,18 @@ Public Class FormPrincipal
     Private Sub QuartosFuncionáriosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles QuartosFuncionáriosToolStripMenuItem.Click
         ' Cria uma nova instância do formulário filho.
         Dim ChildForm As New FormQuartos
+        ' Torná-lo uma criança deste formulário MDI antes de mostrá-lo.
+        ChildForm.MdiParent = Me
+
+        m_ChildFormNumber += 1
+        ChildForm.Text = "Janela " & m_ChildFormNumber
+
+        ChildForm.Show()
+    End Sub
+
+    Private Sub ReservasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReservasToolStripMenuItem.Click
+        ' Cria uma nova instância do formulário filho.
+        Dim ChildForm As New FormReservas
         ' Torná-lo uma criança deste formulário MDI antes de mostrá-lo.
         ChildForm.MdiParent = Me
 

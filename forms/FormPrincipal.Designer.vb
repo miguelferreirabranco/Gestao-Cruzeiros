@@ -88,6 +88,7 @@ Partial Class FormPrincipal
         Me.StatusStrip = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ReservasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip.SuspendLayout()
         Me.ToolStrip.SuspendLayout()
         Me.StatusStrip.SuspendLayout()
@@ -95,7 +96,7 @@ Partial Class FormPrincipal
         '
         'MenuStrip
         '
-        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.EditMenu, Me.ViewMenu, Me.ToolsMenu, Me.WindowsMenu, Me.HelpMenu, Me.CruzeirosToolStripMenuItem, Me.QuartosToolStripMenuItem, Me.ParagensToolStripMenuItem1, Me.ParagensToolStripMenuItem, Me.ListaDePessoasToolStripMenuItem})
+        Me.MenuStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileMenu, Me.EditMenu, Me.ViewMenu, Me.ToolsMenu, Me.WindowsMenu, Me.HelpMenu, Me.CruzeirosToolStripMenuItem, Me.QuartosToolStripMenuItem, Me.ParagensToolStripMenuItem1, Me.ParagensToolStripMenuItem, Me.ListaDePessoasToolStripMenuItem, Me.ReservasToolStripMenuItem})
         Me.MenuStrip.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip.MdiWindowListItem = Me.WindowsMenu
         Me.MenuStrip.Name = "MenuStrip"
@@ -536,6 +537,12 @@ Partial Class FormPrincipal
         Me.ToolStripStatusLabel.Size = New System.Drawing.Size(39, 17)
         Me.ToolStripStatusLabel.Text = "Status"
         '
+        'ReservasToolStripMenuItem
+        '
+        Me.ReservasToolStripMenuItem.Name = "ReservasToolStripMenuItem"
+        Me.ReservasToolStripMenuItem.Size = New System.Drawing.Size(64, 20)
+        Me.ReservasToolStripMenuItem.Text = "Reservas"
+        '
         'FormPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -621,4 +628,5 @@ Partial Class FormPrincipal
     Friend WithEvents QuartosToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QuartosViajantesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents QuartosFuncionáriosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReservasToolStripMenuItem As ToolStripMenuItem
 End Class
