@@ -39,5 +39,16 @@ Public Class ClassEmpresa
     End Sub
 
 
+    Public Function ReceitaTotal() As Single
+        Dim resultado As Single = 0
+        Dim k As Integer
 
+        If Me.Cruzeiros.Count > 0 Then
+            For k = 0 To Me.Cruzeiros.Count - 1
+                resultado = resultado & Me.Cruzeiros(k).ReceitaTotal
+            Next
+        End If
+
+        Return resultado
+    End Function
 End Class

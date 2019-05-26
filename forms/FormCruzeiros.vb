@@ -24,6 +24,12 @@
                 item.SubItems.Add(EmpresaCruzeiros.Cruzeiros(k).DataFim.ToShortDateString)
                 ListView1.Items.Add(item)
             Next
+
+        End If
+
+        If NivelVisivel = "Funcionario" Then
+            Me.LabelReceitaEmpresa.Text = EmpresaCruzeiros.ReceitaTotal & "€"
+            Me.LabelReceitaCruzeiroV.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).ReceitaTotal & "€"
         End If
     End Sub
 
@@ -79,6 +85,7 @@
     End Sub
 
     Private Sub FormCruzeiros_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
         If NivelVisivel = "Viajante" Then
             Me.Button_modificar.Visible = False
             Me.Button_Adicionar.Visible = False
@@ -88,6 +95,10 @@
             Me.DateTimePicker_datainicial.Enabled = False
             Me.DateTimePicker_datafinal.Enabled = False
             Me.ButtonNovo.Visible = False
+            Me.LabelE.Visible = False
+            Me.LabelRCV.Visible = False
+            Me.LabelReceitaCruzeiroV.Visible = False
+            Me.LabelReceitaEmpresa.Visible = False
         ElseIf NivelVisivel = "Funcionario" Then
             Me.Button_Reservar.Visible = False
         End If

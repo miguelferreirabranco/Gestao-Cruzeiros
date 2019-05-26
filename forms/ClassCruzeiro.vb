@@ -142,4 +142,18 @@ Public Class ClassCruzeiro
         Me.LocalFim = LocalFim
     End Sub
 
+    Public Function ReceitaTotal() As Single
+        Dim resultado As Single = 0
+        Dim k As Integer
+
+        If Me.Quartos.Count > 0 Then
+            For k = 0 To Me.Quartos.Count - 1
+                If Me.Quartos(k).Reservado = True Then
+                    resultado = resultado + Me.Quartos(k).Ppessoa * Me.Quartos(k).Npessoas
+                End If
+            Next
+        End If
+
+        Return resultado
+    End Function
 End Class
