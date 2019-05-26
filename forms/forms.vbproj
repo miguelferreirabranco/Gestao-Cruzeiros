@@ -144,6 +144,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
+    <Compile Include="My Project\Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Form1.vb" />
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -182,6 +186,10 @@
     <Compile Include="ClassUtilizador.vb" />
     <Compile Include="ClassViajante.vb" />
     <Compile Include="ClassViajantes.vb" />
+    <Compile Include="My Project\VerificaFuncionario.Designer.vb">
+      <DependentUpon>VerificaFuncionario.vb</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\VerificaFuncionario.vb" />
     <Compile Include="VariavelGlobal.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormQuartos.resx">
       <DependentUpon>FormQuartos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\VerificaFuncionario.resx">
+      <DependentUpon>VerificaFuncionario.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
