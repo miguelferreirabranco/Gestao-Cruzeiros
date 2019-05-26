@@ -95,10 +95,11 @@
         Else
             EmpresaCruzeiros.Viajantes(ViajanteVisivel).CruzeirosMarcados.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel))
             gravar()
+            MsgBox("Reservou o cruzeiro com sucesso, efetue agora a reserva do quarto e das atividades!")
         End If
 
 
-        MsgBox("Reservou o cruzeiro com sucesso, efetue agora a reserva do quarto e das atividades!")
+
     End Sub
 
     Private Sub FormCruzeiros_Load(sender As Object, e As EventArgs) Handles MyBase.Load

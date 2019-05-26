@@ -31,40 +31,6 @@
         Dim temp As Boolean = False
         Dim k As Integer = 0
 
-        'If Me.AtividadesNavioMarcadas.Count > 0 Then
-
-        '    While k <= Me.AtividadesNavioMarcadas.Count - 1 And temp = False
-        '        If novaatividadenavio.DataInicio.Date = Me.AtividadesNavioMarcadas(k).DataInicio.Date Then
-        '            If (novaatividadenavio.DataInicio.Hour >= Me.AtividadesNavioMarcadas(k).DataInicio.Hour And novaatividadenavio.DataInicio.Hour <= Me.AtividadesNavioMarcadas(k).DataFim.Hour) Or (novaatividadenavio.DataFim.Hour >= Me.AtividadesNavioMarcadas(k).DataInicio.Hour And novaatividadenavio.DataFim.Hour <= Me.AtividadesNavioMarcadas(k).DataFim.Hour) Then
-        '                temp = True
-        '            End If
-
-        '        End If
-        '        k = k + 1
-        '    End While
-
-        '    If temp = False Then
-        '        k = 0
-        '        While k <= Me.AtividadesParagensMarcadas.Count - 1 And temp = False
-        '            If novaatividadenavio.DataInicio.Date = Me.AtividadesParagensMarcadas(k).DataInicio.Date Then
-        '                If (novaatividadenavio.DataInicio.Hour >= Me.AtividadesParagensMarcadas(k).DataInicio.Hour And novaatividadenavio.DataInicio.Hour <= Me.AtividadesParagensMarcadas(k).DataInicio.Hour) Or (novaatividadenavio.DataFim.Hour >= Me.AtividadesParagensMarcadas(k).DataInicio.Hour And novaatividadenavio.DataFim.Hour <= Me.AtividadesParagensMarcadas(k).DataFim.Hour) Then
-        '                    temp = True
-        '                End If
-
-        '            End If
-        '            k = k + 1
-        '        End While
-        '        If temp = False Then
-        '            Me.AtividadesNavioMarcadas.Add(novaatividadenavio)
-        '            MsgBox("A atividade foi marcada!")
-        '        Else
-        '            MsgBox("Já tem uma atividade marcada nesse horário!")
-
-        '        End If
-        '    Else
-        '        MsgBox("Já tem uma atividade marcada nesse horário!")
-        '    End If
-        'End If
 
         If Me.AtividadesNavioMarcadas.Count > 0 Then
 
@@ -167,41 +133,7 @@
         Dim temp As Boolean = False
         Dim k As Integer = 0
 
-        'If Me.AtividadesParagensMarcadas.Count > 0 Then
 
-        '    While k <= Me.AtividadesParagensMarcadas.Count - 1 And temp = False
-        '        If novaatividadeparagem.DataInicio.Date = Me.AtividadesParagensMarcadas(k).DataInicio.Date Then
-        '            If (novaatividadeparagem.DataInicio.Hour >= Me.AtividadesParagensMarcadas(k).DataInicio.Hour And novaatividadeparagem.DataInicio.Hour <= Me.AtividadesParagensMarcadas(k).DataFim.Hour) Or (novaatividadeparagem.DataFim.Hour >= Me.AtividadesParagensMarcadas(k).DataInicio.Hour And novaatividadeparagem.DataFim.Hour <= Me.AtividadesParagensMarcadas(k).DataFim.Hour) Then
-        '                temp = True
-        '            End If
-
-        '        End If
-        '        k = k + 1
-        '    End While
-
-        '    If temp = False Then
-        '        k = 0
-        '        While k <= Me.AtividadesNavioMarcadas.Count - 1 And temp = False
-        '            If novaatividadeparagem.DataInicio.Date = Me.AtividadesNavioMarcadas(k).DataInicio.Date Then
-        '                If (novaatividadeparagem.DataInicio.Hour >= Me.AtividadesNavioMarcadas(k).DataInicio.Hour And novaatividadeparagem.DataInicio.Hour <= Me.AtividadesNavioMarcadas(k).DataFim.Hour) Or (novaatividadeparagem.DataFim.Hour >= Me.AtividadesNavioMarcadas(k).DataInicio.Hour And novaatividadeparagem.DataFim.Hour <= Me.AtividadesNavioMarcadas(k).DataFim.Hour) Then
-        '                    temp = True
-        '                End If
-
-        '            End If
-        '            k = k + 1
-        '        End While
-
-        '        If temp = False Then
-        '            Me.AtividadesParagensMarcadas.Add(novaatividadeparagem)
-        '            MsgBox("A atividade foi marcada!")
-        '        Else
-        '            MsgBox("Já tem uma atividade marcada nesse horário!")
-        '        End If
-
-        '    Else
-        '        MsgBox("Já tem uma atividade marcada nesse horário!")
-        '    End If
-        'End If
 
         If Me.AtividadesNavioMarcadas.Count > 0 Then
 

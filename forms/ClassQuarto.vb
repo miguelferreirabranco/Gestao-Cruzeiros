@@ -68,6 +68,7 @@
     Public Sub Reservar(ByVal Nome As String)
         If Me.Nomedereserva = "" Then
             Me.Nomedereserva = Nome
+            MsgBox("Reservou o quarto nº " & Me.Nquarto & "!")
         Else
             MsgBox("O quarto em questão já se encontra reservado!")
         End If
@@ -77,6 +78,7 @@
     Public Sub AnularReserva(ByVal Nome As String)
         If Me.Nomedereserva = Nome Then
             Me.Nomedereserva = ""
+            MsgBox("Anulou a reserva do quarto nº " & Me.Nquarto & "!")
         Else
             MsgBox("O quarto em questão não se encontra reservado ou não está reservado por si!")
         End If

@@ -60,7 +60,7 @@
         Dim quarto As ClassQuarto
         quarto = New ClassQuarto(Me.TextBox_npessoas.Text, Me.TextBox_numero.Text, Me.TextBox_preco.Text, Me.ComboBoxSeccao.Text)
         EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Add(quarto)
-        ordenar()
+        'ordenar()
         QuartoVisivel = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count - 1
 
         gravar()
@@ -70,21 +70,21 @@
 
     End Sub
 
-    Public Sub ordenar()
-        Dim k As Integer
-        Dim i As Integer
-        Dim temp As ClassQuarto
+    'Public Sub ordenar()
+    '    Dim k As Integer
+    '    Dim i As Integer
+    '    Dim temp As New ClassQuarto
 
-        For k = 0 To EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count - 2
-            For i = k + 1 To EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count - 1
-                If EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k).Nquarto > EmpresaCruzeiros.Cruzeiros(i).Quartos(k).Nquarto Then
-                    temp = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k)
-                    EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k) = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(i)
-                    EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(i) = temp
-                End If
-            Next
-        Next
-    End Sub
+    '    For k = 0 To EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count - 2
+    '        For i = k + 1 To EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count - 1
+    '            If EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k).Nquarto > EmpresaCruzeiros.Cruzeiros(i).Quartos(k).Nquarto Then
+    '                temp = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k)
+    '                EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k) = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(i)
+    '                EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(i) = temp
+    '            End If
+    '        Next
+    '    Next
+    'End Sub
 
     Private Sub FormQuartos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Mostra()

@@ -20,12 +20,17 @@
         Me.TextBox_preco.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Ppessoa
         Me.ComboBoxSeccao.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Seccao
 
+        If EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Reservado = True Then
+            Me.TextBoxEstado.Text = "Reservado"
+        Else
+            Me.TextBoxEstado.Text = "Disponível"
+        End If
     End Sub
     Public Sub mostradatagrid()
         Dim k, j, l As Integer
         Dim Len As Integer
         Dim aux As Integer
-
+        Dim n As Integer
 
         Me.DataGridView1.Rows.Clear()
 
@@ -33,9 +38,11 @@
         aux = Len Mod 4
 
         k = 0
+        n = 0
         While k < (Len - aux) / 4
-            Me.DataGridView1.Rows.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k).Nquarto, EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k + 1).Nquarto, EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k + 2).Nquarto, EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k + 3).Nquarto)
+            Me.DataGridView1.Rows.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(n).Nquarto, EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(n + 1).Nquarto, EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(n + 2).Nquarto, EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(n + 3).Nquarto)
             k = k + 1
+            n = n + 4
         End While
 
 
@@ -75,7 +82,6 @@
     Private Sub MudarCor(ByVal posquarto As Integer, ByVal nlinha As Integer, ByVal ncoluna As Integer)
         If EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(posquarto).Reservado = True Then
             Me.DataGridView1.Item(ncoluna, nlinha).Style.BackColor = Color.Red
-            Me.DataGridView1.Item(ncoluna, nlinha).Value = "Reservado!"
         Else
             Me.DataGridView1.Item(ncoluna, nlinha).Style.BackColor = Color.Green
         End If
@@ -104,13 +110,13 @@
 
 
     Private Sub Button_Reservar_Click(sender As Object, e As EventArgs) Handles Button_Reservar.Click
-        EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Reservar(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).Login)
+        EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Reservar(EmpresaCruzeiros.Viajantes(ViajanteVisivel).Login)
 
         gravar()
     End Sub
 
     Private Sub Button_anular_Click(sender As Object, e As EventArgs) Handles Button_anular.Click
-        EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).AnularReserva(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Viajantes(ViajanteVisivel).Login)
+        EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).AnularReserva(EmpresaCruzeiros.Viajantes(ViajanteVisivel).Login)
 
         gravar()
     End Sub
