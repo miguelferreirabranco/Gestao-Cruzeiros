@@ -91,8 +91,8 @@ Public Class FormPrincipal
         ' Torná-lo uma criança deste formulário MDI antes de mostrá-lo.
         ChildForm.MdiParent = Me
 
-        m_ChildFormNumber += 1
-        ChildForm.Text = "Janela " & m_ChildFormNumber
+        'm_ChildFormNumber += 1
+        'ChildForm.Text = "Janela " & m_ChildFormNumber
 
         ChildForm.Show()
     End Sub
@@ -134,8 +134,8 @@ Public Class FormPrincipal
         ' Torná-lo uma criança deste formulário MDI antes de mostrá-lo.
         ChildForm.MdiParent = Me
 
-        m_ChildFormNumber += 1
-        ChildForm.Text = "Janela " & m_ChildFormNumber
+        'm_ChildFormNumber += 1
+        'ChildForm.Text = "Janela " & m_ChildFormNumber
 
         ChildForm.Show()
     End Sub
@@ -146,8 +146,8 @@ Public Class FormPrincipal
         ' Torná-lo uma criança deste formulário MDI antes de mostrá-lo.
         ChildForm.MdiParent = Me
 
-        m_ChildFormNumber += 1
-        ChildForm.Text = "Janela " & m_ChildFormNumber
+        'm_ChildFormNumber += 1
+        'ChildForm.Text = "Janela " & m_ChildFormNumber
 
         ChildForm.Show()
     End Sub
@@ -158,8 +158,8 @@ Public Class FormPrincipal
         ' Torná-lo uma criança deste formulário MDI antes de mostrá-lo.
         ChildForm.MdiParent = Me
 
-        m_ChildFormNumber += 1
-        ChildForm.Text = "Janela " & m_ChildFormNumber
+        'm_ChildFormNumber += 1
+        'ChildForm.Text = "Janela " & m_ChildFormNumber
 
         ChildForm.Show()
     End Sub
@@ -170,8 +170,8 @@ Public Class FormPrincipal
         ' Torná-lo uma criança deste formulário MDI antes de mostrá-lo.
         ChildForm.MdiParent = Me
 
-        m_ChildFormNumber += 1
-        ChildForm.Text = "Janela " & m_ChildFormNumber
+        'm_ChildFormNumber += 1
+        'ChildForm.Text = "Janela " & m_ChildFormNumber
 
         ChildForm.Show()
     End Sub
@@ -182,8 +182,8 @@ Public Class FormPrincipal
         ' Torná-lo uma criança deste formulário MDI antes de mostrá-lo.
         ChildForm.MdiParent = Me
 
-        m_ChildFormNumber += 1
-        ChildForm.Text = "Janela " & m_ChildFormNumber
+        'm_ChildFormNumber += 1
+        'ChildForm.Text = "Janela " & m_ChildFormNumber
 
         ChildForm.Show()
     End Sub
@@ -194,8 +194,8 @@ Public Class FormPrincipal
         ' Torná-lo uma criança deste formulário MDI antes de mostrá-lo.
         ChildForm.MdiParent = Me
 
-        m_ChildFormNumber += 1
-        ChildForm.Text = "Janela " & m_ChildFormNumber
+        'm_ChildFormNumber += 1
+        'ChildForm.Text = "Janela " & m_ChildFormNumber
 
         ChildForm.Show()
     End Sub
@@ -206,8 +206,8 @@ Public Class FormPrincipal
         ' Torná-lo uma criança deste formulário MDI antes de mostrá-lo.
         ChildForm.MdiParent = Me
 
-        m_ChildFormNumber += 1
-        ChildForm.Text = "Janela " & m_ChildFormNumber
+        'm_ChildFormNumber += 1
+        'ChildForm.Text = "Janela " & m_ChildFormNumber
 
         ChildForm.Show()
     End Sub
@@ -218,8 +218,8 @@ Public Class FormPrincipal
         ' Torná-lo uma criança deste formulário MDI antes de mostrá-lo.
         ChildForm.MdiParent = Me
 
-        m_ChildFormNumber += 1
-        ChildForm.Text = "Janela " & m_ChildFormNumber
+        'm_ChildFormNumber += 1
+        'ChildForm.Text = "Janela " & m_ChildFormNumber
 
         ChildForm.Show()
     End Sub

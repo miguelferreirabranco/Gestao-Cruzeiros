@@ -34,18 +34,20 @@ Partial Class FormLista_Funcionários
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(184, 9)
+        Me.Label6.Location = New System.Drawing.Point(245, 11)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(251, 25)
+        Me.Label6.Size = New System.Drawing.Size(308, 31)
         Me.Label6.TabIndex = 63
         Me.Label6.Text = "Lista dos Funcionários"
         '
         'ListView1
         '
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeaderLogin, Me.ColumnHeaderNome, Me.ColumnHeaderCC, Me.ColumnHeaderNIB})
-        Me.ListView1.Location = New System.Drawing.Point(84, 59)
+        Me.ListView1.Location = New System.Drawing.Point(112, 73)
+        Me.ListView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(480, 301)
+        Me.ListView1.Size = New System.Drawing.Size(639, 370)
         Me.ListView1.TabIndex = 116
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
@@ -72,13 +74,14 @@ Partial Class FormLista_Funcionários
         '
         'FormLista_Funcionários
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(636, 387)
+        Me.ClientSize = New System.Drawing.Size(848, 476)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.Label6)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FormLista_Funcionários"
-        Me.Text = "Lista_Funcionários"
+        Me.Text = "Lista dos Funcionários"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

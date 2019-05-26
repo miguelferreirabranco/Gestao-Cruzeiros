@@ -164,7 +164,7 @@ Partial Class FormListaQuartos
         Me.Controls.Add(Me.DataGridView1)
         Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FormListaQuartos"
-        Me.Text = "FormListaQuartos"
+        Me.Text = "Lista dos Quartos"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
