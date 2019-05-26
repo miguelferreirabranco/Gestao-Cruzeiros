@@ -140,6 +140,7 @@ Public Class ClassCruzeiro
         Me.DataFim = datafim
         Me.LocalInicio = localInicio
         Me.LocalFim = LocalFim
+        gravar()
     End Sub
 
     Public Function ReceitaTotal() As Single

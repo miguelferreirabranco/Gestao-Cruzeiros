@@ -70,6 +70,8 @@
     End Sub
 
     Private Sub FormParagens_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ler()
+
         If NivelVisivel = "Viajante" Then
             Me.Button_Adicionar.Visible = False
             Me.HoraFim.Enabled = False

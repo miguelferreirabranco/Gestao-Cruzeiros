@@ -69,6 +69,7 @@
         If Me.Nomedereserva = "" Then
             Me.Nomedereserva = Nome
             MsgBox("Reservou o quarto nº " & Me.Nquarto & "!")
+            gravar()
         Else
             MsgBox("O quarto em questão já se encontra reservado!")
         End If
@@ -79,15 +80,15 @@
         If Me.Nomedereserva = Nome Then
             Me.Nomedereserva = ""
             MsgBox("Anulou a reserva do quarto nº " & Me.Nquarto & "!")
+            gravar()
+        ElseIf Me.Nomedereserva = "" Then
+            MsgBox("O quarto em questão não se encontra reservado!")
         Else
-            MsgBox("O quarto em questão não se encontra reservado ou não está reservado por si!")
+            MsgBox("O quarto em questão não está reservado por si!")
+
         End If
     End Sub
 
-
-    Public Function ParaString() As String
-        Return Me.Nquarto & vbTab & Me.Seccao & vbTab & Me.Npessoas & vbTab & Me.Ppessoa
-    End Function
 
     Public Function Reservado() As Boolean
         Dim temp As Boolean = False

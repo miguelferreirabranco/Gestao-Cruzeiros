@@ -59,5 +59,7 @@
         Return temp
     End Function
 
-
+    Private Sub FormNovoRegisto_Funcionário_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ler()
+    End Sub
 End Class

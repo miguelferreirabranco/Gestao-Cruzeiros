@@ -41,52 +41,46 @@ Partial Class FormNovoRegisto_Viajante
         '
         'TextBox_ncc
         '
-        Me.TextBox_ncc.Location = New System.Drawing.Point(311, 171)
-        Me.TextBox_ncc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox_ncc.Location = New System.Drawing.Point(233, 139)
         Me.TextBox_ncc.Name = "TextBox_ncc"
-        Me.TextBox_ncc.Size = New System.Drawing.Size(245, 22)
+        Me.TextBox_ncc.Size = New System.Drawing.Size(185, 20)
         Me.TextBox_ncc.TabIndex = 79
         '
         'TextBox_username
         '
-        Me.TextBox_username.Location = New System.Drawing.Point(311, 234)
-        Me.TextBox_username.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox_username.Location = New System.Drawing.Point(233, 190)
         Me.TextBox_username.Name = "TextBox_username"
-        Me.TextBox_username.Size = New System.Drawing.Size(245, 22)
+        Me.TextBox_username.Size = New System.Drawing.Size(185, 20)
         Me.TextBox_username.TabIndex = 78
         '
         'TextBox_nif
         '
-        Me.TextBox_nif.Location = New System.Drawing.Point(311, 203)
-        Me.TextBox_nif.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox_nif.Location = New System.Drawing.Point(233, 165)
         Me.TextBox_nif.Name = "TextBox_nif"
-        Me.TextBox_nif.Size = New System.Drawing.Size(245, 22)
+        Me.TextBox_nif.Size = New System.Drawing.Size(185, 20)
         Me.TextBox_nif.TabIndex = 77
         '
         'TextBox_password
         '
-        Me.TextBox_password.Location = New System.Drawing.Point(311, 266)
-        Me.TextBox_password.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox_password.Location = New System.Drawing.Point(233, 216)
         Me.TextBox_password.Name = "TextBox_password"
-        Me.TextBox_password.Size = New System.Drawing.Size(245, 22)
+        Me.TextBox_password.Size = New System.Drawing.Size(185, 20)
         Me.TextBox_password.TabIndex = 76
         '
         'TextBox_nome
         '
-        Me.TextBox_nome.Location = New System.Drawing.Point(311, 75)
-        Me.TextBox_nome.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox_nome.Location = New System.Drawing.Point(233, 61)
         Me.TextBox_nome.Name = "TextBox_nome"
-        Me.TextBox_nome.Size = New System.Drawing.Size(245, 22)
+        Me.TextBox_nome.Size = New System.Drawing.Size(185, 20)
         Me.TextBox_nome.TabIndex = 75
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(211, 75)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(158, 61)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(70, 25)
+        Me.Label8.Size = New System.Drawing.Size(55, 20)
         Me.Label8.TabIndex = 74
         Me.Label8.Text = "Nome:"
         '
@@ -94,10 +88,9 @@ Partial Class FormNovoRegisto_Viajante
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(219, 107)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(164, 87)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(64, 25)
+        Me.Label7.Size = New System.Drawing.Size(49, 20)
         Me.Label7.TabIndex = 73
         Me.Label7.Text = "Sexo:"
         '
@@ -105,10 +98,9 @@ Partial Class FormNovoRegisto_Viajante
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(73, 139)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(55, 113)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(194, 25)
+        Me.Label6.Size = New System.Drawing.Size(158, 20)
         Me.Label6.TabIndex = 72
         Me.Label6.Text = "Data de Nascimento:"
         '
@@ -116,10 +108,9 @@ Partial Class FormNovoRegisto_Viajante
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(232, 203)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(174, 165)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(49, 25)
+        Me.Label5.Size = New System.Drawing.Size(39, 20)
         Me.Label5.TabIndex = 71
         Me.Label5.Text = "NIF:"
         '
@@ -127,10 +118,9 @@ Partial Class FormNovoRegisto_Viajante
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(175, 266)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(131, 216)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(104, 25)
+        Me.Label4.Size = New System.Drawing.Size(82, 20)
         Me.Label4.TabIndex = 70
         Me.Label4.Text = "Password:"
         '
@@ -138,10 +128,9 @@ Partial Class FormNovoRegisto_Viajante
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(88, 234)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(66, 190)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(182, 25)
+        Me.Label3.Size = New System.Drawing.Size(147, 20)
         Me.Label3.TabIndex = 69
         Me.Label3.Text = "Nome de Utilizador:"
         '
@@ -149,47 +138,43 @@ Partial Class FormNovoRegisto_Viajante
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(85, 171)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(64, 139)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(187, 25)
+        Me.Label2.Size = New System.Drawing.Size(149, 20)
         Me.Label2.TabIndex = 68
         Me.Label2.Text = "N.º Cartão Cidadão:"
         '
         'Button_Registar
         '
         Me.Button_Registar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_Registar.Location = New System.Drawing.Point(440, 329)
-        Me.Button_Registar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button_Registar.Location = New System.Drawing.Point(330, 267)
         Me.Button_Registar.Name = "Button_Registar"
-        Me.Button_Registar.Size = New System.Drawing.Size(117, 48)
+        Me.Button_Registar.Size = New System.Drawing.Size(88, 39)
         Me.Button_Registar.TabIndex = 88
         Me.Button_Registar.Text = "Registar"
         Me.Button_Registar.UseVisualStyleBackColor = True
         '
         'DateTimePicker_datanasc
         '
-        Me.DateTimePicker_datanasc.Location = New System.Drawing.Point(311, 138)
-        Me.DateTimePicker_datanasc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DateTimePicker_datanasc.Location = New System.Drawing.Point(233, 112)
         Me.DateTimePicker_datanasc.Name = "DateTimePicker_datanasc"
-        Me.DateTimePicker_datanasc.Size = New System.Drawing.Size(245, 22)
+        Me.DateTimePicker_datanasc.Size = New System.Drawing.Size(185, 20)
         Me.DateTimePicker_datanasc.TabIndex = 89
         '
         'ComboBoxSexo
         '
         Me.ComboBoxSexo.FormattingEnabled = True
         Me.ComboBoxSexo.Items.AddRange(New Object() {"Feminino", "Masculino", "Outro"})
-        Me.ComboBoxSexo.Location = New System.Drawing.Point(311, 107)
-        Me.ComboBoxSexo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ComboBoxSexo.Location = New System.Drawing.Point(233, 87)
         Me.ComboBoxSexo.Name = "ComboBoxSexo"
-        Me.ComboBoxSexo.Size = New System.Drawing.Size(245, 24)
+        Me.ComboBoxSexo.Size = New System.Drawing.Size(185, 21)
         Me.ComboBoxSexo.TabIndex = 90
         '
         'FormNovoRegisto_Viajante
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(759, 425)
+        Me.ClientSize = New System.Drawing.Size(569, 345)
         Me.Controls.Add(Me.ComboBoxSexo)
         Me.Controls.Add(Me.DateTimePicker_datanasc)
         Me.Controls.Add(Me.Button_Registar)
@@ -205,7 +190,6 @@ Partial Class FormNovoRegisto_Viajante
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "FormNovoRegisto_Viajante"
         Me.Text = "Novo Registo Viajante"
         Me.ResumeLayout(False)

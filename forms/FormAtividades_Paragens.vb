@@ -121,6 +121,7 @@
     End Sub
 
     Private Sub FormAtividades_Paragens_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ler()
         If EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens.Count > 0 Then
 
             For i = 0 To EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Paragens.Count - 1
@@ -146,7 +147,7 @@
             Me.Button_Marcar.Visible = False
             Me.Button_anular.Visible = False
         End If
-        ler()
+
         mostra()
     End Sub
 

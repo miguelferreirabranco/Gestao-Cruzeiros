@@ -5,7 +5,12 @@
 
 
     Private Sub FormListaQuartos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        ler()
+        Me.TextBoxEstado.Enabled = False
+        Me.TextBox_npessoas.Enabled = False
+        Me.TextBox_numero.Enabled = False
+        Me.TextBox_preco.Enabled = False
+        Me.ComboBoxSeccao.Enabled = False
 
         DataGridView1.ColumnCount = 4
         mostradatagrid()
@@ -27,7 +32,7 @@
         End If
     End Sub
     Public Sub mostradatagrid()
-        Dim k, j, l As Integer
+        Dim k As Integer
         Dim Len As Integer
         Dim aux As Integer
         Dim n As Integer

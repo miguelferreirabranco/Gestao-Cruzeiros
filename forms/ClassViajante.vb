@@ -1,11 +1,12 @@
-﻿Public Class ClassViajante
+﻿Imports forms
+
+Public Class ClassViajante
     Inherits ClassUtilizador
 
     Private _nif As String
-    Public CruzeirosMarcados As ClassCruzeiros
-    Public QuartosMarcados As ClassQuartos
-    Public AtividadesNavioMarcadas As ClassAtividadesNavio
-    Public AtividadesParagensMarcadas As ClassAtividadesParagens
+    Private _cruzeirosMarcados As ClassCruzeiros
+    Private _atividadesNavioMarcadas As ClassAtividadesNavio
+    Private _atividadesParagensMarcadas As ClassAtividadesParagens
 
     Public Sub New()
 
@@ -15,6 +16,11 @@
                    ByVal login As String, ByVal pass As String, ByVal nif As String)
         MyBase.New(nome, sexo, data, cc, login, pass)
         Me._nif = nif
+        Me.CruzeirosMarcados = New ClassCruzeiros
+        Me.AtividadesNavioMarcadas = New ClassAtividadesNavio
+        Me.AtividadesParagensMarcadas = New ClassAtividadesParagens
+
+
     End Sub
 
     Public Property Nif As String
@@ -26,6 +32,32 @@
         End Set
     End Property
 
+    Public Property CruzeirosMarcados As ClassCruzeiros
+        Get
+            Return _cruzeirosMarcados
+        End Get
+        Set(value As ClassCruzeiros)
+            _cruzeirosMarcados = value
+        End Set
+    End Property
+
+    Public Property AtividadesNavioMarcadas As ClassAtividadesNavio
+        Get
+            Return _atividadesNavioMarcadas
+        End Get
+        Set(value As ClassAtividadesNavio)
+            _atividadesNavioMarcadas = value
+        End Set
+    End Property
+
+    Public Property AtividadesParagensMarcadas As ClassAtividadesParagens
+        Get
+            Return _atividadesParagensMarcadas
+        End Get
+        Set(value As ClassAtividadesParagens)
+            _atividadesParagensMarcadas = value
+        End Set
+    End Property
 
     Public Sub MarcarAtividadeNavio(ByVal novaatividadenavio As ClassAtividadeNavio)
         Dim temp As Boolean = False
@@ -48,9 +80,9 @@
                         End If
 
 
-                    ElseIf novaatividadenavio.DataInicio.Hour >= Me.AtividadesNavioMarcadas(k).DataInicio.Hour And novaatividadenavio.DataInicio.Hour < Me.AtividadesNavioMarcadas(k).Datafim.Hour And novaatividadenavio.DataFim.hour >= Me.AtividadesNavioMarcadas(k).datafim.hour Then
+                    ElseIf novaatividadenavio.DataInicio.Hour >= Me.AtividadesNavioMarcadas(k).DataInicio.Hour And novaatividadenavio.DataInicio.Hour < Me.AtividadesNavioMarcadas(k).DataFim.Hour And novaatividadenavio.DataFim.Hour >= Me.AtividadesNavioMarcadas(k).DataFim.Hour Then
                         temp = True
-                    ElseIf novaatividadenavio.DataInicio.Hour = Me.AtividadesNavioMarcadas(k).DataFim.Hour And novaatividadenavio.Datafim.Hour = Me.AtividadesNavioMarcadas(k).DataFim.Hour Then
+                    ElseIf novaatividadenavio.DataInicio.Hour = Me.AtividadesNavioMarcadas(k).DataFim.Hour And novaatividadenavio.DataFim.Hour = Me.AtividadesNavioMarcadas(k).DataFim.Hour Then
                         If novaatividadenavio.DataInicio.Minute < Me.AtividadesNavioMarcadas(k).DataFim.Minute Then
                             temp = True
                         End If
@@ -104,6 +136,7 @@
                 MsgBox("Já tem uma atividade marcada nesse horário!")
             Else
                 Me.AtividadesNavioMarcadas.Add(novaatividadenavio)
+                gravar()
                 MsgBox("A atividade foi marcada!")
             End If
         End If
@@ -116,6 +149,7 @@
         While k <= Me.AtividadesNavioMarcadas.Count - 1 And temp = False
             If Me.AtividadesNavioMarcadas(k).Nome = NomeAtividade Then
                 Me.AtividadesNavioMarcadas.RemoveAt(k)
+                gravar()
                 MsgBox("A marcação desta atividade foi anulada!")
                 temp = True
             End If
@@ -207,6 +241,7 @@
                 MsgBox("Já tem uma atividade marcada nesse horário!")
             Else
                 Me.AtividadesParagensMarcadas.Add(novaatividadeparagem)
+                gravar()
                 MsgBox("A atividade foi marcada!")
             End If
         End If
@@ -219,6 +254,7 @@
         While k <= Me.AtividadesParagensMarcadas.Count - 1 And temp = False
             If Me.AtividadesParagensMarcadas(k).Nome = NomeAtividade Then
                 Me.AtividadesParagensMarcadas.RemoveAt(k)
+                gravar()
                 MsgBox("A marcação desta atividade foi anulada!")
                 temp = True
             End If
