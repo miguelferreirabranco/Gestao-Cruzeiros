@@ -29,7 +29,6 @@ Partial Class FormQuartos
         Me.TextBox_npessoas = New System.Windows.Forms.TextBox()
         Me.TextBox_numero = New System.Windows.Forms.TextBox()
         Me.Button_Adicionar = New System.Windows.Forms.Button()
-        Me.ListBox_Quartos = New System.Windows.Forms.ListBox()
         Me.Button_fim = New System.Windows.Forms.Button()
         Me.Button_seguinte = New System.Windows.Forms.Button()
         Me.Button_anterior = New System.Windows.Forms.Button()
@@ -38,6 +37,11 @@ Partial Class FormQuartos
         Me.Label6 = New System.Windows.Forms.Label()
         Me.ButtonNovo = New System.Windows.Forms.Button()
         Me.ComboBoxSeccao = New System.Windows.Forms.ComboBox()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ColumnHeaderNumero = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderSeccao = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderNPessoas = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeaderPrecoPessoa = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.SuspendLayout()
         '
         'Label5
@@ -103,14 +107,6 @@ Partial Class FormQuartos
         Me.Button_Adicionar.TabIndex = 25
         Me.Button_Adicionar.Text = "Adicionar"
         Me.Button_Adicionar.UseVisualStyleBackColor = True
-        '
-        'ListBox_Quartos
-        '
-        Me.ListBox_Quartos.FormattingEnabled = True
-        Me.ListBox_Quartos.Location = New System.Drawing.Point(439, 124)
-        Me.ListBox_Quartos.Name = "ListBox_Quartos"
-        Me.ListBox_Quartos.Size = New System.Drawing.Size(329, 303)
-        Me.ListBox_Quartos.TabIndex = 24
         '
         'Button_fim
         '
@@ -188,11 +184,42 @@ Partial Class FormQuartos
         Me.ComboBoxSeccao.Size = New System.Drawing.Size(140, 21)
         Me.ComboBoxSeccao.TabIndex = 67
         '
+        'ListView1
+        '
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeaderNumero, Me.ColumnHeaderSeccao, Me.ColumnHeaderNPessoas, Me.ColumnHeaderPrecoPessoa})
+        Me.ListView1.Location = New System.Drawing.Point(360, 131)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(511, 301)
+        Me.ListView1.TabIndex = 119
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeaderNumero
+        '
+        Me.ColumnHeaderNumero.Text = "Número"
+        Me.ColumnHeaderNumero.Width = 128
+        '
+        'ColumnHeaderSeccao
+        '
+        Me.ColumnHeaderSeccao.Text = "Secção"
+        Me.ColumnHeaderSeccao.Width = 137
+        '
+        'ColumnHeaderNPessoas
+        '
+        Me.ColumnHeaderNPessoas.Text = "Número de Pessoas"
+        Me.ColumnHeaderNPessoas.Width = 131
+        '
+        'ColumnHeaderPrecoPessoa
+        '
+        Me.ColumnHeaderPrecoPessoa.Text = "Preço por pessoa"
+        Me.ColumnHeaderPrecoPessoa.Width = 110
+        '
         'FormQuartos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(803, 465)
+        Me.ClientSize = New System.Drawing.Size(901, 465)
+        Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.ComboBoxSeccao)
         Me.Controls.Add(Me.ButtonNovo)
         Me.Controls.Add(Me.Label6)
@@ -204,7 +231,6 @@ Partial Class FormQuartos
         Me.Controls.Add(Me.TextBox_npessoas)
         Me.Controls.Add(Me.TextBox_numero)
         Me.Controls.Add(Me.Button_Adicionar)
-        Me.Controls.Add(Me.ListBox_Quartos)
         Me.Controls.Add(Me.Button_fim)
         Me.Controls.Add(Me.Button_seguinte)
         Me.Controls.Add(Me.Button_anterior)
@@ -222,7 +248,6 @@ Partial Class FormQuartos
     Friend WithEvents TextBox_npessoas As TextBox
     Friend WithEvents TextBox_numero As TextBox
     Friend WithEvents Button_Adicionar As Button
-    Friend WithEvents ListBox_Quartos As ListBox
     Friend WithEvents Button_fim As Button
     Friend WithEvents Button_seguinte As Button
     Friend WithEvents Button_anterior As Button
@@ -231,4 +256,9 @@ Partial Class FormQuartos
     Friend WithEvents Label6 As Label
     Friend WithEvents ButtonNovo As Button
     Friend WithEvents ComboBoxSeccao As ComboBox
+    Friend WithEvents ListView1 As ListView
+    Friend WithEvents ColumnHeaderNumero As ColumnHeader
+    Friend WithEvents ColumnHeaderSeccao As ColumnHeader
+    Friend WithEvents ColumnHeaderNPessoas As ColumnHeader
+    Friend WithEvents ColumnHeaderPrecoPessoa As ColumnHeader
 End Class

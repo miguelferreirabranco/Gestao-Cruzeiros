@@ -109,6 +109,7 @@ Public Class FormPrincipal
         If NivelVisivel = "Viajante" Then
             ListaFuncionáriosToolStripMenuItem.Visible = False
             ListaViajantesToolStripMenuItem.Visible = False
+            QuartosFuncionáriosToolStripMenuItem.Visible = False
         End If
     End Sub
 

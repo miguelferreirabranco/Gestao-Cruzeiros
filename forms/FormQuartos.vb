@@ -18,11 +18,15 @@
             Me.TextBox_preco.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Ppessoa
             Me.ComboBoxSeccao.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Seccao
 
-            Me.ListBox_Quartos.Items.Clear()
 
+            ListView1.Items.Clear()
 
             For k = 0 To EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count - 1
-                Me.ListBox_Quartos.Items.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k).ParaString)
+                Dim item As New ListViewItem(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k).Nquarto)
+                item.SubItems.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k).Seccao)
+                item.SubItems.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k).Npessoas)
+                item.SubItems.Add(EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k).Ppessoa)
+                ListView1.Items.Add(item)
             Next
         End If
     End Sub

@@ -36,10 +36,29 @@
     End Sub
 
     Public Sub mostra()
+        Dim k, j, l As Integer
+
         Me.TextBox_numero.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Nquarto
         Me.TextBox_npessoas.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Npessoas
         Me.TextBox_preco.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Ppessoa
         Me.ComboBoxSeccao.Text = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(QuartoVisivel).Seccao
+
+        l = 0
+        j = 0
+        k = 0
+        While k < EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos.Count
+
+            If j = 4 Then
+                j = 0
+                l = l + 1
+                Me.DataGridView1.Item(j, l).Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k).Nquarto
+            Else
+                Me.DataGridView1.Item(j, l).Value = EmpresaCruzeiros.Cruzeiros(CruzeiroVisivel).Quartos(k).Nquarto
+            End If
+            j = j + 1
+            k = k + 1
+        End While
+
     End Sub
 
     Private Function ProcurarQuarto(ByVal numero As Integer) As Integer

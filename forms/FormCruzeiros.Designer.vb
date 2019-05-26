@@ -237,7 +237,7 @@ Partial Class FormCruzeiros
         'ColumnHeaderNome
         '
         Me.ColumnHeaderNome.Text = "Nome"
-        Me.ColumnHeaderNome.Width = 99
+        Me.ColumnHeaderNome.Width = 124
         '
         'ColumnHeaderOrigem
         '
@@ -263,7 +263,7 @@ Partial Class FormCruzeiros
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(840, 465)
+        Me.ClientSize = New System.Drawing.Size(884, 465)
         Me.Controls.Add(Me.ListView1)
         Me.Controls.Add(Me.ButtonNovo)
         Me.Controls.Add(Me.Label6)

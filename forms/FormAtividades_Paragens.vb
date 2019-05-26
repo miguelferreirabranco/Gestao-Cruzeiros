@@ -140,7 +140,7 @@
 
             Me.ComboBoxParagem.Enabled = False
             Me.ComboBoxTipo1.Enabled = False
-            Me.ButtonNova.Visible = False
+            Me.ButtonNova1.Visible = False
 
         ElseIf NivelVisivel = "Funcionario" Then
             Me.Button_Marcar.Visible = False
