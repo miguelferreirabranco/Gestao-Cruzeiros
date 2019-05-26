@@ -95,13 +95,13 @@ Partial Class FormPrincipal
         'AtNavioToolStripMenuItem
         '
         Me.AtNavioToolStripMenuItem.Name = "AtNavioToolStripMenuItem"
-        Me.AtNavioToolStripMenuItem.Size = New System.Drawing.Size(122, 22)
+        Me.AtNavioToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.AtNavioToolStripMenuItem.Text = "Navio"
         '
         'AtParagensToolStripMenuItem1
         '
         Me.AtParagensToolStripMenuItem1.Name = "AtParagensToolStripMenuItem1"
-        Me.AtParagensToolStripMenuItem1.Size = New System.Drawing.Size(122, 22)
+        Me.AtParagensToolStripMenuItem1.Size = New System.Drawing.Size(180, 22)
         Me.AtParagensToolStripMenuItem1.Text = "Paragens"
         '
         'ListaDePessoasToolStripMenuItem
@@ -155,7 +155,7 @@ Partial Class FormPrincipal
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip
         Me.Name = "FormPrincipal"
-        Me.Text = "Cruzeiros"
+        Me.Text = "Empresa de Cruzeiros"
         Me.MenuStrip.ResumeLayout(False)
         Me.MenuStrip.PerformLayout()
         Me.StatusStrip.ResumeLayout(False)
