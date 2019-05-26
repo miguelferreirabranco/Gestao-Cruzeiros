@@ -28,4 +28,7 @@
 
     End Sub
 
+    Private Sub FormReservas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Mostra()
+    End Sub
 End Class
