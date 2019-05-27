@@ -12,6 +12,11 @@
         Me.TextBox_preco.Enabled = False
         Me.ComboBoxSeccao.Enabled = False
 
+        If NivelVisivel = "Funcionario" Then
+            Me.Button_anular.Visible = False
+            Me.Button_Reservar.Visible = False
+        End If
+
         DataGridView1.ColumnCount = 4
         mostradatagrid()
         mostratext()
