@@ -70,8 +70,11 @@
             Me.Nomedereserva = Nome
             MsgBox("Reservou o quarto nº " & Me.Nquarto & "!")
             gravar()
-        Else
+        ElseIf Me.Nomedereserva <> "" And Me.Nomedereserva <> nome Then
             MsgBox("O quarto em questão já se encontra reservado!")
+        Else
+            MsgBox("O quarto em questão já se encontra reservado por si!")
+
         End If
 
 
@@ -83,7 +86,7 @@
             gravar()
         ElseIf Me.Nomedereserva = "" Then
             MsgBox("O quarto em questão não se encontra reservado!")
-        Else
+        ElseIf Me.Nomedereserva <> "" And Me.Nomedereserva <> nome Then
             MsgBox("O quarto em questão não está reservado por si!")
 
         End If

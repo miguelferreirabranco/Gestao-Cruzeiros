@@ -153,7 +153,7 @@ Public Class ClassViajante
                 MsgBox("A marcação desta atividade foi anulada!")
                 temp = True
             End If
-
+            k = k + 1
         End While
 
         If temp = False Then
@@ -258,7 +258,7 @@ Public Class ClassViajante
                 MsgBox("A marcação desta atividade foi anulada!")
                 temp = True
             End If
-
+            k = k + 1
         End While
 
         If temp = False Then
